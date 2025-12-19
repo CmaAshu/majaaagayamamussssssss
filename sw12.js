@@ -1,0 +1,178 @@
+// --- DATA: 15 Questions Per Set (Extracted from 12.md) ---
+const quizSets = [
+    {
+        setName: "Set 1",
+        questions: [
+            { q: "1. Type of accounting which measures, reports and analyse non-financial and financial information to help in decision making is called:", o: ["Financial Accounting", "Management Accounting", "Cost Accounting", "Green Accounting"], c: "Management Accounting" },
+            { q: "2. Which one of the following is NOT considered as a method of Transfer Pricing?", o: ["Negotiated Transfer Pricing", "Market Price Based Transfer Pricing", "Fixed Cost Based Transfer Pricing", "Opportunity Cost Based Transfer Pricing"], c: "Fixed Cost Based Transfer Pricing" },
+            { q: "3. In cost accounting, purpose of variance analysis is to:", o: ["Understand reasons for variances", "Take remedial measures", "Improve future performance", "All of the above"], c: "All of the above" },
+            { q: "4. Absorption Costing is also known as:", o: ["Total Costing", "Committed Costing", "Target Costing", "Discretionary Costing"], c: "Total Costing" },
+            { q: "5. Which of the following is NOT correct with regard to Margin of Safety (MOS)?", o: ["MOS = Profit / PV Ratio", "MOS = Total Sales - Sales at BEP", "MOS = (Total Sales - Sales at BEP) / Total Sales × 100", "MOS = PV Ratio × Sales - Fixed Cost"], c: "MOS = PV Ratio × Sales - Fixed Cost" },
+            { q: "6. Which one of the following is NOT to be considered for preparing a production budget?", o: ["The production plan of the organization", "The Sales Budget", "Research and Development Budget", "Availability of Raw Materials"], c: "Research and Development Budget" },
+            { q: "7. Which statement best describes the role of the management accountant?", o: ["Management accountants prepare the financial statements for an organization", "Management accountants facilitate the decision-making process within an organization", "Management accountants make the principal decisions within an organization", "Management accountants are basically information collectors"], c: "Management accountants facilitate the decision-making process within an organization" },
+            { q: "8. In a factory when production is increased within the relevant range then:", o: ["Variable costs will vary on a per unit basis", "Variable costs will vary in total", "Fixed costs will vary in total", "Fixed and variable cost stay the same in total"], c: "Variable costs will vary in total" },
+            { q: "9. The main objective of budgetary control is:", o: ["To define the goal of the firm", "To coordinate different departments", "To plan to achieve its goals", "All of the above"], c: "To coordinate different departments" },
+            { q: "10. Method of pricing, when two separate pricing methods are used to price transfer of products from one subunit to another, is called:", o: ["Dual pricing", "Functional pricing", "Congruent pricing", "Optimal pricing"], c: "Dual pricing" },
+            { q: "11. When are overhead variances recorded in a standard costing system?", o: ["When the goods are transferred out of work-in-progress", "When the factory overhead is applied to work-in-progress", "When the cost of goods sold is recorded", "When the direct labour is recorded"], c: "When the factory overhead is applied to work-in-progress" },
+            { q: "12. Which of the following factors does NOT affect Learning Curve?", o: ["Method of Production", "Labour Strike", "Shut Down", "Efficiency Rate"], c: "Shut Down" },
+            { q: "13. Decision-making concerns with:", o: ["Past", "Future", "Past and Future both", "None of the above"], c: "Future" },
+            { q: "14. Which of the following operating measures would a manager like to see decreasing over time?", o: ["Merchandise Inventory Turn-over", "Total quality Cost", "% of On-time Deliveries", "Finished Goods Inventory Turn-Over"], c: "Total quality Cost" },
+            { q: "15. Which of the following departments is most likely responsible for a Price Variance in Direct Materials?", o: ["Warehousing", "Receiving", "Purchasing", "Production"], c: "Purchasing" }
+        ]
+    },
+    {
+        setName: "Set 2",
+        questions: [
+            { q: "16. Another name for the Learning Curves is:", o: ["Exponential Curve", "Growth Curve", "Production Curve", "Experience Curve"], c: "Experience Curve" },
+            { q: "17. The distinctive feature of Learning Curve is:", o: ["On the principle of exception", "Persons engaged in repetitive task will improve his performance over time", "Is designed to fix responsibilities on executives", "Notional value at which goods are transferred between divisions"], c: "Persons engaged in repetitive task will improve his performance over time" },
+            { q: "18. Budgetary Control System:", o: ["Is designed to fix responsibilities on executives, through the preparation of budgets", "Is on the principle of exception", "Works based on notional values", "Applies to all types of organizations"], c: "Is designed to fix responsibilities on executives, through the preparation of budgets" },
+            { q: "19. The well-known basic function of management is:", o: ["Motivating", "Leadership", "Decision-making", "Communicating"], c: "Decision-making" },
+            { q: "20. Contribution margin is equal to:", o: ["Sales - Fixed Cost - Profit", "Profit + Variable Cost", "Fixed Cost - Loss", "None of the above"], c: "Profit + Variable Cost" },
+            { q: "21. In a system whereby all activities are revaluated each time a budget is formulated and starts with the assumption that requirement of funds does not exist is called:", o: ["Performance Budgeting", "Programme Budgeting", "Flexible Budgeting", "Zero-based Budgeting"], c: "Zero-based Budgeting" },
+            { q: "22. The management's time is saved by reporting only the deviations from the predetermined standards is called:", o: ["Management by objectives", "Budgetary Control", "Standard Costing", "Management by Exception"], c: "Management by Exception" },
+            { q: "23. Management Accounting:", o: ["Accumulates, summarises and analyses the available data", "Is primarily concerned with the requirements of the management", "Makes Corporate Planning and Strategy Effective", "All of the above"], c: "All of the above" },
+            { q: "24. XYZ Ltd. makes a special gadget for the car it manufactures. The machine for the gadget works to full capacity and incurs ₹15 Lakhs and ₹40 Lakhs respectively as Variable and Fixed Costs. If all the gadgets were purchased from an outside supplier, the machine could be used to produce other items, which would earn a total contribution of ₹25 Lakhs. What is the maximum price that XYZ Ltd. should be willing to pay to the outside supplier for the gadgets?", o: ["₹40 Lakhs", "₹65 Lakhs", "₹25 Lakhs", "₹15 Lakhs"], c: "₹65 Lakhs" },
+            { q: "25. When a manager is concerned with monitoring total cost, total revenue and net profit conditioned upon the level of productivity, an accountant should normally recommend:", o: ["Flexible Budgeting and Standard costing (Yes / Yes)", "Flexible Budgeting and Standard costing (Yes / No)", "Flexible Budgeting and Standard costing (No / Yes)", "Flexible Budgeting and Standard costing (No / No)"], c: "Flexible Budgeting and Standard costing (Yes / Yes)" },
+            { q: "26. In a system whereby all activities are re-evaluated each time a budget is formulated and starts with assumption that requirements of funds does not exist is called:", o: ["Performance Budgeting", "Programme Budget", "Flexible Budgeting", "Zero-based Budgeting"], c: "Zero-based Budgeting" },
+            { q: "27. The difference between hours paid and hours worked is known as:", o: ["Labour rate variance", "Labour efficiency variance", "Idle time variance", "Net efficiency variance"], c: "Idle time variance" },
+            { q: "28. The difference in total cost that results from two alternative courses of action is called:", o: ["Relevant Cost", "Opportunity Cost", "Differential Cost", "Marginal Cost"], c: "Differential Cost" },
+            { q: "29. A budget that gives a summary of all the functional budgets and projected Profit and Loss Account is known as:", o: ["Master budget", "Flexible budget", "Performance budget", "Discretionary budget"], c: "Master budget" },
+            { q: "30. When there are no opening or closing stocks, profit under marginal costing will be:", o: ["Greater than in absorption costing", "Less than in absorption costing", "Equal to absorption costing", "Greater, Lower or Equal depending on certain factors"], c: "Equal to absorption costing" }
+        ]
+    },
+    {
+        setName: "Set 3",
+        questions: [
+            { q: "31. Break Even Point can be reduced by:", o: ["Increasing selling price per unit", "Reducing the variable costs", "Reducing fixed costs", "All of the above"], c: "All of the above" },
+            { q: "32. One of the following is NOT within the scope of Management Accounting:", o: ["Formulation of policies", "Classification and collection of costs", "Planning and co-ordinating the activities of the enterprise", "Decision making on alternative courses of action"], c: "Formulation of policies" },
+            { q: "33. MNC Consciously manipulate the transfer Price as an instrument of maximizing achievement of:", o: ["Investors Goals", "Divisional Goals", "Managers Goals", "Corporate Goals"], c: "Corporate Goals" },
+            { q: "34. RUB LTD. earned a Profit of ₹2,40,000 during the year 2020-21. If its PV Ratio is 25%, what will be the Margin of Safety?", o: ["₹8,80,000", "₹9,00,000", "₹9,60,000", "₹9,80,000"], c: "₹9,60,000" },
+            { q: "35. Which of the following Concepts suggests a basis for Correct staffing in Continuously expanding production?", o: ["Growth Curve", "Learning Curve", "Exponential Curve", "Production Curve"], c: "Learning Curve" },
+            { q: "36. A favourable material price variance coupled with an unfavourable material usage variance would most likely result from:", o: ["Changes in the product mix", "Problems with processing machines", "The purchase of low quality materials", "Problems with labour efficiency"], c: "The purchase of low quality materials" },
+            { q: "37. Decision making Concerns:", o: ["Past", "Future", "None of these", "Future and Past both"], c: "Future" },
+            { q: "38. Transfer Price are normally set for:", o: ["Intermediate Products", "Giffen Products", "None of these", "Finished Products"], c: "Intermediate Products" },
+            { q: "39. Recording of actual performance is a step in __________:", o: [], c: "Budgetary Control" },
+            { q: "40. Roxy Ltd. maintains a margin of Safety of 25% on its current Sales and earns a profit of 28 lakh per annum. If the company has a PV Ratio of 25%, its current sales will be:", o: [], c: "₹448 lakh" },
+            { q: "41. All current or proposed programs, listed out in a Zero Based Budget are known as:", o: [], c: "Decision Packages" },
+            { q: "42. __________ is the notional value at which goods and services are transferred between divisions in a decentralized organization.", o: [], c: "A transfer price" },
+            { q: "43. Which of the following Accountings records both qualitative and quantitative aspect?", o: ["Green Accounting", "Management Accounting", "Financial Accounting", "Cost Accounting"], c: "Management Accounting" },
+            { q: "44. The Chart that shows the relationship between Profit and Sales Volume is:", o: ["Break-even chart", "Profit - volume chart", "None of these", "Contribution Break-even chart"], c: "Profit - volume chart" },
+            { q: "45. The learning curve __________ relates to a repetitive Job or task and represents the relationship between experience and productivity.", o: [], c: "Theory (or concept)" }
+        ]
+    },
+    {
+        setName: "Set 4",
+        questions: [
+            { q: "46. In a factory of ZINB Ltd operating Standard Costing System, 2000 kgs of a material @ ₹12 per kg were used for a Product, resulting in Material Cost variance of ₹3,000 FAV. The standard material cost of actual production is:", o: ["₹30,000", "₹27,000", "₹24,000", "₹25,000"], c: "₹27,000" },
+            { q: "47. For preparing a production budget which one of the following is NOT to be considered?", o: ["Research and Development Budget", "The Production plan of the factory", "The Sales Budget", "Cash Budget"], c: "Research and Development Budget" },
+            { q: "48. Recording of actual performance is a step in __________:", o: [], c: "Budgetary Control" },
+            { q: "49. __________ is the technique of evaluation of __________ Performance:", o: [], c: "Interfirm comparison, Business Performance" },
+            { q: "50. __________ is caused due to the poor working conditions:", o: [], c: "Labour efficiency variance" },
+            { q: "51. Management Accounting is a __________ tools to management:", o: [], c: "Modern (or important)" },
+            { q: "52. __________ is the angle formed at the intersection point of total sales line and total cost line in a formal break-even chart:", o: [], c: "Angle of incidence" },
+            { q: "53. Management accounting is concerned with data collection from:", o: ["Internal sources", "External sources", "Internal and external sources", "Internal or external sources"], c: "Internal and external sources" },
+            { q: "54. In a product mix decision, which is the most important factor to consider in order to try to maximise profit?", o: ["Contribution per unit of a scarce resource used to make the product", "Contribution per unit of the product", "Variable cost per unit of the product", "Selling price per unit"], c: "Contribution per unit of a scarce resource used to make the product" },
+            { q: "55. X Ltd. provides information: Activity Level 60 and 80; Total Overheads ₹9,20,000 and ₹11,60,000. If the production capacity at 50% Activity Level is 60,000 units, then the variable overhead per unit is:", o: ["₹9 per unit", "₹10 per unit", "₹11 per unit", "₹12 per unit"], c: "₹10 per unit" },
+            { q: "56. Calculate the Budgeted Labour Hours required for Production if One Labour Hour is required per unit:", o: ["8,400 hours", "9,400 hours", "8,900 hours", "9,000 hours"], c: "9,000 hours" },
+            { q: "57. Calculate the Efficiency Ratio, if Capacity and Activity Ratios are 98% and 93.10% respectively:", o: ["100%", "95%", "105.263%", "91.238%"], c: "105.263%" },
+            { q: "58. If the Standard Cost of the Actual Quantity of Material Consumed is deducted from the Standard Cost of the Revised Standard Quantity, then we obtain:", o: ["Direct Material Yield Variance", "Direct Material Price Variance", "Direct Material Usage Variance", "Direct Material Mix Variance"], c: "Direct Material Yield Variance" },
+            { q: "59. Profit Volume ratio is equal to:", o: ["Variable cost as a percentage of sales", "Fixed cost as a percentage of sales", "Excess of sales over variable cost as a percentage of sales", "Total cost as a percentage of sales"], c: "Excess of sales over variable cost as a percentage of sales" },
+            { q: "60. A Limited produces 500 units of product in 7,500 hours against standard hours of 8,000. If standard rate per hour is ₹75, then labour efficiency variance will be:", o: ["₹37,500 F", "₹37,500 A", "₹40,000 F", "₹38,000 F"], c: "₹37,500 F" }
+        ]
+    },
+    {
+        setName: "Set 5",
+        questions: [
+            { q: "61. Divisional managers prepare budget based on __________ achievements:", o: ["Outcome Budgets", "Performance Budgets", "Programme Budgets without reference to the past", "Zero Base Budgets"], c: "Outcome Budgets" },
+            { q: "62. According to Norton and Kaplan, the balanced scorecard should be used as:", o: ["A control system", "A diagnostic system", "A strategic system", "All of the above"], c: "All of the above" },
+            { q: "63. An __________ is an organizational unit whose manager is responsible for generating revenue and managing expenses related to current activity:", o: ["Expense Centre", "Revenue Centre", "Cost Centre", "Profit Centre"], c: "Revenue Centre" },
+            { q: "64. RTM Ltd., using Activity Based Costing (ABC), manufactures two types of products - P and Q respectively. During a period, the company incurred ₹50,000 as inspection cost and it worked for 10 and 15 production runs respectively for producing product P and Q. The inspection cost for product P under ABC system was:", o: ["₹20,000", "₹30,000", "₹40,000", "None of the above"], c: "₹20,000" },
+            { q: "65. The minimum expected opportunity loss (EOL) is:", o: ["Equal to EVPI", "Minimum Regret", "Equal to EMV", "Both a and b"], c: "Both a and b" },
+            { q: "66. Responsibility Accounting is used for:", o: ["Cost control", "Planning", "Decision making", "Pricing"], c: "Cost control" },
+            { q: "67. The term __________ is used to describe a location to which overhead costs are initially assigned:", o: ["Cost driver", "Cost pool", "Activity", "Cost objects"], c: "Cost pool" },
+            { q: "68. Units produced 50,000; Selling price per unit ₹15; Variable cost per unit ₹12; Fixed costs ₹1,60,000. Calculate sales value when the profit to be earned is ₹80,000:", o: ["₹10,00,000", "₹12,00,000", "₹9,00,000", "₹14,00,000"], c: "₹12,00,000" },
+            { q: "69. Economic Value Added (EVA) can be calculated as under:", o: ["Return to Equity Shareholders fund - Cost of capital × Employed Capital", "Return to providers of fund - Cost of capital × Employed Capital", "Return to Long term loan fund - Cost of capital × Employed Capital", "Return to Equity Shareholders fund - Cost of Equity"], c: "Return to providers of fund - Cost of capital × Employed Capital" },
+            { q: "70. According to DuPont methodology, the parameters that drive Return on Equity (ROE) are:", o: ["Operating performance", "Asset usage performance", "Financial leverage", "All of the above"], c: "All of the above" },
+            { q: "71. Which of the following would decrease unit contribution margin the most?", o: ["10% decrease in selling price", "10% increase in variable costs", "10% decrease in variable costs", "10% decrease in fixed costs"], c: "10% decrease in selling price" },
+            { q: "72. Which one of the following statements best demonstrates the concept of the learning curve?", o: ["Learning curve is a linear cost behavior influenced by learning", "Learning curve is a judgmental method of estimating costs when learning is present", "A learning curve is a percentage by which average time per unit produced decreases as output doubles", "A learning curve is a percentage by which average time falls as output increases by one unit"], c: "A learning curve is a percentage by which average time per unit produced decreases as output doubles" },
+            { q: "73. AB Ltd. uses standard costing system. Standard rate per hour ₹8; Actual rate per hour ₹8.40; Standard hours allowed for actual production 2,000 hours; Labour Efficiency variance ₹1,600 Adverse. What were the actual hours worked?", o: ["1,800 Hours", "1,810 Hours", "2,200 Hours", "2,190 Hours"], c: "2,190 Hours" },
+            { q: "74. Economic value added (EVA) is a concept that is closely related to residual income. EVA is computed by:", o: ["Subtracting the adjusted total cost of capital from the adjusted after-tax income", "Subtracting adjusted after-tax income from total divisional investment", "Dividing adjusted after-tax income by adjusted divisional investment", "Dividing adjusted after-tax income by adjusted total cost of capital"], c: "Subtracting the adjusted total cost of capital from the adjusted after-tax income" },
+            { q: "75. Expected value in decision analysis is:", o: ["A standard deviation using the probabilities as weights", "The square root of the squared deviations", "The measure of the difference between the best possible outcome and the outcome of a original decision", "An arithmetic mean using the probabilities as weights"], c: "An arithmetic mean using the probabilities as weights" }
+        ]
+    },
+    {
+        setName: "Set 6",
+        questions: [
+            { q: "76. Ms SP Limited sells Glucon P at a selling price of ₹100 per unit. Variable cost per unit is ₹80 and Fixed cost for the year is ₹3,00,000. Actual quantity sold during the year is 1,00,000 boxes. The Break Even Point Units and Margin of Safety Units will be:", o: ["BEP Units 20,000 and MOS Units 80,000", "BEP Units 10,000 and MOS Units 90,000", "BEP Units 15,000 and MOS Units 85,000", "BEP Units 50,000 and MOS Units 50,000"], c: "BEP Units 20,000 and MOS Units 80,000" },
+            { q: "77. Standard output is 1,000 units and actual output is 800 units. Standard price per Kg. is ₹2 and Actual price per Kg. is ₹3. Standard quantity per unit is 4 Kg. If actual quantity is 4,000 kgs, the Material Cost Variance will be:", o: ["₹1,600 F", "₹1,600 A", "₹5,600 A", "₹3,200 A"], c: "₹5,600 A" },
+            { q: "78. The budget which incorporates all functional budgets and is finally approved and adopted employed is:", o: ["Zero Base Budget", "Rolling Budget", "Master Budget", "Performance Budget"], c: "Master Budget" },
+            { q: "79. Ms Shibaji Limited has Capital Employed of ₹4,50,000 and its Operating Income for the year ended 31-03-2023 is ₹1,00,000. If the minimum expected rate of return is 14%, the Residual Income (RI) of the Company is:", o: ["₹35,000", "₹43,000", "₹40,000", "₹37,000"], c: "₹35,000" },
+            { q: "80. Ms Dutta Rubber manufactured 10,000 units of Biodegradable disposable containers at Material cost of ₹6 per unit. Direct labour cost is ₹15 per unit (of which 23% is fixed). Factory overhead cost is ₹20 per unit (of which 60% is fixed). The labour used can manufacture another product with selling price ₹40 and Material cost ₹10 per unit. The Relevant Cost RC is:", o: ["₹66", "₹44", "₹36", "₹32"], c: "₹36" },
+            { q: "81. Fixed cost is Relevant Cost if it is:", o: ["Discretionary", "Sunk", "Unavoidable", "Periodic"], c: "Discretionary" },
+            { q: "82. According to Norton and Kaplan, the balanced scorecard should be used as:", o: ["A Control system", "A Diagnostic system", "A Strategic system", "Both A and C above"], c: "Both A and C above" },
+            { q: "83. Break Even Point in 2,66,666.67. Selling price per unit is ₹100 and Variable Cost per unit is ₹70. Fixed Cost is ₹80,000. If the selling price per unit is reduced by 10% in the next year, what will the new Break Even Point in rupees?", o: ["₹3,56,058", "₹3,60,000", "₹3,88,556", "₹3,57,548"], c: "₹3,88,556" },
+            { q: "84. Ms Agartala Plastics Private Limited - Packaging Division: Fixed Assets ₹10,00,000; Current Assets ₹10,00,000; Annual Fixed Cost ₹16,00,000; Variable Cost per unit ₹10; Budgeted volume 8,00,000 units; ROI 18%. The Transfer Price of the packaging division will be:", o: ["₹11.60", "₹12.45", "₹13.40", "₹10.90"], c: "₹11.60" },
+            { q: "85. Under Marginal Costing, the Opening and Closing stock is valued at which of the following basis?", o: ["Opening stock at variable cost, closing stock at total cost", "Opening stock at total cost, closing stock at variable cost", "Both at variable cost", "Both at total cost"], c: "Both at variable cost" },
+            { q: "86. Period of lost relevance is the __________ of the evolution of management accounting:", o: ["1st Stage", "2nd Stage", "3rd Stage", "4th Stage"], c: "3rd Stage" },
+            { q: "87. Process of cost allocation under Activity Based Costing is:", o: ["Cost of activities → Activities → Cost driver → Cost allocated to cost objects", "Cost driver → Cost of activities → Cost allocated to cost objects → Activities", "Activities → Cost of activities → Cost driver → Cost allocated to cost objects", "Activities → Cost driver → Cost allocated to cost objects → Cost of activities"], c: "Activities → Cost of activities → Cost driver → Cost allocated to cost objects" },
+            { q: "88. AXR Ltd. has a break-even point when sales are ₹20 lakh and fixed cost is ₹8 lakh. If the selling price is ₹5, the PV Ratio will be:", o: ["50%", "40%", "30%", "20%"], c: "40%" },
+            { q: "89. The difference in total cost that results from two alternative courses of action is called:", o: ["Relevant Cost", "Opportunity Cost", "Marginal Cost", "Differential Cost"], c: "Differential Cost" },
+            { q: "90. Expected profit or loss from the new product with demand levels and probabilities: Level of demand: High (₹1,00,000 with probability 0.1), Medium (₹50,000 with 0.5), Low (₹20,000 with 0.4):", o: ["Profit ₹35,000", "Loss ₹8,000", "Profit ₹27,000", "Profit ₹43,000"], c: "Profit ₹27,000" }
+        ]
+    },
+    {
+        setName: "Set 7",
+        questions: [
+            { q: "91. Division A uses a type of transfer pricing system with a fixed fee for Division B representing allowance for fixed costs. This is known as:", o: ["Dual pricing", "Opportunity based transfer pricing", "Negotiated transfer pricing", "Two-part tariff transfer pricing"], c: "Two-part tariff transfer pricing" },
+            { q: "92. Given labour efficiency variance and standard/actual hours rates, actual hours worked were:", o: ["2,200", "2,190", "1,800", "1,810"], c: "2,190" },
+            { q: "93. Budget slack refers to:", o: ["Difference between budgeted output and break-even output", "Additional capacity available", "Extended lead-time between budgets", "Deliberate over-estimation of costs and under-estimation of revenues"], c: "Deliberate over-estimation of costs and under-estimation of revenues" },
+            { q: "94. Characteristic NOT associated with traditional responsibility accounting:", o: ["Assumes optimisation of the part", "Assumes independence of the part", "Places emphasis on individual performance", "Attempts to control the processes"], c: "Attempts to control the processes" },
+            { q: "95. The return on capital employed for the company from given ratios (Gross profit 42%, Operating profit margin 28%, Gearing debt/equity 40%, Asset turnover 65%):", o: ["27.30%", "18.20%", "11.20%", "16.80%"], c: "18.20%" },
+            { q: "96. Maximum price XYZ Ltd. should pay to an outside supplier given data:", o: ["₹40 lakhs", "₹65 lakhs", "₹25 lakhs", "₹15 lakhs"], c: "₹65 lakhs" },
+            { q: "97. Learning curve ratios apply to two workers. 4th product's labour cost is more for:", o: ["A", "B", "Same for both", "Can't be said"], c: "Same for both" },
+            { q: "98. Operating asset in ROI computations:", o: ["Land for expansion", "Treasury Stock", "Accounts Receivable", "Common Stock"], c: "Accounts Receivable" },
+            { q: "99. Total costs treating department X as a responsibility center:", o: ["₹3,200", "₹2,200", "₹1,200", "₹8,000"], c: "₹2,200" },
+            { q: "100. Coefficient of optimism is needed while using the criterion of:", o: ["Realism", "Maximin", "Minimax", "Equally Likely"], c: "Maximin" },
+            { q: "101. __________ criteria are a set of standards for a company's behaviour used by socially conscious investors to screen potential investments:", o: ["JIT", "AMT", "ESG", "ABC"], c: "ESG" },
+            { q: "102. Ms SB Limited produces 10,000 units of Product - S and 15,000 units of Product - R at a total cost of ₹2,00,000. Costs apportioned in Machine hour related (ratio 2) and Labour hour related (ratio 1): Product-S: Machine Hour 3,000, Labour Hour 2,000; Product-R: Machine Hour 5,000, Labour Hour 3,000. The Cost Per Unit of Product - S and Product - R are:", o: ["Product S ₹15.80, Product R ₹6.40", "Product S ₹13.70, Product R ₹7.15", "Product S ₹12.20, Product R ₹5.20", "Product S ₹11.80, Product R ₹5.30"], c: "Product S ₹12.20, Product R ₹5.20" },
+            { q: "103. Main cost driver of customer order processing activity:", o: ["Flow of the product", "Order value", "Number of product suppliers", "Number of machine charges"], c: "Order value" },
+            { q: "104. Ms Zimbra Limited sold 65,000 units of its product at ₹80 per unit. PV Ratio is 20%. If total Fixed Cost is ₹6,40,000, the Margin of Safety Units is:", o: ["20,000 Units", "25,000 Units", "22,000 Units", "28,000 Units"], c: "22,000 Units" },
+            { q: "105. To obtain the break-even point in rupee sales value, total fixed costs are divided by:", o: ["Variable Cost Per Unit", "Contribution Margin Per Unit", "Fixed Cost Per Unit", "Profit-Volume Ratio"], c: "Profit-Volume Ratio" }
+        ]
+    },
+    {
+        setName: "Set 8",
+        questions: [
+            { q: "106. Ms Littles Limited - Standard production 8 units per shift of 8 hours at ₹200 per hour. Actual production 5 units per shift (1 hour lunch break). Actual rate ₹210. The Labour Efficiency Variance is:", o: ["₹600 Adverse", "₹600 Favorable", "₹300 Adverse", "₹400 Adverse"], c: "₹600 Adverse" },
+            { q: "107. Which is NOT a method of Transfer Pricing?", o: ["Negotiated Transfer Pricing", "Market Price Based Transfer Pricing", "Fixed Cost Based Transfer Pricing", "Opportunity Cost Based Transfer Pricing"], c: "Fixed Cost Based Transfer Pricing" },
+            { q: "108. Budget prepared by re-evaluating activities and comparing incremental costs with incremental benefits:", o: ["Incremental budget", "Rolling budget", "Zero based budget", "Flexible budget"], c: "Zero based budget" },
+            { q: "109. WDV of Fixed Asset of Ms Vanguard Limited as on 31-03-2024 is ₹22,50,000. On 01-07-2024, Company sold an asset (WDV ₹2,50,000) for ₹2,75,000. Other income ₹2,00,000. The ROI of the company is:", o: ["10.50%", "8.88%", "11.25%", "10%"], c: "11.25%" },
+            { q: "110. Formula for calculating RI (Residual Income):", o: ["Divisional profit - % change in Sales × Divisional investment", "Divisional profit - % capital charge × Total investment", "Divisional profit - % capital charge × Divisional investment", "Total profit - % capital charge × Divisional investment"], c: "Divisional profit - % capital charge × Divisional investment" },
+            { q: "111. The theory of learning curves holds if:", o: ["Task must be repetitive", "Production must be at early stage", "Inconsistency in workforce", "Both A and B"], c: "Both A and B" },
+            { q: "112. Ms Zeon Limited - Component manufacturing in-house costs: Material ₹10, Other Overheads ₹15 (60% fixed). Market price ₹25. Alternative use contribution ₹12. Relevant cost per unit:", o: ["₹25", "₹37", "₹31", "₹28"], c: "₹28" },
+            { q: "113. Ms Nikita Limited - Raw materials ₹35.40 (incl. GST 18%, eligible for ITC). Machine hour rate ₹576. Specialized dice cycle time 25 seconds per unit. Cost of Production per unit:", o: ["₹37.40", "₹32.00", "₹34.00", "₹39.40"], c: "₹34.00" },
+            { q: "114. DuPont model main functional parameters driving ROE:", o: ["Operating performance", "Asset usage performance", "Financial leverage", "All of the above"], c: "All of the above" },
+            { q: "115. Which is NOT true?", o: ["Marginal costing is a system of costing", "Key factor is important in ascertaining profitability", "Fixed costs charged off to revenue, not for inventory", "Plant and machinery depreciate more when idle than when used"], c: "Plant and machinery depreciate more when idle than when used" },
+            { q: "116. Which of the following statements is FALSE?", o: ["Management accountant uses cost accounting tools for planning", "Management accounting is mostly historical and projects the past", "Cost accounting can be installed without management accounting", "Management accounting focuses on wealth maximization"], c: "Management accounting is mostly historical and projects the past" },
+            { q: "117. According to DU-Pont Methodology, parameters driving ROE:", o: ["Operating performance", "Asset usage performance", "Financial Leverage", "All of the above"], c: "All of the above" },
+            { q: "118. Responsibility Center whose manager manages revenues and current expenses:", o: ["Investment Center", "Revenue Center", "Profit Center", "Cost/Expense Center"], c: "Profit Center" },
+            { q: "119. Laplace Criterion is a feature of?", o: ["Deterministic Model", "Decision making under certainty", "Decision making under uncertainty", "Optimization"], c: "Decision making under uncertainty" },
+            { q: "120. Bon, a division of BANT Ltd., has total assets ₹12,00,000 and Operating Income ₹3,00,000. Cost of capital 15%. Division's Residual Income (RI):", o: ["₹1,80,000", "₹1,50,000", "₹1,20,000", "₹60,000"], c: "₹1,80,000" }
+        ]
+    },
+    {
+        setName: "Set 9",
+        questions: [
+            { q: "121. Time to be taken for the second unit in incremental time learning model (first unit 5 hours, 80% learning rate):", o: ["4 hours", "3 hours", "2 hours", "5 hours"], c: "4 hours" },
+            { q: "122. Fixed overhead volume variance ₹4,000 Adverse. Identify Actual Output: Standard: Fixed ₹80,000, Variable ₹1,20,000. Actual: Fixed ₹85,000, Variable ₹1,15,000. Output units: ?", o: ["38,000 units", "41,000 units", "42,000 units", "Insufficient information"], c: "41,000 units" },
+            { q: "123. FBT Ltd. at 60% capacity producing 600 units. Costs at 60%: Material ₹50/unit, Labour ₹25/unit, Direct expenses ₹5/unit, Factory overheads ₹20,000 (60% variable), Admin ₹15,000 (60% fixed). Total Cost per unit at 80% capacity:", o: ["₹1,05,000", "₹131.25", "₹126.25", "None of the above"], c: "₹131.25" },
+            { q: "124. SNG Ltd. choosing products P, Q, R under scenarios A1, A2, A3. Using maximax criterion, product chosen: Payoff table: P (A1=40, A2=80, A3=100), Q (80, 100, 20), R (20, 150, 70)", o: ["Product P", "Product Q", "Product R", "None of the above"], c: "Product Q" },
+            { q: "125. Budget continuously updated by adding a further accounting period when the earlier period expires:", o: ["Zero base budget", "Step-up budget", "Rolling budget", "Performance budget"], c: "Rolling budget" },
+            { q: "126. For both fixed and variable costs considered for product costing and inventory valuation:", o: ["Marginal Costing", "Relevant Costing", "Absorption Costing", "Activity Based Costing"], c: "Absorption Costing" },
+            { q: "127. Ms Unicorn Limited sold 200 units (2023) and 300 units (2024). Total overhead ₹10,000 (2023) and ₹12,000 (2024). The fixed overhead:", o: ["₹6,000", "₹4,000", "₹8,000", "₹10,000"], c: "₹4,000" },
+            { q: "128. PV Ratio 20%, Selling price ₹50, Margin of safety 2,000 units, Fixed cost ₹30,000. The actual sales quantity:", o: ["4,000 units", "6,000 units", "5,000 units", "7,000 units"], c: "5,000 units" },
+            { q: "129. A Limited produces 500 units in 7,500 hours (standard 8,000 hours). Standard rate ₹50/hour. Labour efficiency variance:", o: ["₹25,000 F", "₹25,000 A", "₹40,000 F", "₹50,000 F"], c: "₹25,000 F" },
+            { q: "130. Expected returns of two mutually exclusive projects ₹15. S.D. of return: Project-1 ₹20, Project-2 ₹10. Coefficient of variation:", o: ["Project-1 0.75, Project-2 0.90", "Project-1 1.33, Project-2 0.66", "Project-1 1.43, Project-2 0.86", "Project-1 1.39, Project-2 0.56"], c: "Project-1 1.33, Project-2 0.66" }
+        ]
+    }
+];

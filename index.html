@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en" class="scrollbar-gutter-stable">
+<head>
+    <!-- 1. PERFORMANCE: Preconnect to critical domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- 2. SEO: Structured Data (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Prepogy",
+      "url": "https://prepogy.fun/",
+      "description": "Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://prepogy.fun/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Prepogy",
+      "url": "https://prepogy.fun/",
+      "logo": "https://prepogy.fun/prep.png",
+      "sameAs": [
+        "https://prepogy.fun/"
+      ],
+      "description": "Tailored MCQ Practice Platform Exclusively for CMA Students (Syllabus 2022).",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      }
+    }
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7792469883739877" crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLGRHV6077"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FLGRHV6077');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- SEO & Primary Meta -->
+    <title>Prepogy - CMA MCQ Practice Platform | Syllabus 2022</title>
+    <meta name="description" content="Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets (2013-2025) for Syllabus 2022.">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://prepogy.fun/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prepogy.fun/">
+    <meta property="og:title" content="Prepogy - CMA MCQ Practice Platform">
+    <meta property="og:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants.">
+    <meta property="og:image" content="https://prepogy.fun/prep.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://prepogy.fun/">
+    <meta property="twitter:title" content="Prepogy - CMA MCQ Practice Platform">
+    <meta property="twitter:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants.">
+    <meta property="twitter:image" content="https://prepogy.fun/prep.png">
+    
+    <link rel="icon" href="prep.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 3. PERFORMANCE: Defer Non-Critical CSS (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+    
+    <!-- Tailwind CSS & Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#6366f1',
+                            dark: '#4f46e5',
+                        },
+                        success: '#10b981',
+                        error: '#ef4444',
+                        surface: '#ffffff',
+                    },
+                    boxShadow: {
+                        soft: '0 10px 40px -10px rgba(0,0,0,0.06)',
+                        hover: '0 20px 40px -5px rgba(99, 102, 241, 0.12)',
+                    },
+                    animation: {
+                        'rise': 'rise 20s linear infinite',
+                        'floating': 'floating 4s ease-in-out infinite',
+                        'bounce-subtle': 'subtle-bounce 0.6s ease infinite',
+                        'fade-in-up': 'fadeInUp 0.3s ease forwards',
+                        'rotate-border': 'rotate-border 3s linear infinite',
+                    },
+                    keyframes: {
+                        rise: {
+                            'from': { transform: 'translateY(0) rotate(0deg)', opacity: '0.4' },
+                            'to': { transform: 'translateY(-120vh) rotate(360deg)', opacity: '0' },
+                        },
+                        floating: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        'subtle-bounce': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-3px)' },
+                        },
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(10px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'rotate-border': {
+                            'from': { transform: 'rotate(0deg)' },
+                            'to': { transform: 'rotate(360deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar { display: none; }
+            .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+            /* Exact gradient from original CSS */
+            .text-gradient-original { 
+                @apply bg-clip-text text-transparent bg-[linear-gradient(135deg,#10b981,#6366f1,#db2777,#f59e0b)];
+            }
+            /* PREVENTS SHAKING: Reserves space for scrollbar */
+            .scrollbar-gutter-stable {
+                scrollbar-gutter: stable;
+            }
+        }
+
+        @layer components {
+            /* Base View Section - Hidden by default, optimized for transition */
+            .view-section { 
+                @apply hidden opacity-0 translate-y-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] max-w-6xl mx-auto px-5 pb-20 w-full; 
+            }
+            /* Visible State */
+            .view-section.active { 
+                @apply block opacity-100 translate-y-0; 
+            }
+            
+            /* Helper for immediate block display before fade-in */
+            .view-section.preparing {
+                @apply block;
+            }
+
+            /* Reusable Card Base */
+            .card-base {
+                @apply border-[3px] border-transparent rounded-[28px] p-10 text-center cursor-pointer 
+                       transition-all duration-300 shadow-soft relative overflow-hidden bg-white hover:-translate-y-2;
+                background-origin: padding-box, border-box;
+                background-clip: padding-box, border-box;
+            }
+
+            .choice-card { @apply card-base; }
+            .subject-card { @apply card-base; }
+
+            .card-foundation, .subj-foundation { background-image: linear-gradient(white, white), linear-gradient(135deg, #10b981, #0ea5e9); }
+            .card-foundation:hover, .subj-foundation:hover { box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); }
+
+            .card-inter, .subj-inter, .mode-bank { background-image: linear-gradient(white, white), linear-gradient(135deg, #6366f1, #a855f7); }
+            .card-inter:hover, .subj-inter:hover, .mode-bank:hover { box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15); }
+
+            .card-final, .subj-final, .mode-pyq { background-image: linear-gradient(white, white), linear-gradient(135deg, #f59e0b, #db2777); }
+            .card-final:hover, .subj-final:hover, .mode-pyq:hover { box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15); }
+
+            .option {
+                @apply flex items-center p-3 md:p-5 mb-3 bg-white border border-slate-200 rounded-2xl 
+                       cursor-pointer transition-all duration-200 hover:scale-[1.015] hover:translate-x-1 hover:bg-violet-50 hover:shadow-hover hover:border-primary;
+            }
+            .option.disabled { @apply pointer-events-none; }
+            .option.correct { @apply border-success bg-emerald-50; }
+            .option.incorrect { @apply border-error bg-red-50; }
+
+            .shape { @apply absolute bottom-[-150px] opacity-15 font-bold block will-change-transform animate-rise; line-height: 1; }
+        }
+    </style>
+</head>
+<!-- min-h-screen and flex-col ensures footer stays at bottom, preventing jumps -->
+<body class="font-sans bg-slate-50 text-gray-800 overflow-x-hidden antialiased selection:bg-indigo-100 selection:text-indigo-700 min-h-screen flex flex-col">
+
+    <!-- Background Shapes -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden select-none" aria-hidden="true">
+        <div class="shape left-[10%] text-[55px] text-emerald-500" style="animation-duration: 22s; animation-delay: -2s;">₹</div>
+        <div class="shape left-[20%] text-[45px] text-indigo-500" style="animation-duration: 18s; animation-delay: -5s;">$</div>
+        <div class="shape left-[35%] text-[50px] text-pink-600" style="animation-duration: 25s; animation-delay: -7s;">₹</div>
+        <div class="shape left-[50%] text-[55px] text-amber-500" style="animation-duration: 20s; animation-delay: -3s;">€</div>
+        <div class="shape left-[65%] text-[45px] text-emerald-500" style="animation-duration: 15s; animation-delay: -10s;">₹</div>
+        <div class="shape left-[80%] text-[65px] text-indigo-500" style="animation-duration: 28s; animation-delay: -1s;">×</div>
+        <div class="shape left-[90%] text-[50px] text-pink-600" style="animation-duration: 23s; animation-delay: -12s;">÷</div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col-reverse gap-3">
+        <button class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white hover:border-transparent transition-all shadow-sm hidden md:flex" id="btnShortcuts" aria-label="Keyboard Shortcuts"><i class="fas fa-keyboard"></i></button>
+        <button class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white hover:border-transparent transition-all shadow-sm" onclick="App.view.navigateTo('view-about')" aria-label="About Prepogy"><i class="fas fa-info-circle"></i></button>
+    </div>
+
+    <!-- Shortcuts Modal -->
+    <div id="shortcutsModal" class="hidden fixed inset-0 z-[2000] bg-black/60 backdrop-blur-sm items-center justify-center p-5 [&.show]:flex" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="bg-white p-8 rounded-3xl w-full max-w-[500px] animate-fade-in-up relative shadow-2xl">
+            <button class="absolute top-4 right-4 text-2xl font-bold text-gray-300 hover:text-gray-500 transition-colors" onclick="App.toggleShortcuts(false)" aria-label="Close Shortcuts Modal">&times;</button>
+            <h2 id="modalTitle" class="text-xl font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-keyboard"></i> Shortcuts</h2>
+            <ul class="space-y-3 text-sm md:text-base">
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span>Select Option</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">A/B/C/D</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span>Next Question</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">Enter / →</span></li>
+                <li class="flex justify-between"><span>Back / Previous</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">Esc / ←</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="globalLoader" class="fixed inset-0 bg-white/95 z-[3000] hidden flex-col items-center justify-center transition-all">
+        <div class="w-12 h-12 border-[5px] border-indigo-100 border-t-primary rounded-full animate-spin"></div>
+        <p class="mt-4 font-bold text-primary tracking-tight animate-pulse">Accessing Prepogy Bank...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center py-10 md:py-16 px-5 relative shrink-0">
+        <!-- 4. PERFORMANCE: Fetch Priority & Explicit Dimensions for LCP Image -->
+        <!-- 5. SEO: Improved Alt Text -->
+        <div class="w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 cursor-pointer transition-all duration-300 hover:scale-110 drop-shadow-lg hover:drop-shadow-2xl flex items-center justify-center animate-floating" id="logoHome" role="button" aria-label="Go to Home" tabindex="0">
+            <img src="prep.png" alt="Prepogy - CMA MCQ Practice Platform Logo" width="144" height="144" class="w-full h-auto object-contain" fetchpriority="high" onerror="this.src='https://via.placeholder.com/150?text=P'">
+        </div>
+        <!-- Original Gradient and Spacing Restored -->
+        <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-extrabold uppercase tracking-[2px] text-gradient-original mb-1">Prepogy</h1>
+        <p class="text-[0.9em] text-slate-500 font-medium tracking-wide mt-1">Tailored MCQ Practice Exclusively for CMA Students</p>
+    </header>
+
+    <!-- flex-grow ensures main takes up remaining space -->
+    <main id="app" class="flex-grow flex flex-col relative w-full">
+        <!-- 1. HOME -->
+        <section id="view-home" class="view-section active">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="choice-card card-foundation group" onclick="App.view.navigateTo('view-foundation')">
+                    <i class="fas fa-seedling text-4xl text-emerald-500 mb-4 block group-hover:scale-110 transition-transform"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Foundation</h2>
+                    <p class="text-gray-400 text-sm mt-1">Level 1 | Papers 1 - 4</p>
+                </div>
+                <div class="choice-card card-inter group" onclick="App.view.navigateTo('view-inter')">
+                    <i class="fas fa-graduation-cap text-4xl text-indigo-500 mb-4 block group-hover:scale-110 transition-transform"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Intermediate</h2>
+                    <p class="text-gray-400 text-sm mt-1">Level 2 | Papers 5 - 12</p>
+                </div>
+                <div class="choice-card card-final group" onclick="App.view.navigateTo('view-final')">
+                    <i class="fas fa-trophy text-4xl text-amber-500 mb-4 block group-hover:scale-110 transition-transform"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Final</h2>
+                    <p class="text-gray-400 text-sm mt-1">Level 3 | Papers 13 - 20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INTER SUB-GROUP -->
+        <section id="view-inter" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-primary bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-primary hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="choice-card card-inter group" onclick="App.view.renderSubjects('interG1', 'Group I', 'subj-inter')">
+                    <h2 class="text-xl font-bold group-hover:text-indigo-600 transition-colors">Group I</h2>
+                    <p class="text-xs text-gray-400 mt-2">Papers 5 - 8</p>
+                </div>
+                <div class="choice-card card-inter group" onclick="App.view.renderSubjects('interG2', 'Group II', 'subj-inter')">
+                    <h2 class="text-xl font-bold group-hover:text-indigo-600 transition-colors">Group II</h2>
+                    <p class="text-xs text-gray-400 mt-2">Papers 9 - 12</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FINAL SUB-GROUP -->
+        <section id="view-final" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-amber-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-amber-500 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="choice-card card-final group" onclick="App.view.renderSubjects('finalG3', 'Group III', 'subj-final')">
+                    <h2 class="text-xl font-bold group-hover:text-amber-600 transition-colors">Group III</h2>
+                    <p class="text-xs text-gray-400 mt-2">Papers 13 - 16</p>
+                </div>
+                <div class="choice-card card-final group" onclick="App.view.renderSubjects('finalG4', 'Group IV', 'subj-final')">
+                    <h2 class="text-xl font-bold group-hover:text-amber-600 transition-colors">Group IV</h2>
+                    <p class="text-xs text-gray-400 mt-2">Papers 17 - 20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FOUNDATION LIST -->
+        <section id="view-foundation" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-emerald-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-emerald-500 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div id="foundationList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </section>
+
+        <!-- 5. GENERIC SUBJECTS LIST -->
+        <section id="view-subjects" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <h2 id="subjectsTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Subjects</h2>
+            <div id="subjectsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </section>
+
+        <!-- 6. PRACTICE DASHBOARD -->
+        <section id="view-dashboard" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <h2 id="dashTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Practice Mode</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="subject-card mode-bank flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('bm')">
+                    <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-primary"><i class="fas fa-university"></i></div>
+                    <div><h3 class="font-bold text-lg">Official MCQ Bank</h3><p class="text-xs text-slate-400">Syllabus 2022</p></div>
+                </div>
+                <div class="subject-card mode-pyq flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('sw')">
+                    <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-amber-500"><i class="fas fa-file-invoice"></i></div>
+                    <div><h3 class="font-bold text-lg">Exam Papers</h3><p class="text-xs text-slate-400">Previous Year Questions</p></div>
+                </div>
+                <div class="subject-card flex items-center gap-5 text-left p-6 opacity-60 grayscale cursor-not-allowed bg-slate-50 border-slate-200 pointer-events-none">
+                    <div class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 text-2xl text-slate-400"><i class="fas fa-book-open"></i></div>
+                    <div><h3 class="font-bold text-lg text-slate-500">Library Section</h3><p class="text-[10px] text-slate-400 font-bold italic">Coming soon</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. QUIZ INTERFACE -->
+        <section id="view-quiz" class="view-section">
+            <div class="max-w-2xl mx-auto">
+                <!-- Quiz Header -->
+                <div class="flex justify-between items-center mb-6">
+                    <button class="bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-500 font-bold text-xs hover:bg-slate-50 transition-colors flex items-center gap-2" onclick="App.view.goBack()" aria-label="Go Back">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <div class="flex items-center gap-3">
+                        <button onclick="App.quiz.resetLocalProgress()" class="text-[10px] text-red-400 font-bold uppercase hover:text-red-600 tracking-wide" aria-label="Reset Quiz Progress">Reset</button>
+                        <select id="setSelector" class="bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer" aria-label="Select Quiz Set"></select>
+                    </div>
+                </div>
+                
+                <!-- Scorecard -->
+                <div class="bg-white rounded-3xl p-4 flex shadow-sm mb-8 border border-slate-100 divide-x divide-slate-100">
+                    <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-emerald-500 mb-1" id="scoreCorrect">0</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Correct</span></div>
+                    <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-red-500 mb-1" id="scoreWrong">0</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Wrong</span></div>
+                    <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-primary mb-1" id="scoreAcc">0%</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Accuracy</span></div>
+                </div>
+
+                <!-- Question Card -->
+                <div id="questionArea" class="bg-white/95 backdrop-blur-md shadow-soft rounded-[28px] p-6 md:p-10 relative overflow-hidden transition-all duration-300">
+                    <i class="fas fa-pen-nib absolute -bottom-6 -right-6 text-[14rem] text-primary opacity-[0.03] -rotate-12 pointer-events-none" aria-hidden="true"></i>
+                    
+                    <p id="qIndexDisplay" class="text-[10px] font-bold text-primary uppercase mb-4 relative z-10 tracking-widest"></p>
+                    <h2 id="qTextDisplay" class="text-lg md:text-xl font-bold text-gray-800 mb-8 leading-relaxed relative z-10"></h2>
+                    
+                    <div id="optionsContainer" class="space-y-3 relative z-10"></div>
+                    
+                    <!-- Explanation Section -->
+                    <div id="explanationContainer" class="relative z-10 mt-6 p-5 bg-slate-50 rounded-2xl border-l-4 border-primary hidden animate-fade-in-up">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-xs font-bold uppercase text-primary tracking-wide">Explanation</h4>
+                            <!-- AI Button -->
+                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative p-[1.5px] rounded-full overflow-hidden inline-flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-sm group border-none bg-transparent" aria-label="Get AI Explanation">
+                                <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#4285f4,#34a853,#fbbc05,#ea4335,#4285f4)] animate-rotate-border"></div>
+                                <div class="relative bg-white px-3 py-1.5 rounded-full flex items-center gap-1.5 z-10">
+                                    <i class="fas fa-magnifying-glass-chart text-primary text-xs"></i>
+                                    <span class="font-bold text-[10px] text-slate-600">Get AI Explanation</span>
+                                </div>
+                            </button>
+                        </div>
+                        <p id="explanationText" class="text-sm text-slate-600 leading-relaxed"></p>
+                    </div>
+
+                    <div class="flex justify-between mt-10 pt-6 border-t border-slate-100 relative z-10">
+                        <button id="btnPrevQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-white border border-slate-200 text-slate-500 hover:bg-slate-50 invisible" aria-label="Previous Question">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button id="btnNextQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-primary text-white shadow-lg shadow-indigo-200 hover:bg-primary-dark hover:translate-y-[-2px]" aria-label="Next Question">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div id="resultsArea" class="hidden bg-white rounded-[28px] p-10 text-center shadow-xl animate-fade-in-up">
+                    <h2 class="text-3xl font-black text-primary mb-2">Quiz Finished!</h2>
+                    <div id="finalScoreDisplay" class="text-xl font-bold mb-4 text-slate-500"></div>
+                    <div id="quoteDisplay" class="bg-slate-50 border-2 border-dashed border-slate-200 p-6 rounded-2xl text-slate-600 font-medium mb-8 text-sm italic"></div>
+                    
+                    <div class="flex justify-center gap-4 mb-8">
+                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-[#25D366]" id="btnShareWA" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
+                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-[#0088cc]" id="btnShareTG" aria-label="Share on Telegram"><i class="fab fa-telegram-plane"></i></button>
+                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-gradient-to-tr from-[#f09433] to-[#bc1888]" id="btnShareInsta" title="Copy Link" aria-label="Copy Page Link"><i class="fas fa-link"></i></button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="App.quiz.loadSet(App.quiz.state.currentSetIdx)" class="bg-primary text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-primary-dark transition-colors">Try Again</button>
+                        <button onclick="App.view.resetToHome()" class="bg-slate-100 text-slate-500 py-4 rounded-2xl font-bold hover:bg-slate-200 transition-colors">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. ABOUT PREPOGY -->
+        <section id="view-about" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-xl leading-relaxed max-w-4xl mx-auto">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary flex items-center gap-3">📚 About Prepogy</h2>
+                <div class="space-y-6 text-slate-700">
+                    <p class="text-lg">My motivation for creating this website is to provide CMA students with an easy and effective way to prepare for their exams. 🎯</p>
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-l-4 border-primary">
+                        <p class="italic text-slate-600">"The idea sparked back in 2019 while I was preparing for my driving license test—a computer-based MCQ exam at the RTO. 🚗💻 I downloaded an app, attempted all 200 questions in one go, and despite making mistakes, the instant learning process was incredibly effective. That experience inspired me to build this platform for you! 💡✨"</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                        <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h3 class="font-bold text-emerald-700 mb-2 flex items-center gap-2"><i class="fas fa-check-circle"></i> Authentic Content</h3>
+                            <p class="text-sm">All questions are sourced directly from the official <strong>CMA Institute MCQ bank</strong>.</p>
+                        </div>
+                        <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h3 class="font-bold text-blue-700 mb-2 flex items-center gap-2"><i class="fas fa-rocket"></i> Targeted Success</h3>
+                            <p class="text-sm">Focus on Syllabus 2022 and Previous Year Questions (2013-2025).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. PRIVACY -->
+        <section id="view-privacy" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="bg-white p-10 rounded-[32px] shadow-lg max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 text-emerald-600">🛡️ Privacy Policy</h2>
+                <p class="text-slate-600 mb-4">At Prepogy.fun, one of our main priorities is the privacy of our visitors. We do not require registration or personal accounts.</p>
+                
+                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">1. Information We Collect</h3>
+                <p class="text-slate-600 mb-4 text-sm">Prepogy is designed to be a "privacy-first" platform. We do not store personal student identifiers.</p>
+                
+                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">2. Cookies</h3>
+                <p class="text-slate-600 mb-4 text-sm">We use standard analytics and ad-serving cookies to maintain site performance and support our educational mission.</p>
+            </div>
+        </section>
+
+        <!-- 10. TERMS -->
+        <section id="view-terms" class="view-section">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="bg-white p-10 rounded-[32px] shadow-lg max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 text-amber-600">📜 Terms and Conditions</h2>
+                <p class="text-slate-600 mb-4">Welcome to Prepogy. These terms outline the rules for using our practice platform.</p>
+                
+                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">1. Property Rights</h3>
+                <p class="text-slate-600 mb-4 text-sm">All educational MCQs and syllabus data are sourced from official ICMAI public materials for fair educational use.</p>
+                
+                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">2. Disclaimer</h3>
+                <p class="text-slate-600 mb-4 text-sm">The content provided is for practice purposes. Students should always consult official study modules for final preparation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center shrink-0">
+        <!-- 6. SEO: Improved Internal Linking (Semantic Anchors) -->
+        <div class="flex justify-center gap-6 mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="#" class="cursor-pointer hover:text-primary transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-about')" tabindex="0">About</a>
+            <a href="#" class="cursor-pointer hover:text-emerald-500 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-privacy')" tabindex="0">Privacy</a>
+            <a href="#" class="cursor-pointer hover:text-amber-600 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-terms')" tabindex="0">Terms</a>
+        </div>
+        <p class="text-slate-400 text-xs font-bold mb-2">Prepogy © 2025</p>
+        <p class="text-sm font-bold text-emerald-500 mt-4 flex items-center justify-center gap-2">
+            <!-- 5. SEO: Improved Alt Text -->
+            जय हिन्द <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India" width="20" height="13" class="w-5 rounded-[2px] shadow-sm" loading="lazy">
+        </p>
+    </footer>
+
+    <script>
+        const Config = {
+            baseTitle: "Prepogy - CMA MCQ Practice",
+            baseDesc: "Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets (2013-2025) for Syllabus 2022.",
+            syllabus: {
+                foundation: [
+                    {id:1,t:"P1: Business Laws", i:"fa-gavel", c:"text-emerald-500"},
+                    {id:2,t:"P2: Accounting", i:"fa-calculator", c:"text-blue-500"},
+                    {id:3,t:"P3: Maths & Stats", i:"fa-chart-line", c:"text-indigo-500"},
+                    {id:4,t:"P4: Economics", i:"fa-globe", c:"text-cyan-500"}
+                ],
+                interG1: [
+                    {id:5,t:"P5: Law & Ethics", i:"fa-scale-balanced", c:"text-indigo-600"},
+                    {id:6,t:"P6: Fin. Accounting", i:"fa-book", c:"text-blue-600"},
+                    {id:7,t:"P7: Taxation", i:"fa-receipt", c:"text-red-500"},
+                    {id:8,t:"P8: Cost Account", i:"fa-coins", c:"text-emerald-600"}
+                ],
+                interG2: [
+                    {id:9,t:"P9: OMSM", i:"fa-cogs", c:"text-gray-600"},
+                    {id:10,t:"P10: Audit", i:"fa-clipboard-check", c:"text-cyan-600"},
+                    {id:11,t:"P11: FMDA", i:"fa-chart-pie", c:"text-blue-400"},
+                    {id:12,t:"P12: Mgmt Account", i:"fa-laptop-code", c:"text-purple-600"}
+                ],
+                finalG3: [
+                    {id:13,t:"P13: Corp Laws", i:"fa-building-columns", c:"text-amber-700"},
+                    {id:14,t:"P14: SFM", i:"fa-chart-area", c:"text-emerald-500"},
+                    {id:15,t:"P15: DT & IT", i:"fa-earth-americas", c:"text-red-600"},
+                    {id:16,t:"P16: SCM", i:"fa-bullseye", c:"text-blue-700"}
+                ],
+                finalG4: [
+                    {id:17,t:"P17: Cost Audit", i:"fa-certificate", c:"text-orange-500"},
+                    {id:18,t:"P18: CFR", i:"fa-file-invoice-dollar", c:"text-blue-800"},
+                    {id:19,t:"P19: Indirect Tax", i:"fa-truck-fast", c:"text-red-400"},
+                    {id:'20A',t:"P20A: SPMBV", i:"fa-rocket", c:"text-pink-600"},
+                    {id:'20B',t:"P20B: Risk Mgmt", i:"fa-chess-knight", c:"text-violet-500"},
+                    {id:'20C',t:"P20C: International Taxation", i:"fa-plane-departure", c:"text-emerald-500"}
+                ]
+            },
+            quotes: [
+                "Knowledge growth is enhanced through collaborative sharing.",
+                "Supporting educational platforms ensures the continuity of quality resources.",
+                "Peer recommendations are vital for the expansion of this learning community.",
+                "Educational excellence is fostered when resources reach a wider audience.",
+                "Sharing high-quality study materials supports fellow aspirants in their journey."
+            ]
+        };
+
+        class ViewManager {
+            constructor() {
+                this.currentViewId = 'view-home';
+                window.addEventListener('popstate', (e) => this.handlePopState(e));
+            }
+            handlePopState(e) {
+                const targetId = e.state ? e.state.viewId : 'view-home';
+                this.showView(targetId, false);
+            }
+            navigateTo(viewId, push = true) {
+                if (this.currentViewId === viewId) return;
+                if (push) history.pushState({ viewId: viewId }, '', '');
+                this.showView(viewId);
+            }
+            goBack() { history.back(); }
+            resetToHome() { this.navigateTo('view-home'); }
+            
+            // FIXED: New smooth transition logic prevents footer jump and layout collapse
+            showView(viewId, updateState = true) {
+                const current = document.getElementById(this.currentViewId);
+                const next = document.getElementById(viewId);
+                
+                if (!next) return;
+                
+                // Hide current immediately (no fade out wait, for snappiness)
+                if (current) {
+                    current.classList.remove('active');
+                }
+                
+                // Prepare next view:
+                // 1. Make it block immediately so it takes up space (prevents footer jump)
+                // 2. But keep it invisible (opacity 0) for a moment
+                next.classList.add('preparing');
+                
+                // Force a browser reflow so the 'preparing' state is rendered
+                // This is crucial for the CSS transition to trigger correctly
+                void next.offsetWidth; 
+                
+                // Now trigger the visible state
+                requestAnimationFrame(() => {
+                    next.classList.remove('preparing');
+                    next.classList.add('active');
+                });
+
+                this.currentViewId = viewId;
+                this.updateMeta(viewId);
+                window.scrollTo(0,0);
+            }
+
+            // 6. SEO: Dynamic Meta Description & Title Update
+            updateMeta(viewId) {
+                let suffix = "Home";
+                let desc = Config.baseDesc;
+                const setMeta = (title, description) => {
+                    document.title = `${title} | ${Config.baseTitle}`;
+                    document.querySelector('meta[name="description"]').setAttribute("content", description);
+                };
+
+                switch(viewId) {
+                    case 'view-foundation': 
+                        setMeta("Foundation Level", "Practice CMA Foundation MCQs for Papers 1-4. Syllabus 2022 compliant.");
+                        break;
+                    case 'view-inter': 
+                        setMeta("Intermediate Level", "CMA Intermediate Group 1 & 2 MCQ practice. Financial Accounting, Law, Taxation, and Costing.");
+                        break;
+                    case 'view-final': 
+                        setMeta("Final Level", "CMA Final Group 3 & 4 practice. Advanced Law, SFM, SCM, and Direct Tax.");
+                        break;
+                    case 'view-subjects':
+                        const sTitle = document.getElementById('subjectsTitle').textContent;
+                        setMeta(sTitle, `Select a subject from ${sTitle} to begin MCQ practice.`);
+                        break;
+                    case 'view-dashboard':
+                        const dTitle = document.getElementById('dashTitle').textContent;
+                        setMeta(dTitle, `Start practicing ${dTitle}. Choose between Official Bank or Previous Year Questions.`);
+                        break;
+                    case 'view-quiz': 
+                        setMeta("Practice Session", "Interactive CMA MCQ Quiz Session. Test your knowledge now.");
+                        break;
+                    case 'view-about': 
+                        setMeta("About Us", "Learn about Prepogy's mission to help CMA aspirants succeed.");
+                        break;
+                    case 'view-privacy': 
+                        setMeta("Privacy Policy", "Prepogy Privacy Policy. We value your privacy and data security.");
+                        break;
+                    case 'view-terms': 
+                        setMeta("Terms & Conditions", "Terms of use for the Prepogy practice platform.");
+                        break;
+                    default:
+                        setMeta("Home", Config.baseDesc);
+                }
+            }
+            renderFoundation() {
+                const container = document.getElementById('foundationList');
+                if(container) container.innerHTML = Config.syllabus.foundation.map(p => this.createCard(p, 'card-foundation')).join('');
+            }
+            renderSubjects(key, title, theme) {
+                const titleEl = document.getElementById('subjectsTitle');
+                const listEl = document.getElementById('subjectsList');
+                if(titleEl) titleEl.textContent = title;
+                if(listEl) listEl.innerHTML = Config.syllabus[key].map(p => this.createCard(p, theme)).join('');
+                this.navigateTo('view-subjects');
+            }
+            createCard(p, theme) {
+                return `<div class="subject-card ${theme} flex items-center gap-5 text-left p-6" onclick="App.selectPaper('${p.id}', '${p.t}')" role="button" tabindex="0" onkeypress="if(event.key==='Enter') App.selectPaper('${p.id}', '${p.t}')">
+                    <div class="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shrink-0 text-2xl shadow-sm"><i class="fas ${p.i} ${p.c}"></i></div>
+                    <div><h3 class="font-bold text-gray-800">${p.t}</h3><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Practice Now</p></div>
+                </div>`;
+            }
+        }
+
+        class QuizManager {
+            constructor() {
+                this.state = { 
+                    paperId: null, 
+                    mode: null, 
+                    currentSetIdx: 0, 
+                    currentQIdx: 0, 
+                    score: { c: 0, w: 0 }, 
+                    dataSets: null, 
+                    answers: [] 
+                };
+                this.loader = document.getElementById('globalLoader');
+                document.getElementById('btnNextQ').onclick = () => this.changeQuestion(1);
+                document.getElementById('btnPrevQ').onclick = () => this.changeQuestion(-1);
+                
+                this.touchStartX = 0;
+                this.initGestures();
+            }
+
+            initGestures() {
+                const area = document.getElementById('questionArea');
+                area.addEventListener('touchstart', (e) => {
+                    this.touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                area.addEventListener('touchend', (e) => {
+                    const endX = e.changedTouches[0].screenX;
+                    const diff = this.touchStartX - endX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) this.changeQuestion(1);
+                        else this.changeQuestion(-1);
+                    }
+                }, { passive: true });
+            }
+
+            saveLocalProgress() {
+                const saveObj = {
+                    paperId: this.state.paperId,
+                    mode: this.state.mode,
+                    currentSetIdx: this.state.currentSetIdx,
+                    currentQIdx: this.state.currentQIdx,
+                    score: this.state.score,
+                    answers: this.state.answers
+                };
+                localStorage.setItem('prepogy_progress', JSON.stringify(saveObj));
+            }
+
+            resetLocalProgress() {
+                localStorage.removeItem('prepogy_progress');
+                this.loadSet(this.state.currentSetIdx);
+            }
+
+            async startQuizSession(mode) {
+                this.state.mode = mode;
+                let loaderTimeout = setTimeout(() => {
+                    this.loader.classList.remove('hidden');
+                    this.loader.style.display = 'flex';
+                }, 300);
+
+                const fileName = `${mode}${this.state.paperId}.js`;
+                try {
+                    const data = await this.loadFile(encodeURI(fileName));
+                    this.state.dataSets = data;
+                    this.setupSelector();
+                    App.view.navigateTo('view-quiz');
+                    
+                    const saved = localStorage.getItem('prepogy_progress');
+                    if (saved) {
+                        const parsed = JSON.parse(saved);
+                        if (parsed.paperId === this.state.paperId && parsed.mode === this.state.mode) {
+                            this.state.currentSetIdx = parsed.currentSetIdx;
+                            this.state.currentQIdx = parsed.currentQIdx;
+                            this.state.score = parsed.score;
+                            this.state.answers = parsed.answers;
+                            document.getElementById('setSelector').value = this.state.currentSetIdx;
+                            this.renderQuestion();
+                            this.updateUI();
+                            return;
+                        }
+                    }
+                    this.loadSet(0);
+                } catch (e) {
+                    console.error("Quiz load error", e);
+                } finally {
+                    clearTimeout(loaderTimeout);
+                    this.loader.classList.add('hidden');
+                    this.loader.style.display = 'none';
+                }
+            }
+
+            loadFile(fileName) {
+                return new Promise((resolve, reject) => {
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                    const handler = (e) => {
+                        if (e.data.type === 'SUCCESS') {
+                            window.removeEventListener('message', handler);
+                            iframe.remove();
+                            resolve(e.data.payload);
+                        } else if (e.data.type === 'ERROR') {
+                            window.removeEventListener('message', handler);
+                            iframe.remove();
+                            reject();
+                        }
+                    };
+                    window.addEventListener('message', handler);
+                    const doc = iframe.contentWindow.document;
+                    doc.open();
+                    doc.write(`<html><body><script src="${fileName}?t=${Date.now()}"><\/script><script>
+                        var pollCount = 0;
+                        var check = setInterval(() => {
+                            if (typeof quizSets !== 'undefined') {
+                                clearInterval(check);
+                                window.parent.postMessage({type: 'SUCCESS', payload: JSON.parse(JSON.stringify(quizSets))}, '*');
+                            }
+                            if (++pollCount > 100) { clearInterval(check); window.parent.postMessage({type: 'ERROR'}, '*'); }
+                        }, 50);
+                    <\/script></body></html>`);
+                    doc.close();
+                    setTimeout(() => reject(), 8000);
+                });
+            }
+
+            setupSelector() {
+                const s = document.getElementById('setSelector');
+                if(!s) return;
+                s.innerHTML = this.state.dataSets.map((set, i) => `<option value="${i}">${set.setName}</option>`).join('');
+                s.onchange = (e) => this.loadSet(parseInt(e.target.value));
+            }
+
+            loadSet(idx) {
+                this.state.currentSetIdx = idx;
+                this.state.currentQIdx = 0;
+                this.state.score = { c: 0, w: 0 };
+                this.state.answers = new Array(this.state.dataSets[idx].questions.length).fill(null);
+                document.getElementById('resultsArea').classList.add('hidden');
+                document.getElementById('questionArea').classList.remove('hidden');
+                document.getElementById('explanationContainer').style.display = 'none';
+                this.updateUI();
+                this.renderQuestion();
+                this.saveLocalProgress();
+            }
+
+            renderQuestion() {
+                const q = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx];
+                document.getElementById('qIndexDisplay').textContent = `Question ${this.state.currentQIdx + 1} / ${this.state.dataSets[this.state.currentSetIdx].questions.length}`;
+                document.getElementById('qTextDisplay').textContent = q.q;
+                
+                const expBox = document.getElementById('explanationContainer');
+                const expText = document.getElementById('explanationText');
+                
+                const container = document.getElementById('optionsContainer');
+                container.innerHTML = q.o.map((opt, i) => {
+                    const letter = String.fromCharCode(65 + i);
+                    const answered = this.state.answers[this.state.currentQIdx] !== null;
+                    const selected = this.state.answers[this.state.currentQIdx] === opt;
+                    const correct = opt === q.c;
+                    let cls = "option";
+                    if(answered) { 
+                        cls += " disabled"; 
+                        if(correct) cls += " correct"; else if(selected) cls += " incorrect"; 
+                    }
+                    return `<div class="${cls}" onclick="App.quiz.pick('${opt.replace(/'/g, "\\'")}')" role="button" tabindex="0">
+                        <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center font-bold mr-4 shrink-0 text-slate-600">${letter}</span>
+                        <span class="text-sm font-medium text-slate-700">${opt}</span>
+                    </div>`;
+                }).join('');
+
+                if(this.state.answers[this.state.currentQIdx] !== null) {
+                    expBox.style.display = 'block';
+                    expText.textContent = q.explanation || "This question is based on concepts from the official CMA Syllabus 2022 modules. Correct answer identification is crucial for exam accuracy.";
+                } else {
+                    expBox.style.display = 'none';
+                }
+
+                document.getElementById('btnPrevQ').style.visibility = this.state.currentQIdx === 0 ? 'hidden' : 'visible';
+                document.getElementById('btnNextQ').innerHTML = (this.state.currentQIdx === this.state.dataSets[this.state.currentSetIdx].questions.length - 1) ? 'Finish' : 'Next <i class="fas fa-arrow-right"></i>';
+            }
+
+            pick(val) {
+                if(this.state.answers[this.state.currentQIdx]) return;
+                this.state.answers[this.state.currentQIdx] = val;
+                const correct = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx].c;
+                if(val === correct) this.state.score.c++; else this.state.score.w++;
+                this.updateUI();
+                this.renderQuestion();
+                this.saveLocalProgress();
+            }
+
+            updateUI() {
+                const total = this.state.score.c + this.state.score.w;
+                document.getElementById('scoreCorrect').textContent = this.state.score.c;
+                document.getElementById('scoreWrong').textContent = this.state.score.w;
+                document.getElementById('scoreAcc').textContent = total > 0 ? Math.round((this.state.score.c/total)*100) + '%' : '0%';
+            }
+
+            changeQuestion(dir) {
+                const total = this.state.dataSets[this.state.currentSetIdx].questions.length;
+                const next = this.state.currentQIdx + dir;
+                
+                if (next < 0) return;
+                if (next >= total) { this.finish(); return; }
+
+                const area = document.getElementById('questionArea');
+                area.classList.add('opacity-0', 'scale-95');
+
+                setTimeout(() => {
+                    this.state.currentQIdx = next;
+                    this.renderQuestion();
+                    this.saveLocalProgress();
+                    area.classList.remove('opacity-0', 'scale-95');
+                }, 150);
+            }
+
+            finish() {
+                document.getElementById('questionArea').classList.add('hidden');
+                document.getElementById('resultsArea').classList.remove('hidden');
+                const qLen = this.state.dataSets[this.state.currentSetIdx].questions.length;
+                document.getElementById('finalScoreDisplay').textContent = `Correct Answers: ${this.state.score.c} / ${qLen}`;
+                const randQuote = Config.quotes[Math.floor(Math.random() * Config.quotes.length)];
+                document.getElementById('quoteDisplay').textContent = randQuote;
+                this.bindShare();
+                localStorage.removeItem('prepogy_progress');
+            }
+
+            bindShare() {
+                const url = "https://prepogy.fun";
+                const msg = "I just scored " + this.state.score.c + " on Prepogy! 🚀 Practice CMA MCQs Syllabus 2022 here: ";
+                document.getElementById('btnShareWA').onclick = () => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg + ' ' + url)}`);
+                document.getElementById('btnShareTG').onclick = () => window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`);
+                document.getElementById('btnShareInsta').onclick = () => { 
+                    const temp = document.createElement('input');
+                    document.body.appendChild(temp);
+                    temp.value = url;
+                    temp.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(temp);
+                };
+            }
+
+            openGoogleSearchExplanation() {
+                const q = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx];
+                const query = `Explain why "${q.c}" is the correct answer for this CMA MCQ: 
+Question: ${q.q}
+Options: ${q.o.join(', ')}`;
+                const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                try {
+                    const temp = document.createElement('textarea');
+                    temp.value = query;
+                    document.body.appendChild(temp);
+                    temp.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(temp);
+                } catch (e) {}
+                window.open(googleUrl, '_blank');
+            }
+        }
+
+        class PrepogyApp {
+            constructor() {
+                this.view = new ViewManager();
+                this.quiz = new QuizManager();
+                this.view.renderFoundation();
+                document.getElementById('logoHome').onclick = () => this.view.resetToHome();
+                document.getElementById('logoHome').onkeypress = (e) => { if(e.key==='Enter') this.view.resetToHome(); };
+                document.getElementById('btnShortcuts').onclick = () => this.toggleShortcuts(true);
+                document.addEventListener('keydown', (e) => this.handleKeys(e));
+            }
+            toggleShortcuts(show) { 
+                const el = document.getElementById('shortcutsModal');
+                if(show) el.classList.add('show'); else el.classList.remove('show');
+            }
+            selectPaper(id, title) {
+                this.quiz.state.paperId = id;
+                document.getElementById('dashTitle').textContent = title;
+
+                // Disable PYQ for Foundation (1-4) and Final (13+), Enable for Inter (5-12)
+                const pyqCard = document.querySelector('.mode-pyq');
+                if (pyqCard) {
+                    const numId = parseInt(id); 
+                    // Intermediate papers are IDs 5 through 12
+                    const isInter = !isNaN(numId) && numId >= 5 && numId <= 12;
+                    
+                    if (isInter) {
+                        pyqCard.classList.remove('opacity-60', 'grayscale', 'cursor-not-allowed', 'pointer-events-none');
+                    } else {
+                        // NEW: Remove grayscale to keep color matching
+                        pyqCard.classList.add('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
+                        pyqCard.classList.remove('grayscale');
+                    }
+                }
+
+                this.view.navigateTo('view-dashboard');
+            }
+            handleKeys(e) {
+                if (this.view.currentViewId !== 'view-quiz' || !this.quiz.state.dataSets) return;
+                const key = e.key.toLowerCase();
+                const keyMap = { 'a': 0, 'b': 1, 'c': 2, 'd': 3, '1': 0, '2': 1, '3': 2, '4': 3 };
+                if (key in keyMap) {
+                    const qIdx = this.quiz.state.currentQIdx;
+                    const sIdx = this.quiz.state.currentSetIdx;
+                    const question = this.quiz.state.dataSets[sIdx].questions[qIdx];
+                    if (question && question.o[keyMap[key]]) {
+                        this.quiz.pick(question.o[keyMap[key]]);
+                    }
+                }
+                if (key === 'arrowright' || key === 'enter') this.quiz.changeQuestion(1);
+                if (key === 'arrowleft' || key === 'escape') {
+                    if(key === 'arrowleft') this.quiz.changeQuestion(-1);
+                    else this.view.goBack();
+                }
+            }
+        }
+
+        const App = new PrepogyApp();
+    </script>
+</body>
+</html>
