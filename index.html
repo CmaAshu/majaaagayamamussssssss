@@ -669,22 +669,56 @@
                 document.getElementById('btnNextQ').onclick = () => this.changeQuestion(1);
                 document.getElementById('btnPrevQ').onclick = () => this.changeQuestion(-1);
                 
+                // Initialize touch tracking variables
                 this.touchStartX = 0;
+                this.touchStartY = 0;
+                this.touchStartTime = 0;
                 this.initGestures();
             }
 
             initGestures() {
                 const area = document.getElementById('questionArea');
+                
                 area.addEventListener('touchstart', (e) => {
-                    this.touchStartX = e.changedTouches[0].screenX;
+                    // 1. Ignore multi-touch (pinch-to-zoom)
+                    // If more than 1 finger is on screen, it's likely a zoom or specialized gesture
+                    if (e.touches.length > 1) return;
+
+                    this.touchStartX = e.changedTouches[0].clientX;
+                    this.touchStartY = e.changedTouches[0].clientY;
+                    this.touchStartTime = new Date().getTime();
                 }, { passive: true });
 
                 area.addEventListener('touchend', (e) => {
-                    const endX = e.changedTouches[0].screenX;
-                    const diff = this.touchStartX - endX;
-                    if (Math.abs(diff) > 50) {
-                        if (diff > 0) this.changeQuestion(1);
-                        else this.changeQuestion(-1);
+                    // Only process if it was a single-finger gesture ending
+                    // e.changedTouches usually contains the finger that was lifted
+                    if (e.changedTouches.length !== 1) return;
+
+                    const touch = e.changedTouches[0];
+                    const diffX = this.touchStartX - touch.clientX;
+                    const diffY = this.touchStartY - touch.clientY;
+                    const duration = new Date().getTime() - this.touchStartTime;
+
+                    // 2. Constants for better feel
+                    const minSwipeDistance = 50;  // Minimum px to count as swipe
+                    const maxSwipeTime = 500;     // Maximum ms to count as swipe (avoid slow drags)
+                    const verticalThresholdRatio = 1.5; // Horizontal move must be 1.5x larger than vertical
+
+                    // 3. Logic:
+                    // - Must be fast (not a slow drag)
+                    // - Must be long enough (pass threshold)
+                    // - Must be MORE horizontal than vertical (to prevent triggering while scrolling down)
+                    
+                    const isFastEnough = duration < maxSwipeTime;
+                    const isLongEnough = Math.abs(diffX) > minSwipeDistance;
+                    const isHorizontal = Math.abs(diffX) > (Math.abs(diffY) * verticalThresholdRatio);
+
+                    if (isFastEnough && isLongEnough && isHorizontal) {
+                        if (diffX > 0) {
+                            this.changeQuestion(1); // Swiped Left -> Next Question
+                        } else {
+                            this.changeQuestion(-1); // Swiped Right -> Prev Question
+                        }
                     }
                 }, { passive: true });
             }
