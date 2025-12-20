@@ -6,32 +6,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- 2. SEO: Structured Data (Schema Markup) -->
+    <!-- 2. SEO: Enhanced Structured Data (Schema Markup) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Prepogy",
-      "url": "https://prepogy.fun/",
-      "description": "Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets.",
+      "url": "https://prepogy.in/",
+      "description": "The ultimate CMA MCQ practice platform. Access authentic ICMAI previous year questions and chapter-wise mock tests for Syllabus 2022.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://prepogy.fun/?q={search_term_string}",
+        "target": "https://prepogy.in/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
     </script>
+    
+    <!-- Schema: Breadcrumb List -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://prepogy.in/"
+      }]
+    }
+    </script>
+
+    <!-- Schema: Organization with Social Links -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Prepogy",
-      "url": "https://prepogy.fun/",
-      "logo": "https://prepogy.fun/prep.png",
+      "url": "https://prepogy.in/",
+      "logo": "https://prepogy.in/prep.png",
       "sameAs": [
-        "https://prepogy.fun/"
+        "https://prepogy.in/",
+        "https://www.instagram.com/prepogy.in/",
+        "https://whatsapp.com/channel/0029Vb77tFDKQuJFr4fbCE3c"
       ],
-      "description": "Tailored MCQ Practice Platform Exclusively for CMA Students (Syllabus 2022).",
+      "description": "Tailored MCQ Practice Platform Exclusively for CMA Students (Syllabus 2022) featuring ICMAI previous year questions.",
       "audience": {
         "@type": "EducationalAudience",
         "educationalRole": "student"
@@ -56,25 +74,27 @@
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#6366f1">
     
-    <!-- SEO & Primary Meta -->
-    <title>Prepogy - CMA MCQ Practice Platform | Syllabus 2022</title>
-    <meta name="description" content="Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets (2013-2025) for Syllabus 2022.">
+    <!-- SEO & Primary Meta: Optimized for High-Traffic Keywords -->
+    <title>Prepogy - CMA MCQ Bank, ICMAI Previous Year Questions & Mock Tests</title>
+    <meta name="description" content="Free CMA MCQ practice platform for Syllabus 2022. Solve authentic ICMAI previous year questions (2013-2025) and chapter-wise mock tests for Foundation, Inter, and Final.">
+    <meta name="keywords" content="CMA MCQ, ICMAI Previous Year Questions, CMA Inter MCQ, CMA Foundation Mock Test, CMA Final Questions, ICMAI Syllabus 2022, Cost and Management Accountant">
+    
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://prepogy.fun/">
+    <link rel="canonical" href="https://prepogy.in/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://prepogy.fun/">
-    <meta property="og:title" content="Prepogy - CMA MCQ Practice Platform">
-    <meta property="og:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants.">
-    <meta property="og:image" content="https://prepogy.fun/prep.png">
+    <meta property="og:url" content="https://prepogy.in/">
+    <meta property="og:title" content="Prepogy - Best CMA MCQ Practice Platform">
+    <meta property="og:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants. Syllabus 2022 compliant.">
+    <meta property="og:image" content="https://prepogy.in/prep.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://prepogy.fun/">
+    <meta property="twitter:url" content="https://prepogy.in/">
     <meta property="twitter:title" content="Prepogy - CMA MCQ Practice Platform">
     <meta property="twitter:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants.">
-    <meta property="twitter:image" content="https://prepogy.fun/prep.png">
+    <meta property="twitter:image" content="https://prepogy.in/prep.png">
     
     <link rel="icon" href="prep.png" type="image/png">
     
@@ -82,7 +102,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- 3. PERFORMANCE: Defer Non-Critical CSS (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" fetchpriority="low">
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </noscript>
@@ -243,11 +263,12 @@
         <p class="mt-4 font-bold text-primary tracking-tight animate-pulse">Accessing Prepogy Bank...</p>
     </div>
 
-    <!-- Header -->
+    <!-- Header (H1) -->
     <header class="text-center py-10 md:py-16 px-5 relative shrink-0">
         <!-- 4. PERFORMANCE: Fetch Priority & Explicit Dimensions for LCP Image -->
         <!-- 5. SEO: Improved Alt Text -->
         <div class="w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 cursor-pointer transition-all duration-300 hover:scale-110 drop-shadow-lg hover:drop-shadow-2xl flex items-center justify-center animate-floating" id="logoHome" role="button" aria-label="Go to Home" tabindex="0">
+            <!-- Optimization: fetchpriority="high" for LCP element -->
             <img src="prep.png" alt="Prepogy - CMA MCQ Practice Platform Logo" width="144" height="144" class="w-full h-auto object-contain" fetchpriority="high" onerror="this.src='https://via.placeholder.com/150?text=P'">
         </div>
         <!-- Original Gradient and Spacing Restored -->
@@ -260,6 +281,7 @@
         <!-- 1. HOME -->
         <section id="view-home" class="view-section active">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Using H2 for key navigation points to improve structure -->
                 <div class="choice-card card-foundation group" onclick="App.view.navigateTo('view-foundation')">
                     <i class="fas fa-seedling text-4xl text-emerald-500 mb-4 block group-hover:scale-110 transition-transform"></i>
                     <h2 class="text-2xl font-bold text-gray-800">Foundation</h2>
@@ -325,6 +347,7 @@
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
+            <!-- H2 for Section Title -->
             <h2 id="subjectsTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Subjects</h2>
             <div id="subjectsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </section>
@@ -336,6 +359,7 @@
             </button>
             <h2 id="dashTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Practice Mode</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Using H3 for card details -->
                 <div class="subject-card mode-bank flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('bm')">
                     <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-primary"><i class="fas fa-university"></i></div>
                     <div><h3 class="font-bold text-lg">Official MCQ Bank</h3><p class="text-xs text-slate-400">Syllabus 2022</p></div>
@@ -456,7 +480,7 @@
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
             <div class="bg-white p-10 rounded-[32px] shadow-lg max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 text-emerald-600">🛡️ Privacy Policy</h2>
-                <p class="text-slate-600 mb-4">At Prepogy.fun, one of our main priorities is the privacy of our visitors. We do not require registration or personal accounts.</p>
+                <p class="text-slate-600 mb-4">At Prepogy.in, one of our main priorities is the privacy of our visitors. We do not require registration or personal accounts.</p>
                 
                 <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">1. Information We Collect</h3>
                 <p class="text-slate-600 mb-4 text-sm">Prepogy is designed to be a "privacy-first" platform. We do not store personal student identifiers.</p>
@@ -483,23 +507,34 @@
     </main>
 
     <footer class="py-10 text-center shrink-0">
+        <!-- New: Social Links for WhatsApp Channel and Instagram -->
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="https://whatsapp.com/channel/0029Vb77tFDKQuJFr4fbCE3c" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:-translate-y-1 hover:bg-[#25D366] group" aria-label="Join WhatsApp Channel">
+                <i class="fab fa-whatsapp text-xl text-slate-400 group-hover:text-white"></i>
+            </a>
+            <a href="https://www.instagram.com/prepogy.in/" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:-translate-y-1 hover:bg-[#E1306C] group" aria-label="Follow on Instagram">
+                <i class="fab fa-instagram text-xl text-slate-400 group-hover:text-white"></i>
+            </a>
+        </div>
+
         <!-- 6. SEO: Improved Internal Linking (Semantic Anchors) -->
         <div class="flex justify-center gap-6 mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
-            <a href="#" class="cursor-pointer hover:text-primary transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-about')" tabindex="0">About</a>
-            <a href="#" class="cursor-pointer hover:text-emerald-500 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-privacy')" tabindex="0">Privacy</a>
-            <a href="#" class="cursor-pointer hover:text-amber-600 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-terms')" tabindex="0">Terms</a>
+            <!-- Updated to semantic hrefs for SEO, while keeping JS behavior -->
+            <a href="#about" class="cursor-pointer hover:text-primary transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-about')" tabindex="0">About</a>
+            <a href="#privacy" class="cursor-pointer hover:text-emerald-500 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-privacy')" tabindex="0">Privacy</a>
+            <a href="#terms" class="cursor-pointer hover:text-amber-600 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-terms')" tabindex="0">Terms</a>
         </div>
         <p class="text-slate-400 text-xs font-bold mb-2">Prepogy © 2025</p>
         <p class="text-sm font-bold text-emerald-500 mt-4 flex items-center justify-center gap-2">
-            <!-- 5. SEO: Improved Alt Text -->
+            <!-- 5. SEO: Improved Alt Text & Lazy Loading -->
             जय हिन्द <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India" width="20" height="13" class="w-5 rounded-[2px] shadow-sm" loading="lazy">
         </p>
     </footer>
 
     <script>
         const Config = {
-            baseTitle: "Prepogy - CMA MCQ Practice",
-            baseDesc: "Master ICMAI exams with Prepogy. Authentic CMA MCQ bank and previous year question sets (2013-2025) for Syllabus 2022.",
+            baseTitle: "Prepogy - CMA MCQ Bank, ICMAI Previous Year Questions & Mock Tests",
+            baseDesc: "Free CMA MCQ practice platform. Solve authentic ICMAI previous year questions (2013-2025) and chapter-wise mock tests for Foundation, Inter, and Final (Syllabus 2022).",
             syllabus: {
                 foundation: [
                     {id:1,t:"P1: Business Laws", i:"fa-gavel", c:"text-emerald-500"},
@@ -592,10 +627,8 @@
                 window.scrollTo(0,0);
             }
 
-            // 6. SEO: Dynamic Meta Description & Title Update
+            // 6. SEO: Dynamic Meta Description & Title Update with KEYWORDS
             updateMeta(viewId) {
-                let suffix = "Home";
-                let desc = Config.baseDesc;
                 const setMeta = (title, description) => {
                     document.title = `${title} | ${Config.baseTitle}`;
                     document.querySelector('meta[name="description"]').setAttribute("content", description);
@@ -603,27 +636,27 @@
 
                 switch(viewId) {
                     case 'view-foundation': 
-                        setMeta("Foundation Level", "Practice CMA Foundation MCQs for Papers 1-4. Syllabus 2022 compliant.");
+                        setMeta("CMA Foundation MCQs | Papers 1-4", "Practice free CMA Foundation MCQs. Authentic ICMAI Syllabus 2022 questions for Business Laws, Accounting, Maths & Economics.");
                         break;
                     case 'view-inter': 
-                        setMeta("Intermediate Level", "CMA Intermediate Group 1 & 2 MCQ practice. Financial Accounting, Law, Taxation, and Costing.");
+                        setMeta("CMA Inter MCQ Bank & Previous Papers", "CMA Intermediate Group 1 & 2 MCQ practice. Syllabus 2022 mocks for Financial Accounting, Law, Taxation, and Costing.");
                         break;
                     case 'view-final': 
-                        setMeta("Final Level", "CMA Final Group 3 & 4 practice. Advanced Law, SFM, SCM, and Direct Tax.");
+                        setMeta("CMA Final Mock Test & MCQs", "CMA Final Group 3 & 4 practice. Advanced Law, SFM, SCM, and Direct Tax. ICMAI previous year question bank included.");
                         break;
                     case 'view-subjects':
                         const sTitle = document.getElementById('subjectsTitle').textContent;
-                        setMeta(sTitle, `Select a subject from ${sTitle} to begin MCQ practice.`);
+                        setMeta(`${sTitle} - Free CMA MCQ Practice`, `Select a subject from ${sTitle} to begin free CMA MCQ practice online.`);
                         break;
                     case 'view-dashboard':
                         const dTitle = document.getElementById('dashTitle').textContent;
-                        setMeta(dTitle, `Start practicing ${dTitle}. Choose between Official Bank or Previous Year Questions.`);
+                        setMeta(dTitle, `Start practicing ${dTitle}. Choose between Official ICMAI MCQ Bank or Previous Year Questions.`);
                         break;
                     case 'view-quiz': 
-                        setMeta("Practice Session", "Interactive CMA MCQ Quiz Session. Test your knowledge now.");
+                        setMeta("CMA MCQ Quiz Session", "Interactive CMA MCQ Quiz Session. Test your knowledge with instant results and explanations.");
                         break;
                     case 'view-about': 
-                        setMeta("About Us", "Learn about Prepogy's mission to help CMA aspirants succeed.");
+                        setMeta("About Prepogy", "Learn about Prepogy's mission to help CMA aspirants succeed with free educational resources.");
                         break;
                     case 'view-privacy': 
                         setMeta("Privacy Policy", "Prepogy Privacy Policy. We value your privacy and data security.");
@@ -778,12 +811,18 @@
                 }
             }
 
+            // OPTIMIZED: Removed timestamp to enable caching
+            // OPTIMIZED: Replaced polling loop with direct onload event
             loadFile(fileName) {
                 return new Promise((resolve, reject) => {
                     const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     document.body.appendChild(iframe);
+                    
                     const handler = (e) => {
+                        // Ensure security and check source
+                        if (e.source !== iframe.contentWindow) return;
+
                         if (e.data.type === 'SUCCESS') {
                             window.removeEventListener('message', handler);
                             iframe.remove();
@@ -795,20 +834,35 @@
                         }
                     };
                     window.addEventListener('message', handler);
+                    
                     const doc = iframe.contentWindow.document;
                     doc.open();
-                    doc.write(`<html><body><script src="${fileName}?t=${Date.now()}"><\/script><script>
-                        var pollCount = 0;
-                        var check = setInterval(() => {
-                            if (typeof quizSets !== 'undefined') {
-                                clearInterval(check);
-                                window.parent.postMessage({type: 'SUCCESS', payload: JSON.parse(JSON.stringify(quizSets))}, '*');
+                    
+                    // Optimization: We write a script that triggers immediately onload 
+                    // instead of setInterval polling.
+                    doc.write(`<html><body>
+                        <script>
+                            function triggerSuccess() {
+                                if (typeof quizSets !== 'undefined') {
+                                    window.parent.postMessage({type: 'SUCCESS', payload: JSON.parse(JSON.stringify(quizSets))}, '*');
+                                } else {
+                                    triggerError();
+                                }
                             }
-                            if (++pollCount > 100) { clearInterval(check); window.parent.postMessage({type: 'ERROR'}, '*'); }
-                        }, 50);
-                    <\/script></body></html>`);
+                            function triggerError() {
+                                window.parent.postMessage({type: 'ERROR'}, '*');
+                            }
+                        <\/script>
+                        <script src="${fileName}" onload="triggerSuccess()" onerror="triggerError()"><\/script>
+                    </body></html>`);
                     doc.close();
-                    setTimeout(() => reject(), 8000);
+                    
+                    // Fallback timeout (increased just in case, but response should be instant from cache)
+                    setTimeout(() => {
+                        window.removeEventListener('message', handler);
+                        if(iframe.parentNode) iframe.remove();
+                        reject(new Error("Timeout"));
+                    }, 10000);
                 });
             }
 
@@ -915,7 +969,7 @@
             }
 
             bindShare() {
-                const url = "https://prepogy.fun";
+                const url = "https://prepogy.in";
                 const msg = "I just scored " + this.state.score.c + " on Prepogy! 🚀 Practice CMA MCQs Syllabus 2022 here: ";
                 document.getElementById('btnShareWA').onclick = () => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg + ' ' + url)}`);
                 document.getElementById('btnShareTG').onclick = () => window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`);
