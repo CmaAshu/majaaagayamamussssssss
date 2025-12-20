@@ -410,11 +410,14 @@
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-xs font-bold uppercase text-primary tracking-wide">Explanation</h4>
                             <!-- AI Button -->
-                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative p-[1.5px] rounded-full overflow-hidden inline-flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-sm group border-none bg-transparent" aria-label="Get AI Explanation">
+                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative group overflow-hidden rounded-full p-[1.5px] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 active:scale-95" aria-label="Ask Guru G">
+                                <!-- Rotating Border (Google Colors) -->
                                 <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#4285f4,#34a853,#fbbc05,#ea4335,#4285f4)] animate-rotate-border"></div>
-                                <div class="relative bg-white px-3 py-1.5 rounded-full flex items-center gap-1.5 z-10">
-                                    <i class="fas fa-magnifying-glass-chart text-primary text-xs"></i>
-                                    <span class="font-bold text-[10px] text-slate-600">Get AI Explanation</span>
+                                
+                                <!-- Inner Button Content -->
+                                <div class="relative bg-white px-4 py-2 rounded-full flex items-center gap-2 z-10 transition-colors group-hover:bg-slate-50">
+                                    <i class="fab fa-google text-transparent bg-clip-text bg-gradient-to-tr from-[#4285f4] to-[#ea4335] text-sm"></i>
+                                    <span class="font-bold text-xs text-slate-700 group-hover:text-[#4285f4] transition-colors">Ask Guru G</span>
                                 </div>
                             </button>
                         </div>
@@ -989,14 +992,9 @@
 Question: ${q.q}
 Options: ${q.o.join(', ')}`;
                 const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-                try {
-                    const temp = document.createElement('textarea');
-                    temp.value = query;
-                    document.body.appendChild(temp);
-                    temp.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(temp);
-                } catch (e) {}
+                
+                // CLIPBOARD COPY REMOVED
+                
                 window.open(googleUrl, '_blank');
             }
         }
