@@ -135,6 +135,8 @@
                         'bounce-subtle': 'subtle-bounce 0.6s ease infinite',
                         'fade-in-up': 'fadeInUp 0.3s ease forwards',
                         'rotate-border': 'rotate-border 3s linear infinite',
+                        'shimmer': 'shimmer 4s infinite',
+                        'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
                     },
                     keyframes: {
                         rise: {
@@ -156,6 +158,14 @@
                         'rotate-border': {
                             'from': { transform: 'rotate(0deg)' },
                             'to': { transform: 'rotate(360deg)' },
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-150%)' },
+                            '100%': { transform: 'translateX(150%)' },
+                        },
+                        'pulse-soft': {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.015)', opacity: '0.95' },
                         }
                     }
                 }
@@ -410,14 +420,11 @@
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-xs font-bold uppercase text-primary tracking-wide">Explanation</h4>
                             <!-- AI Button -->
-                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative group overflow-hidden rounded-full p-[1.5px] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 active:scale-95" aria-label="Ask Guru G">
-                                <!-- Rotating Border (Google Colors) -->
+                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative p-[1.5px] rounded-full overflow-hidden inline-flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-sm group border-none bg-transparent" aria-label="Get AI Explanation">
                                 <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#4285f4,#34a853,#fbbc05,#ea4335,#4285f4)] animate-rotate-border"></div>
-                                
-                                <!-- Inner Button Content -->
-                                <div class="relative bg-white px-4 py-2 rounded-full flex items-center gap-2 z-10 transition-colors group-hover:bg-slate-50">
-                                    <i class="fab fa-google text-transparent bg-clip-text bg-gradient-to-tr from-[#4285f4] to-[#ea4335] text-sm"></i>
-                                    <span class="font-bold text-xs text-slate-700 group-hover:text-[#4285f4] transition-colors">Ask Guru G</span>
+                                <div class="relative bg-white px-3 py-1.5 rounded-full flex items-center gap-1.5 z-10">
+                                    <i class="fas fa-magnifying-glass-chart text-primary text-xs"></i>
+                                    <span class="font-bold text-[10px] text-slate-600">Get AI Explanation</span>
                                 </div>
                             </button>
                         </div>
@@ -435,15 +442,45 @@
                 </div>
 
                 <!-- Results Card -->
-                <div id="resultsArea" class="hidden bg-white rounded-[28px] p-10 text-center shadow-xl animate-fade-in-up">
-                    <h2 class="text-3xl font-black text-primary mb-2">Quiz Finished!</h2>
-                    <div id="finalScoreDisplay" class="text-xl font-bold mb-4 text-slate-500"></div>
-                    <div id="quoteDisplay" class="bg-slate-50 border-2 border-dashed border-slate-200 p-6 rounded-2xl text-slate-600 font-medium mb-8 text-sm italic"></div>
-                    
-                    <div class="flex justify-center gap-4 mb-8">
-                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-[#25D366]" id="btnShareWA" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></button>
-                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-[#0088cc]" id="btnShareTG" aria-label="Share on Telegram"><i class="fab fa-telegram-plane"></i></button>
-                        <button class="w-11 h-11 rounded-xl flex items-center justify-center text-white text-lg transition-all hover:-translate-y-1 shadow-md bg-gradient-to-tr from-[#f09433] to-[#bc1888]" id="btnShareInsta" title="Copy Link" aria-label="Copy Page Link"><i class="fas fa-link"></i></button>
+                <div id="resultsArea" class="hidden bg-white rounded-[28px] p-6 md:p-10 text-center shadow-xl animate-fade-in-up">
+                    <h2 class="text-2xl md:text-3xl font-black text-primary mb-2">Quiz Finished!</h2>
+                    <div id="finalScoreDisplay" class="text-lg md:text-xl font-bold mb-6 text-slate-500"></div>
+
+                    <!-- Enhanced Share Encouragement Section -->
+                    <div class="relative overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-emerald-500 p-[2px] rounded-[32px] mb-8 animate-pulse-soft">
+                        <div class="bg-white rounded-[30px] p-6 md:p-8 relative overflow-hidden">
+                            <!-- Shimmer Effect Layer -->
+                            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 translate-x-[-150%] animate-shimmer"></div>
+                            </div>
+
+                            <h3 class="text-lg md:text-xl font-extrabold text-gray-800 mb-4 relative z-10">Help Others Learn 📚 — Share This Quiz!</h3>
+                            
+                            <div id="quoteDisplay" class="text-slate-600 font-medium mb-8 text-sm md:text-base italic leading-relaxed relative z-10 px-4 min-h-[3rem] flex items-center justify-center">
+                                <!-- Quote injected here -->
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-3 md:gap-6 relative z-10">
+                                <button id="btnShareWA" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Share on WhatsApp">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#25D366] group-hover:shadow-green-200 transition-all">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">WhatsApp</span>
+                                </button>
+                                <button id="btnShareTG" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Share on Telegram">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#0088cc] group-hover:shadow-blue-200 transition-all">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </div>
+                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">Telegram</span>
+                                </button>
+                                <button id="btnShareCopy" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Copy Link">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-slate-700 group-hover:shadow-slate-300 transition-all">
+                                        <i class="fas fa-link"></i>
+                                    </div>
+                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">Copy Link</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
@@ -573,11 +610,16 @@
                 ]
             },
             quotes: [
-                "Knowledge growth is enhanced through collaborative sharing.",
-                "Supporting educational platforms ensures the continuity of quality resources.",
-                "Peer recommendations are vital for the expansion of this learning community.",
-                "Educational excellence is fostered when resources reach a wider audience.",
-                "Sharing high-quality study materials supports fellow aspirants in their journey."
+                "Knowledge grows when shared. Help a friend prepare better 📚",
+                "Your share helps keep Prepogy free and improving 🚀",
+                "If this helped you, it can help someone else too. Share it!",
+                "Learning is better together. Invite your friends 👥",
+                "Your support through sharing helps us add more MCQs faster 💙",
+                "One share = one more student prepared better 🎯",
+                "Exams are tough — sharing good resources makes them easier.",
+                "Help Prepogy grow so we can keep helping CMA students.",
+                "Don’t keep good resources to yourself — share the knowledge!",
+                "Your share directly supports maintenance and future features ⚙️"
             ]
         };
 
@@ -598,28 +640,16 @@
             goBack() { history.back(); }
             resetToHome() { this.navigateTo('view-home'); }
             
-            // FIXED: New smooth transition logic prevents footer jump and layout collapse
             showView(viewId, updateState = true) {
                 const current = document.getElementById(this.currentViewId);
                 const next = document.getElementById(viewId);
                 
                 if (!next) return;
+                if (current) current.classList.remove('active');
                 
-                // Hide current immediately (no fade out wait, for snappiness)
-                if (current) {
-                    current.classList.remove('active');
-                }
-                
-                // Prepare next view:
-                // 1. Make it block immediately so it takes up space (prevents footer jump)
-                // 2. But keep it invisible (opacity 0) for a moment
                 next.classList.add('preparing');
-                
-                // Force a browser reflow so the 'preparing' state is rendered
-                // This is crucial for the CSS transition to trigger correctly
                 void next.offsetWidth; 
                 
-                // Now trigger the visible state
                 requestAnimationFrame(() => {
                     next.classList.remove('preparing');
                     next.classList.add('active');
@@ -630,7 +660,6 @@
                 window.scrollTo(0,0);
             }
 
-            // 6. SEO: Dynamic Meta Description & Title Update with KEYWORDS
             updateMeta(viewId) {
                 const setMeta = (title, description) => {
                     document.title = `${title} | ${Config.baseTitle}`;
@@ -704,57 +733,26 @@
                 this.loader = document.getElementById('globalLoader');
                 document.getElementById('btnNextQ').onclick = () => this.changeQuestion(1);
                 document.getElementById('btnPrevQ').onclick = () => this.changeQuestion(-1);
-                
-                // Initialize touch tracking variables
-                this.touchStartX = 0;
-                this.touchStartY = 0;
-                this.touchStartTime = 0;
                 this.initGestures();
             }
 
             initGestures() {
                 const area = document.getElementById('questionArea');
-                
                 area.addEventListener('touchstart', (e) => {
-                    // 1. Ignore multi-touch (pinch-to-zoom)
-                    // If more than 1 finger is on screen, it's likely a zoom or specialized gesture
                     if (e.touches.length > 1) return;
-
                     this.touchStartX = e.changedTouches[0].clientX;
                     this.touchStartY = e.changedTouches[0].clientY;
                     this.touchStartTime = new Date().getTime();
                 }, { passive: true });
 
                 area.addEventListener('touchend', (e) => {
-                    // Only process if it was a single-finger gesture ending
-                    // e.changedTouches usually contains the finger that was lifted
                     if (e.changedTouches.length !== 1) return;
-
                     const touch = e.changedTouches[0];
                     const diffX = this.touchStartX - touch.clientX;
                     const diffY = this.touchStartY - touch.clientY;
                     const duration = new Date().getTime() - this.touchStartTime;
-
-                    // 2. Constants for better feel
-                    const minSwipeDistance = 50;  // Minimum px to count as swipe
-                    const maxSwipeTime = 500;     // Maximum ms to count as swipe (avoid slow drags)
-                    const verticalThresholdRatio = 1.5; // Horizontal move must be 1.5x larger than vertical
-
-                    // 3. Logic:
-                    // - Must be fast (not a slow drag)
-                    // - Must be long enough (pass threshold)
-                    // - Must be MORE horizontal than vertical (to prevent triggering while scrolling down)
-                    
-                    const isFastEnough = duration < maxSwipeTime;
-                    const isLongEnough = Math.abs(diffX) > minSwipeDistance;
-                    const isHorizontal = Math.abs(diffX) > (Math.abs(diffY) * verticalThresholdRatio);
-
-                    if (isFastEnough && isLongEnough && isHorizontal) {
-                        if (diffX > 0) {
-                            this.changeQuestion(1); // Swiped Left -> Next Question
-                        } else {
-                            this.changeQuestion(-1); // Swiped Right -> Prev Question
-                        }
+                    if (duration < 500 && Math.abs(diffX) > 50 && Math.abs(diffX) > (Math.abs(diffY) * 1.5)) {
+                        if (diffX > 0) this.changeQuestion(1); else this.changeQuestion(-1);
                     }
                 }, { passive: true });
             }
@@ -789,7 +787,6 @@
                     this.state.dataSets = data;
                     this.setupSelector();
                     App.view.navigateTo('view-quiz');
-                    
                     const saved = localStorage.getItem('prepogy_progress');
                     if (saved) {
                         const parsed = JSON.parse(saved);
@@ -814,18 +811,13 @@
                 }
             }
 
-            // OPTIMIZED: Removed timestamp to enable caching
-            // OPTIMIZED: Replaced polling loop with direct onload event
             loadFile(fileName) {
                 return new Promise((resolve, reject) => {
                     const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     document.body.appendChild(iframe);
-                    
                     const handler = (e) => {
-                        // Ensure security and check source
                         if (e.source !== iframe.contentWindow) return;
-
                         if (e.data.type === 'SUCCESS') {
                             window.removeEventListener('message', handler);
                             iframe.remove();
@@ -837,35 +829,11 @@
                         }
                     };
                     window.addEventListener('message', handler);
-                    
                     const doc = iframe.contentWindow.document;
                     doc.open();
-                    
-                    // Optimization: We write a script that triggers immediately onload 
-                    // instead of setInterval polling.
-                    doc.write(`<html><body>
-                        <script>
-                            function triggerSuccess() {
-                                if (typeof quizSets !== 'undefined') {
-                                    window.parent.postMessage({type: 'SUCCESS', payload: JSON.parse(JSON.stringify(quizSets))}, '*');
-                                } else {
-                                    triggerError();
-                                }
-                            }
-                            function triggerError() {
-                                window.parent.postMessage({type: 'ERROR'}, '*');
-                            }
-                        <\/script>
-                        <script src="${fileName}" onload="triggerSuccess()" onerror="triggerError()"><\/script>
-                    </body></html>`);
+                    doc.write(`<html><body><script>function triggerSuccess(){if(typeof quizSets!=='undefined'){window.parent.postMessage({type:'SUCCESS',payload:JSON.parse(JSON.stringify(quizSets))},'*');}else{triggerError();}}function triggerError(){window.parent.postMessage({type:'ERROR'},'*');}<\/script><script src="${fileName}" onload="triggerSuccess()" onerror="triggerError()"><\/script></body></html>`);
                     doc.close();
-                    
-                    // Fallback timeout (increased just in case, but response should be instant from cache)
-                    setTimeout(() => {
-                        window.removeEventListener('message', handler);
-                        if(iframe.parentNode) iframe.remove();
-                        reject(new Error("Timeout"));
-                    }, 10000);
+                    setTimeout(() => { window.removeEventListener('message', handler); if(iframe.parentNode) iframe.remove(); reject(new Error("Timeout")); }, 10000);
                 });
             }
 
@@ -893,10 +861,8 @@
                 const q = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx];
                 document.getElementById('qIndexDisplay').textContent = `Question ${this.state.currentQIdx + 1} / ${this.state.dataSets[this.state.currentSetIdx].questions.length}`;
                 document.getElementById('qTextDisplay').textContent = q.q;
-                
                 const expBox = document.getElementById('explanationContainer');
                 const expText = document.getElementById('explanationText');
-                
                 const container = document.getElementById('optionsContainer');
                 container.innerHTML = q.o.map((opt, i) => {
                     const letter = String.fromCharCode(65 + i);
@@ -904,23 +870,10 @@
                     const selected = this.state.answers[this.state.currentQIdx] === opt;
                     const correct = opt === q.c;
                     let cls = "option";
-                    if(answered) { 
-                        cls += " disabled"; 
-                        if(correct) cls += " correct"; else if(selected) cls += " incorrect"; 
-                    }
-                    return `<div class="${cls}" onclick="App.quiz.pick('${opt.replace(/'/g, "\\'")}')" role="button" tabindex="0">
-                        <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center font-bold mr-4 shrink-0 text-slate-600">${letter}</span>
-                        <span class="text-sm font-medium text-slate-700">${opt}</span>
-                    </div>`;
+                    if(answered) { cls += " disabled"; if(correct) cls += " correct"; else if(selected) cls += " incorrect"; }
+                    return `<div class="${cls}" onclick="App.quiz.pick('${opt.replace(/'/g, "\\'")}')" role="button" tabindex="0"><span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center font-bold mr-4 shrink-0 text-slate-600">${letter}</span><span class="text-sm font-medium text-slate-700">${opt}</span></div>`;
                 }).join('');
-
-                if(this.state.answers[this.state.currentQIdx] !== null) {
-                    expBox.style.display = 'block';
-                    expText.textContent = q.explanation || "This question is based on concepts from the official CMA Syllabus 2022 modules. Correct answer identification is crucial for exam accuracy.";
-                } else {
-                    expBox.style.display = 'none';
-                }
-
+                if(this.state.answers[this.state.currentQIdx] !== null) { expBox.style.display = 'block'; expText.textContent = q.explanation || "This question is based on concepts from the official CMA Syllabus 2022 modules."; } else { expBox.style.display = 'none'; }
                 document.getElementById('btnPrevQ').style.visibility = this.state.currentQIdx === 0 ? 'hidden' : 'visible';
                 document.getElementById('btnNextQ').innerHTML = (this.state.currentQIdx === this.state.dataSets[this.state.currentSetIdx].questions.length - 1) ? 'Finish' : 'Next <i class="fas fa-arrow-right"></i>';
             }
@@ -945,13 +898,10 @@
             changeQuestion(dir) {
                 const total = this.state.dataSets[this.state.currentSetIdx].questions.length;
                 const next = this.state.currentQIdx + dir;
-                
                 if (next < 0) return;
                 if (next >= total) { this.finish(); return; }
-
                 const area = document.getElementById('questionArea');
                 area.classList.add('opacity-0', 'scale-95');
-
                 setTimeout(() => {
                     this.state.currentQIdx = next;
                     this.renderQuestion();
@@ -965,8 +915,11 @@
                 document.getElementById('resultsArea').classList.remove('hidden');
                 const qLen = this.state.dataSets[this.state.currentSetIdx].questions.length;
                 document.getElementById('finalScoreDisplay').textContent = `Correct Answers: ${this.state.score.c} / ${qLen}`;
+                
+                // Select Random Encouragement Quote
                 const randQuote = Config.quotes[Math.floor(Math.random() * Config.quotes.length)];
                 document.getElementById('quoteDisplay').textContent = randQuote;
+                
                 this.bindShare();
                 localStorage.removeItem('prepogy_progress');
             }
@@ -976,25 +929,38 @@
                 const msg = "I just scored " + this.state.score.c + " on Prepogy! 🚀 Practice CMA MCQs Syllabus 2022 here: ";
                 document.getElementById('btnShareWA').onclick = () => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg + ' ' + url)}`);
                 document.getElementById('btnShareTG').onclick = () => window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`);
-                document.getElementById('btnShareInsta').onclick = () => { 
+                document.getElementById('btnShareCopy').onclick = () => { 
                     const temp = document.createElement('input');
                     document.body.appendChild(temp);
                     temp.value = url;
                     temp.select();
                     document.execCommand('copy');
                     document.body.removeChild(temp);
+                    
+                    // Small visual feedback for copy
+                    const btnLabel = document.querySelector('#btnShareCopy span');
+                    const original = btnLabel.textContent;
+                    btnLabel.textContent = "COPIED!";
+                    btnLabel.classList.add('text-emerald-500');
+                    setTimeout(() => {
+                        btnLabel.textContent = original;
+                        btnLabel.classList.remove('text-emerald-500');
+                    }, 2000);
                 };
             }
 
             openGoogleSearchExplanation() {
                 const q = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx];
-                const query = `Explain why "${q.c}" is the correct answer for this CMA MCQ: 
-Question: ${q.q}
-Options: ${q.o.join(', ')}`;
+                const query = `Explain why "${q.c}" is the correct answer for this CMA MCQ: \nQuestion: ${q.q}\nOptions: ${q.o.join(', ')}`;
                 const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-                
-                // CLIPBOARD COPY REMOVED
-                
+                try {
+                    const temp = document.createElement('textarea');
+                    temp.value = query;
+                    document.body.appendChild(temp);
+                    temp.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(temp);
+                } catch (e) {}
                 window.open(googleUrl, '_blank');
             }
         }
@@ -1005,7 +971,6 @@ Options: ${q.o.join(', ')}`;
                 this.quiz = new QuizManager();
                 this.view.renderFoundation();
                 document.getElementById('logoHome').onclick = () => this.view.resetToHome();
-                document.getElementById('logoHome').onkeypress = (e) => { if(e.key==='Enter') this.view.resetToHome(); };
                 document.getElementById('btnShortcuts').onclick = () => this.toggleShortcuts(true);
                 document.addEventListener('keydown', (e) => this.handleKeys(e));
             }
@@ -1016,23 +981,13 @@ Options: ${q.o.join(', ')}`;
             selectPaper(id, title) {
                 this.quiz.state.paperId = id;
                 document.getElementById('dashTitle').textContent = title;
-
-                // Disable PYQ for Foundation (1-4) and Final (13+), Enable for Inter (5-12)
                 const pyqCard = document.querySelector('.mode-pyq');
                 if (pyqCard) {
                     const numId = parseInt(id); 
-                    // Intermediate papers are IDs 5 through 12
                     const isInter = !isNaN(numId) && numId >= 5 && numId <= 12;
-                    
-                    if (isInter) {
-                        pyqCard.classList.remove('opacity-60', 'grayscale', 'cursor-not-allowed', 'pointer-events-none');
-                    } else {
-                        // NEW: Remove grayscale to keep color matching
-                        pyqCard.classList.add('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
-                        pyqCard.classList.remove('grayscale');
-                    }
+                    if (isInter) pyqCard.classList.remove('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
+                    else pyqCard.classList.add('opacity-60', 'cursor-not-allowed', 'pointer-events-none');
                 }
-
                 this.view.navigateTo('view-dashboard');
             }
             handleKeys(e) {
@@ -1041,17 +996,11 @@ Options: ${q.o.join(', ')}`;
                 const keyMap = { 'a': 0, 'b': 1, 'c': 2, 'd': 3, '1': 0, '2': 1, '3': 2, '4': 3 };
                 if (key in keyMap) {
                     const qIdx = this.quiz.state.currentQIdx;
-                    const sIdx = this.quiz.state.currentSetIdx;
-                    const question = this.quiz.state.dataSets[sIdx].questions[qIdx];
-                    if (question && question.o[keyMap[key]]) {
-                        this.quiz.pick(question.o[keyMap[key]]);
-                    }
+                    const question = this.quiz.state.dataSets[this.quiz.state.currentSetIdx].questions[qIdx];
+                    if (question && question.o[keyMap[key]]) this.quiz.pick(question.o[keyMap[key]]);
                 }
                 if (key === 'arrowright' || key === 'enter') this.quiz.changeQuestion(1);
-                if (key === 'arrowleft' || key === 'escape') {
-                    if(key === 'arrowleft') this.quiz.changeQuestion(-1);
-                    else this.view.goBack();
-                }
+                if (key === 'arrowleft' || key === 'escape') { if(key === 'arrowleft') this.quiz.changeQuestion(-1); else this.view.goBack(); }
             }
         }
 
