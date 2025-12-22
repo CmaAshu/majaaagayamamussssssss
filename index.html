@@ -138,7 +138,6 @@
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col-reverse gap-3">
         <button class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white hover:border-transparent transition-all shadow-sm hidden md:flex" id="btnShortcuts" aria-label="Shortcuts"><i class="fas fa-keyboard"></i></button>
-        <!-- BLOG persistency replaces the static info persistence -->
         <a href="blog.html" class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-indigo-500 hover:bg-indigo-500 hover:text-white hover:border-transparent transition-all shadow-sm relative group" aria-label="Strategy Blog">
             <i class="fas fa-newspaper"></i>
             <span class="absolute -top-1 -left-1 flex h-3 w-3">
@@ -255,23 +254,19 @@
         <section id="view-dashboard" class="view-section">
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm" onclick="App.view.goBack()"><i class="fas fa-arrow-left"></i> Back</button>
             <h2 id="dashTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Practice Mode</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="dashboardGrid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="dashboardGrid">
                 <div class="subject-card mode-bank flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('bm')">
                     <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-primary"><i class="fas fa-university"></i></div>
                     <div><h3 class="font-bold text-lg text-slate-700">Official MCQ Bank</h3><p class="text-xs text-slate-400">Syllabus 2022</p></div>
                 </div>
-                <div class="subject-card mode-pyq flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('sw')">
+                <div id="cardPyq" class="subject-card mode-pyq flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('sw')">
                     <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-amber-500"><i class="fas fa-file-invoice"></i></div>
                     <div><h3 class="font-bold text-lg text-slate-700">Exam Papers</h3><p class="text-xs text-slate-400">Previous Year Questions</p></div>
                 </div>
                 <!-- SJC Custom Quiz Card -->
-                <div id="cardSjc" class="subject-card mode-sjc flex items-center gap-5 text-left p-6 hidden" onclick="App.toggleSjcModal(true)">
+                <div id="cardSjc" class="subject-card mode-sjc flex items-center gap-5 text-left p-6 hidden col-span-1 md:col-span-2" onclick="App.toggleSjcModal(true)">
                     <div class="w-14 h-14 rounded-2xl bg-[#036176] text-white font-bold flex items-center justify-center shrink-0 shadow-inner">SJC</div>
                     <div><h3 class="font-bold text-lg text-slate-700">Chapter wise Quiz</h3><p class="text-[10px] text-slate-400 font-bold">by Satish Jalan Sir</p></div>
-                </div>
-                <div id="cardLibrary" class="subject-card flex items-center gap-5 text-left p-6 opacity-60 grayscale cursor-not-allowed bg-slate-50 border-slate-200 pointer-events-none">
-                    <div class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 text-2xl text-slate-400"><i class="fas fa-book-open"></i></div>
-                    <div><h3 class="font-bold text-lg text-slate-500">Library Section</h3><p class="text-[10px] text-slate-400 font-bold italic">Coming soon</p></div>
                 </div>
             </div>
         </section>
@@ -576,10 +571,23 @@
             toggleSjcModal(show) { const el = document.getElementById('sjcIntroModal'); if(show) el.classList.add('show'); else el.classList.remove('show'); }
             selectPaper(id, title) {
                 this.quiz.state.paperId = id; document.getElementById('dashTitle').textContent = title;
-                const sjcCard = document.getElementById('cardSjc'); const libCard = document.getElementById('cardLibrary');
-                if (id == '8') { sjcCard.classList.remove('hidden'); libCard.classList.add('hidden'); } else { sjcCard.classList.add('hidden'); libCard.classList.remove('hidden'); }
-                const pyqCard = document.querySelector('.mode-pyq');
-                if (pyqCard) { const numId = parseInt(id); const isInter = !isNaN(numId) && numId >= 5 && numId <= 12; if (isInter) pyqCard.classList.remove('opacity-60', 'cursor-not-allowed', 'pointer-events-none'); else pyqCard.classList.add('opacity-60', 'cursor-not-allowed', 'pointer-events-none'); }
+                
+                const numId = parseInt(id);
+                const isInter = !isNaN(numId) && numId >= 5 && numId <= 12;
+                
+                const sjcCard = document.getElementById('cardSjc');
+                const pyqCard = document.getElementById('cardPyq');
+                
+                // Toggle SJC (Only for Costing Paper 8)
+                if (id == '8') sjcCard.classList.remove('hidden');
+                else sjcCard.classList.add('hidden');
+                
+                // Toggle PYQ (Remove for Foundation and Final, show for Inter)
+                if (pyqCard) {
+                    if (isInter) pyqCard.classList.remove('hidden');
+                    else pyqCard.classList.add('hidden');
+                }
+                
                 this.view.navigateTo('view-dashboard');
             }
             handleKeys(e) {
