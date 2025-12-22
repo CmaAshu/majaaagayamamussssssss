@@ -345,7 +345,7 @@
                 </div>
                 <!-- SJC Custom Quiz Card -->
                 <div id="cardSjc" class="subject-card mode-sjc flex items-center gap-5 text-left p-6 hidden" onclick="App.toggleSjcModal(true)">
-                    <div class="w-14 h-14 rounded-2xl bg-[#036176] flex items-center justify-center shrink-0 text-lg font-bold text-white shadow-inner">SJC</div>
+                    <div class="w-14 h-14 rounded-2xl bg-[#019175] flex items-center justify-center shrink-0 text-lg font-bold text-white shadow-inner">SJC</div>
                     <div>
                         <h3 class="font-bold text-lg">Chapter wise Quiz</h3>
                         <p class="text-[10px] text-slate-400 font-bold">by Satish Jalan Sir</p>
@@ -367,7 +367,8 @@
                     </button>
                     <div class="flex items-center gap-3">
                         <button onclick="App.quiz.resetLocalProgress()" class="text-[10px] text-red-400 font-bold uppercase tracking-wide">Reset</button>
-                        <select id="setSelector" class="bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer"></select>
+                        <!-- Updated setSelector with restricted max-width and truncation -->
+                        <select id="setSelector" class="max-w-[140px] md:max-w-[220px] bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer truncate"></select>
                     </div>
                 </div>
                 
