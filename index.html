@@ -116,7 +116,6 @@
             .option.incorrect { @apply border-error bg-red-50; }
             .shape { @apply absolute bottom-[-150px] opacity-15 font-bold block will-change-transform animate-rise; line-height: 1; }
             
-            /* Restored Article Styling for Static Views */
             .article-body h2 { @apply text-xl md:text-2xl font-black text-slate-800 mt-10 mb-5 flex items-center gap-2; }
             .article-body h3 { @apply text-lg font-bold text-primary mt-8 mb-3; }
             .article-body p { @apply text-slate-600 leading-relaxed mb-4; }
@@ -139,7 +138,14 @@
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col-reverse gap-3">
         <button class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white hover:border-transparent transition-all shadow-sm hidden md:flex" id="btnShortcuts" aria-label="Shortcuts"><i class="fas fa-keyboard"></i></button>
-        <button class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white hover:border-transparent transition-all shadow-sm" onclick="App.view.navigateTo('view-about')" aria-label="About"><i class="fas fa-info-circle"></i></button>
+        <!-- BLOG persistency replaces the static info persistence -->
+        <a href="blog.html" class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-indigo-500 hover:bg-indigo-500 hover:text-white hover:border-transparent transition-all shadow-sm relative group" aria-label="Strategy Blog">
+            <i class="fas fa-newspaper"></i>
+            <span class="absolute -top-1 -left-1 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500 border border-white"></span>
+            </span>
+        </a>
     </div>
 
     <!-- Shortcuts Modal -->
