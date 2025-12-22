@@ -322,6 +322,13 @@
                     <h2 class="text-2xl font-black text-primary mb-2">Quiz Finished!</h2>
                     <div id="finalScoreDisplay" class="text-lg font-bold mb-6 text-slate-500"></div>
                     <div id="quoteDisplay" class="text-slate-600 italic mb-8"></div>
+                    
+                    <!-- Share buttons moved here -->
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                         <button onclick="App.handleWhatsAppShare()" class="bg-emerald-500 text-white py-4 rounded-2xl font-bold shadow-lg flex items-center justify-center gap-2 text-sm"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                         <button onclick="App.handleNativeShare()" class="bg-primary text-white py-4 rounded-2xl font-bold shadow-lg flex items-center justify-center gap-2 text-sm"><i class="fas fa-share-nodes"></i> Share App</button>
+                    </div>
+
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="App.quiz.loadSet(App.quiz.state.currentSetIdx)" class="bg-primary text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-primary-dark">Try Again</button>
                         <button onclick="App.view.resetToHome()" class="bg-slate-100 text-slate-500 py-4 rounded-2xl font-bold">Menu</button>
@@ -569,6 +576,24 @@
             }
             toggleShortcuts(show) { const el = document.getElementById('shortcutsModal'); if(show) el.classList.add('show'); else el.classList.remove('show'); }
             toggleSjcModal(show) { const el = document.getElementById('sjcIntroModal'); if(show) el.classList.add('show'); else el.classList.remove('show'); }
+            
+            async handleNativeShare() {
+                if (navigator.share) {
+                    try {
+                        await navigator.share({
+                            title: 'Prepogy - CMA MCQ Bank',
+                            text: 'Master your CMA MCQs with Prepogy! Practice previous year questions and official MCQ bank for Syllabus 2022.',
+                            url: window.location.href
+                        });
+                    } catch (e) {}
+                }
+            }
+
+            handleWhatsAppShare() {
+                const text = encodeURIComponent("Hey! I'm practicing CMA MCQs on Prepogy. It's free and has the official ICMAI bank. Check it out: " + window.location.href);
+                window.open(`https://wa.me/?text=${text}`, '_blank');
+            }
+
             selectPaper(id, title) {
                 this.quiz.state.paperId = id; document.getElementById('dashTitle').textContent = title;
                 
