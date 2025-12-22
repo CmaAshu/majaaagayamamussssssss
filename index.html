@@ -345,7 +345,7 @@
                 </div>
                 <!-- SJC Custom Quiz Card -->
                 <div id="cardSjc" class="subject-card mode-sjc flex items-center gap-5 text-left p-6 hidden" onclick="App.toggleSjcModal(true)">
-                    <div class="w-14 h-14 rounded-2xl bg-[#019175] flex items-center justify-center shrink-0 text-lg font-bold text-white shadow-inner">SJC</div>
+                    <div class="w-14 h-14 rounded-2xl bg-[#036176] text-white font-bold flex items-center justify-center shrink-0 shadow-inner">SJC</div>
                     <div>
                         <h3 class="font-bold text-lg">Chapter wise Quiz</h3>
                         <p class="text-[10px] text-slate-400 font-bold">by Satish Jalan Sir</p>
@@ -367,7 +367,6 @@
                     </button>
                     <div class="flex items-center gap-3">
                         <button onclick="App.quiz.resetLocalProgress()" class="text-[10px] text-red-400 font-bold uppercase tracking-wide">Reset</button>
-                        <!-- Updated setSelector with restricted max-width and truncation -->
                         <select id="setSelector" class="max-w-[140px] md:max-w-[220px] bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer truncate"></select>
                     </div>
                 </div>
@@ -399,7 +398,13 @@
                         <p id="explanationText" class="text-sm text-slate-600 leading-relaxed"></p>
                     </div>
 
-                    <div class="flex justify-between mt-10 pt-6 border-t border-slate-100 relative z-10">
+                    <!-- MOBILE SWIPE GESTURE GUIDE -->
+                    <div class="md:hidden flex justify-center items-center gap-2 text-slate-300 text-[8px] font-bold uppercase tracking-[0.2em] mt-8 pt-4 border-t border-slate-50 animate-pulse relative z-10">
+                        <i class="fas fa-left-right"></i>
+                        <span>Swipe to navigate</span>
+                    </div>
+
+                    <div class="flex justify-between mt-6 md:mt-10 pt-6 relative z-10">
                         <button id="btnPrevQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-white border border-slate-200 text-slate-500 hover:bg-slate-50 invisible">
                             <i class="fas fa-arrow-left"></i> Previous
                         </button>
@@ -440,7 +445,7 @@
             </div>
         </section>
 
-        <!-- STATIC PAGES: Full Original Content -->
+        <!-- STATIC PAGES: Full Content -->
         <section id="view-about" class="view-section">
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
             <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-xl leading-relaxed max-w-4xl mx-auto">
