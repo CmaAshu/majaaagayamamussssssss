@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>CMA Insights & Strategy Blog | Prepogy</title>
-    <meta name="description" content="Expert insights, 30-day study blueprints, and strategy guides for CMA aspirants. Master Accounts, Costing, Law, and Taxation with Prepogy.">
+    
+    <!-- SEO Meta Tags for prepogy.in -->
+    <title>CMA Intermediate Study Strategy & 30-Day Blueprints | Prepogy</title>
+    <meta name="description" content="Master ICMAI Syllabus 2022 with Prepogy's expert 30-day blueprints for CMA Inter Financial Accounting, Taxation, Law, and Costing. Proven strategies to score 70+.">
+    <meta name="keywords" content="CMA Inter Study Plan, ICMAI Syllabus 2022, CMA Intermediate Strategy, Financial Accounting Paper 6, Taxation Paper 7, Law Paper 7, Costing Paper 8, CMA Exam Tips, Prepogy Blog">
+    <meta name="author" content="Prepogy">
+    <link rel="canonical" href="https://prepogy.in/blog.html" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://prepogy.in/blog.html">
+    <meta property="og:title" content="CMA Intermediate 30-Day Blueprints for Success | Prepogy">
+    <meta property="og:description" content="Get structured study plans for CMA Inter Papers 6, 7, and 8. Transform your preparation with smart prioritization and master the ICMAI exams.">
+    <meta property="og:image" content="https://prepogy.in/prep.png">
+    <meta property="og:site_name" content="Prepogy">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CMA Intermediate 30-Day Blueprints | Prepogy">
+    <meta name="twitter:description" content="Structured 30-day study plans to crack CMA Intermediate exams with confidence.">
+    <meta name="twitter:image" content="https://prepogy.in/prep.png">
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Prepogy CMA Strategy Blog",
+      "url": "https://prepogy.in/blog.html",
+      "description": "Expert study blueprints and strategy guides for CMA Intermediate aspirants focusing on ICMAI Syllabus 2022.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Prepogy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://prepogy.in/prep.png"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Mastering CMA Inter Financial Accounting: A 30-Day Blueprint for Success",
+          "url": "https://prepogy.in/blog.html#accounts"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Mastering CMA Inter Taxation: A 30-Day Blueprint for Success",
+          "url": "https://prepogy.in/blog.html#taxation"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Mastering CMA Inter Law: A 30-Day Blueprint for Success",
+          "url": "https://prepogy.in/blog.html#law"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Mastering CMA Inter Costing: A 30-Day Blueprint for Success",
+          "url": "https://prepogy.in/blog.html#costing"
+        }
+      ]
+    }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +87,10 @@
                     animation: {
                         'rise': 'rise 20s linear infinite',
                         'floating': 'floating 4s ease-in-out infinite',
-                        'fade-in-up': 'fadeInUp 0.3s ease forwards',
                     },
                     keyframes: {
                         rise: { 'from': { transform: 'translateY(0) rotate(0deg)', opacity: '0.4' }, 'to': { transform: 'translateY(-120vh) rotate(360deg)', opacity: '0' } },
                         floating: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } },
-                        fadeInUp: { 'from': { opacity: '0', transform: 'translateY(10px)' }, 'to': { opacity: '1', transform: 'translateY(0)' } },
                     }
                 }
             }
@@ -57,29 +115,31 @@
 </head>
 <body class="font-sans bg-slate-50 text-gray-800 min-h-screen flex flex-col overflow-x-hidden">
 
+    <!-- Background Decoration -->
     <div class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden select-none">
         <div class="shape left-[10%] text-[55px] text-emerald-500" style="animation-duration: 22s;">₹</div>
         <div class="shape left-[50%] text-[55px] text-amber-500" style="animation-duration: 20s;">€</div>
         <div class="shape left-[80%] text-[65px] text-indigo-500" style="animation-duration: 28s;">×</div>
     </div>
 
+    <!-- Header -->
     <header class="text-center py-10 md:py-16 px-5 shrink-0">
-        <a href="index.html" class="inline-block w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 animate-floating">
-            <img src="prep.png" alt="Prepogy Logo" class="w-full h-auto object-contain">
+        <a href="index.html" class="inline-block w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 animate-floating" aria-label="Prepogy Home">
+            <img src="prep.png" alt="Prepogy Education Logo" class="w-full h-auto object-contain" onerror="this.src='https://via.placeholder.com/150?text=Prepogy'">
         </a>
-        <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-extrabold uppercase tracking-[2px] text-gradient-original mb-1">Prepogy Blog</h1>
+        <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-extrabold uppercase tracking-[2px] text-gradient-original mb-1">Prepogy CMA Blog</h1>
     </header>
 
     <main class="flex-grow">
-        <!-- 1. Blog List View -->
+        <!-- Main Feed -->
         <section id="view-blog" class="view-section active">
             <a href="index.html" class="mb-8 font-bold inline-flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
                 <i class="fas fa-arrow-left"></i> Back to Home
             </a>
-            <h2 class="text-3xl font-extrabold text-center mb-10 text-slate-700">CMA Insights & Strategy</h2>
+            <h2 class="text-3xl font-extrabold text-center mb-10 text-slate-700">CMA Intermediate Study Blueprints</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Accounts Card -->
+                <!-- Financial Accounting Card -->
                 <article class="blog-card group cursor-pointer" onclick="showView('view-article-accounts')">
                     <div class="h-48 bg-rose-100 relative overflow-hidden flex items-center justify-center text-rose-400 text-5xl">
                         <i class="fas fa-calculator group-hover:scale-110 transition-transform duration-500"></i>
@@ -89,7 +149,7 @@
                         <h3 class="text-lg font-bold text-slate-800 mt-3 mb-2 group-hover:text-primary transition-colors">Mastering CMA Inter Accounts: 30-Day Blueprint</h3>
                         <p class="text-sm text-slate-500 line-clamp-2">Master Paper 6 with a focus on Single Entry, Partnership, and Accounting Standards for a 70+ score.</p>
                         <div class="mt-4 pt-4 border-t border-slate-50 flex justify-end items-center text-[10px] font-bold text-slate-400">
-                            <span class="text-primary group-hover:translate-x-1 transition-transform">READ MORE <i class="fas fa-arrow-right ml-1"></i></span>
+                            <span class="text-primary group-hover:translate-x-1 transition-transform uppercase font-black">Read Guide <i class="fas fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </article>
@@ -104,7 +164,7 @@
                         <h3 class="text-lg font-bold text-slate-800 mt-3 mb-2 group-hover:text-primary transition-colors">Mastering CMA Inter Taxation: 30-Day Blueprint</h3>
                         <p class="text-sm text-slate-500 line-clamp-2">The ultimate guide to Paper 7: Direct & Indirect Tax. Master GST and Income Tax with strategic prioritization.</p>
                         <div class="mt-4 pt-4 border-t border-slate-50 flex justify-end items-center text-[10px] font-bold text-slate-400">
-                            <span class="text-primary group-hover:translate-x-1 transition-transform">READ MORE <i class="fas fa-arrow-right ml-1"></i></span>
+                            <span class="text-primary group-hover:translate-x-1 transition-transform uppercase font-black">Read Guide <i class="fas fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </article>
@@ -115,11 +175,11 @@
                         <i class="fas fa-gavel group-hover:scale-110 transition-transform duration-500"></i>
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Blueprints</span>
+                        <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Syllabus 2022</span>
                         <h3 class="text-lg font-bold text-slate-800 mt-3 mb-2 group-hover:text-primary transition-colors">Mastering CMA Inter Law: A 30-Day Blueprint</h3>
-                        <p class="text-sm text-slate-500 line-clamp-2">A structured plan for Paper 7, covering Companies Act, Industrial Laws, and Ethics with high-weightage focus.</p>
+                        <p class="text-sm text-slate-500 line-clamp-2">Detailed breakdown of Law and Ethics, including Companies Act, Industrial Laws, and revision strategies.</p>
                         <div class="mt-4 pt-4 border-t border-slate-50 flex justify-end items-center text-[10px] font-bold text-slate-400">
-                            <span class="text-primary group-hover:translate-x-1 transition-transform">READ MORE <i class="fas fa-arrow-right ml-1"></i></span>
+                            <span class="text-primary group-hover:translate-x-1 transition-transform uppercase font-black">Read Guide <i class="fas fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </article>
@@ -130,72 +190,383 @@
                         <i class="fas fa-chart-line group-hover:scale-110 transition-transform duration-500"></i>
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] font-bold text-primary uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Strategy</span>
+                        <span class="text-[10px] font-bold text-primary uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Paper 8</span>
                         <h3 class="text-lg font-bold text-slate-800 mt-3 mb-2 group-hover:text-primary transition-colors">Mastering CMA Inter Costing: A 30-Day Blueprint</h3>
-                        <p class="text-sm text-slate-500 line-clamp-2">Learn how to tackle the toughest chapters in Paper 8 with our proven study sequence and practice methods.</p>
+                        <p class="text-sm text-slate-500 line-clamp-2">Learn how to tackle Paper 8 with our proven study sequence, formula mastery, and practice methods.</p>
                         <div class="mt-4 pt-4 border-t border-slate-50 flex justify-end items-center text-[10px] font-bold text-slate-400">
-                            <span class="text-primary group-hover:translate-x-1 transition-transform">READ MORE <i class="fas fa-arrow-right ml-1"></i></span>
+                            <span class="text-primary group-hover:translate-x-1 transition-transform uppercase font-black">Read Guide <i class="fas fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- [Article Views for Costing, Accounts, Taxation, Law, and About are maintained below...] -->
-        
-        <!-- 2. Costing Article View -->
-        <section id="view-article-costing" class="view-section">
-            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
+        <!-- Article: Financial Accounting -->
+        <section id="view-article-accounts" class="view-section">
+            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
                 <i class="fas fa-arrow-left"></i> Back to Blog
             </button>
-            <div class="bg-white rounded-[40px] shadow-xl overflow-hidden max-w-4xl mx-auto">
-                <div class="bg-gradient-to-br from-indigo-500 to-primary p-12 md:p-20 text-center text-white">
-                    <span class="text-xs font-black uppercase tracking-[0.3em] bg-white/20 px-4 py-2 rounded-full mb-6 inline-block">Study Strategy</span>
-                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Mastering CMA Inter Costing: A 30-Day Blueprint for Success 🚀</h1>
-                </div>
+            <article class="bg-white rounded-[40px] shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <header class="bg-gradient-to-br from-rose-500 to-rose-700 p-12 md:p-20 text-center text-white">
+                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Mastering CMA Inter Financial Accounting: A 30-Day Blueprint for Success 🚀📊</h1>
+                </header>
                 <div class="p-8 md:p-16 article-body">
-                    <p class="text-lg font-medium text-slate-700 italic">Cost Accounting (Paper 8) is the backbone of the CMA Inter curriculum. 🏆</p>
-                    <h2>🎯 The Secret Weapon: The 30-Mark MCQ Strategy</h2>
+                    <p class="text-lg font-medium text-slate-700 italic">Financial Accounting (Paper 6) is one of the most substantial and rewarding papers in the CMA Intermediate curriculum. While it is lengthy, it is also highly scoring if you master the "Art of Attempting" and prioritize the right topics. 🎨📈</p>
+                    <p>Here is your strategic 30-day blueprint to navigate this subject with precision and achieve that 70+ target! 🎯✨</p>
+
+                    <h2>📝 The Secret to 30 Marks: MCQs & Strategy</h2>
+                    <p>Before diving into long problems, secure your foundation with the Objective section.</p>
                     <ul>
-                        <li><i class="fas fa-hashtag"></i> <strong>CAS:</strong> Memorize names and numbers of CAS 1 to 24.</li>
-                        <li><i class="fas fa-book"></i> <strong>The "Bit" Bank:</strong> Solve every objective question.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Accuracy is King:</strong> There is no negative marking, so ensure you attempt all 15 questions. Focus on the final option; no need to show working or provide reasons. ✅</li>
+                        <li><i class="fas fa-history"></i> <strong>Repetition is Key:</strong> Practicing past papers and standard objective banks can help you secure 20+ marks in just 15 minutes! ⏱️🔢</li>
                     </ul>
-                    <!-- Remaining Costing sections... -->
+
+                    <h2>🏗️ Phase 1: High-Yield Foundation (Days 1–10)</h2>
+                    <p>A significant portion of the paper stems from foundational topics. Strengthening these can give you a massive lead. 🧱</p>
+                    <ul>
+                        <li><i class="fas fa-box-open"></i> <strong>Days 1–4: Basic Practical Chapters:</strong> Focus on Consignment, Bills of Exchange, and Joint Ventures. These are often tested in 7-mark segments and are highly scoring. 📦📜</li>
+                        <li><i class="fas fa-university"></i> <strong>Days 5–7: Reconciliation & Assets:</strong> Master Bank Reconciliation Statements (BRS) and Depreciation. These chapters frequently appear in the early part of the subjective section. 🏦📉</li>
+                        <li><i class="fas fa-pencil-alt"></i> <strong>Days 8–10: Rectification & Basics:</strong> Quickly brush up on Rectification of Errors and Capital/Revenue transactions. These are vital for both MCQs and short practical questions. ✏️✔️</li>
+                    </ul>
+
+                    <h2>🏭 Phase 2: Core Intermediate Modules (Days 11–20)</h2>
+                    <p>This phase covers the "Tier 1" chapters that carry the maximum weightage and require the most practice. 🛠️</p>
+                    <ul>
+                        <li><i class="fas fa-users"></i> <strong>Days 11–14: Single Entry & Partnership:</strong> These are the most lengthy chapters. You will often see full 14-mark questions from these. <strong>Exam Tip:</strong> In the exam, try to choose between a Single Entry or a Partnership question to manage time effectively—don't get bogged down by attempting both if time is tight! 🤝</li>
+                        <li><i class="fas fa-building"></i> <strong>Days 15–17: Branch & Departmental Accounting:</strong> Focus on Dependent Branches, as they are a favorite for examiners. Departmental accounts are generally straightforward and should be practiced for accuracy. 🏢🌿</li>
+                        <li><i class="fas fa-file-signature"></i> <strong>Days 18–20: Insurance Claims & Higher Purchase:</strong> Master the calculation of "Loss of Stock" and "Loss of Profit" for insurance. For Hire Purchase, focus on interest calculations and repossession. 📑🛡️</li>
+                    </ul>
+
+                    <h2>⚖️ Phase 3: Accounting Standards & Specialized Topics (Days 21–25)</h2>
+                    <p>Accounting Standards (AS) are the backbone of professional accounting. 🏛️</p>
+                    <ul>
+                        <li><i class="fas fa-landmark"></i> <strong>Days 21–23: The "Big Four" Standards:</strong> Prioritize AS 10 (Property, Plant, and Equipment), AS 11 (Foreign Exchange), AS 12 (Government Grants), and AS 16 (Borrowing Costs). 🏗️🌐</li>
+                        <li><i class="fas fa-hand-holding-usd"></i> <strong>Days 24–25: Lease Accounting:</strong> Focus on AS 19 (Leases), specifically Finance vs. Operating leases. This often appears as a 7-mark practical question. 📄🏢</li>
+                    </ul>
+
+                    <h2>🔄 Phase 4: Final Revision & Mock Exams (Days 26–30)</h2>
+                    <p>The final countdown is for consolidating your knowledge. 🏁</p>
+                    <ul>
+                        <li><i class="fas fa-brain"></i> <strong>The 1.5-Day Strategy:</strong> During the final days before the exam, prioritize "Technical" chapters like Partnership, Branch, and Single Entry. Foundation-level chapters like BRS or Consignment can be revised earlier as they are easier to retain. 🧠💡</li>
+                        <li><i class="fas fa-stopwatch"></i> <strong>Accuracy vs. Completion:</strong> It is better to accurately attempt 90 marks than to rush through 100 marks with silly mistakes. Aim for high accuracy to ensure your marks reflect your effort. ✅🎯</li>
+                        <li><i class="fas fa-paste"></i> <strong>Mock Tests:</strong> Solve at least one full paper to get used to the length of the exam. Start with MCQs, move to 7-mark questions, and save the 14-mark giants for the end. ⏱️📝</li>
+                    </ul>
+
+                    <div class="highlight-box !bg-rose-50 !border-rose-400">
+                        <h3 class="!text-rose-800 !mt-0">💡 Pro-Tips for Financial Accounting</h3>
+                        <ul class="mb-0 text-rose-900">
+                            <li><i class="fas fa-sort-amount-down"></i> <strong>Sequence Matters:</strong> Start your paper with MCQs to build momentum, then move to Foundation-level questions (7 marks each) to secure pass marks quickly. 🏃‍♂️💨</li>
+                            <li><i class="fas fa-sun"></i> <strong>Accounting Standards on Exam Day:</strong> The best time to revise AS 10, 11, and 12 is the morning of the exam. Keeping them fresh in your mind helps in writing precise technical answers. 🌅📖</li>
+                            <li><i class="fas fa-list-ol"></i> <strong>Step Marking:</strong> Even if a balance sheet doesn't tally, don't panic! You get marks for every correct entry and working note. Keep your presentation clean. 📊🖋️</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> <strong>Avoid the "Giant" Trap:</strong> Don't start your exam with a massive Partnership or Single Entry problem. If it gets stuck, it can ruin your time management for the rest of the paper. 🚫🪤</li>
+                        </ul>
+                    </div>
+                    <p class="text-xl font-bold text-center text-slate-800 mt-12 italic">By following this 30-day blueprint, you’ll turn a lengthy syllabus into a manageable victory. Stay consistent, practice the "Tier 1" chapters rigorously, and keep your accuracy high. You are ready to excel! 💪🌟</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Article: Taxation -->
+        <section id="view-article-taxation" class="view-section">
+            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <article class="bg-white rounded-[40px] shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <header class="bg-gradient-to-br from-amber-500 to-orange-600 p-12 md:p-20 text-center text-white">
+                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Mastering CMA Inter Taxation: A 30-Day Blueprint for Success 🚀🧾</h1>
+                </header>
+                <div class="p-8 md:p-16 article-body">
+                    <p class="text-lg font-medium text-slate-700 italic">Direct and Indirect Taxation (Paper 7) is often considered one of the most extensive papers in the CMA Intermediate group. With a vast syllabus, the key to scoring 70+ isn't just hard work—it's Smart Work. 💡</p>
+                    <p>This 30-day blueprint uses an ABC analysis to help you prioritize high-weightage chapters while ensuring you cover the entire syllabus. Let’s dive in! 🌊</p>
+
+                    <div class="highlight-box !bg-amber-50 !border-amber-400">
+                        <h2 class="!mt-0 !text-amber-800"><i class="fas fa-chess-knight"></i> The Strategy: IDT First, DT Next</h2>
+                        <p class="text-amber-900 mb-0">A great way to build confidence is to start with Indirect Taxation (IDT). Because the course content is more concise, you can finish it sooner, giving you a psychological win before tackling the massive Direct Taxation (DT) portion. 🏆</p>
+                    </div>
+
+                    <h2>📅 Phase 1: Indirect Taxation (Days 1–8) 🏗️</h2>
+                    <p>GST and Customs are scoring areas. Focus on the core pillars that make up about 80% of the weightage.</p>
+                    <ul>
+                        <li><i class="fas fa-link"></i> <strong>Days 1–3: The Core of GST:</strong> Focus on Levy and Collection, the concept of Supply, and the Reverse Charge Mechanism (RCM). ⛓️</li>
+                        <li><i class="fas fa-clock"></i> <strong>Days 4–5: Logistics of Supply:</strong> Master Value of Supply and Time of Supply. These are guaranteed areas for practical questions. ⏱️💎</li>
+                        <li><i class="fas fa-credit-card"></i> <strong>Days 6–7: ITC & Liability:</strong> Study Input Tax Credit (ITC) and the Computation of GST Liability in depth. 💳</li>
+                        <li><i class="fas fa-plane"></i> <strong>Day 8: Customs & Quick Brush-up:</strong> A mandatory question usually comes from Customs Duty, so don't skip it! Quickly skim through Registration, Returns, and Tax Invoices. ✈️📦</li>
+                    </ul>
+
+                    <h2>📅 Phase 2: Direct Taxation – The "Big Five" (Days 9–20) 💰</h2>
+                    <p>DT is vast, so focus your energy on the chapters that appear most frequently in past papers.</p>
+                    <ul>
+                        <li><i class="fas fa-home"></i> <strong>Days 9–10: Residential Status:</strong> A mandatory question often appears here. It's a foundational topic you must master. 🏠</li>
+                        <li><i class="fas fa-briefcase"></i> <strong>Days 11–13: Salaries & House Property:</strong> These are the most common "Heads of Income" in exams. Practice as many practical problems as possible. 💼</li>
+                        <li><i class="fas fa-chart-line"></i> <strong>Days 14–17: PGBP & Capital Gains:</strong> These are heavy chapters. For Capital Gains, focus on the initial parts like indexation and exemptions. If the later parts (like mergers) get too complex, ensure your basics are rock-solid first. 📈</li>
+                        <li><i class="fas fa-cut"></i> <strong>Days 18–20: Clubbing, Set-off & Deductions:</strong> These chapters are recurring favorites. Deductions (Chapter VI-A) are essential for every total income problem. ✂️</li>
+                    </ul>
+
+                    <h2>📅 Phase 3: Special Taxation & Procedures (Days 21–25) 📑</h2>
+                    <ul>
+                        <li><i class="fas fa-users"></i> <strong>Days 21–22: Taxation of Various Persons:</strong> Pay close attention to the taxation of political parties and other specific entities. 👥</li>
+                        <li><i class="fas fa-receipt"></i> <strong>Days 23–24: TDS & TCS:</strong> It’s a huge chapter, so focus on the most important and frequently tested sections rather than trying to memorize every single rate. 🧾</li>
+                        <li><i class="fas fa-file-alt"></i> <strong>Day 25: Advance Tax & Returns:</strong> Briefly cover administrative procedures to ensure you don't miss out on easy marks. 📝</li>
+                    </ul>
+
+                    <h2>📅 Phase 4: The Final Lap – Revision & Mock Exams (Days 26–30) 🏁</h2>
+                    <ul>
+                        <li><i class="fas fa-redo"></i> <strong>Days 26–28: Triple Revision:</strong> The goal is to revise the entire syllabus at least three times. Use Charts to retain complex laws and sections. 📊</li>
+                        <li><i class="fas fa-paste"></i> <strong>Days 29–30: Practice & Mocks:</strong> Solve every practical question in the CMA Study Material. It is the ultimate key to success. Finish by attempting at least one full Mock Test Paper (MTP) to test your time management. ⏱️📝</li>
+                    </ul>
+
+                    <div class="highlight-box !bg-slate-900 !border-amber-500 !text-white">
+                        <h3 class="!text-amber-400 !mt-0">🌟 Golden Rules for 70+ Marks</h3>
+                        <ul class="mb-0 text-slate-300">
+                            <li><strong>Taxation is a Relationship:</strong> Think of Taxation as a partner—if you ignore it for even a day, it might stop "talking" to you. Practice it every single day to maintain consistency. ❤️📅</li>
+                            <li><strong>The Scanner is Your Best Friend:</strong> Use a scanner to identify which questions have appeared over the last 10-15 attempts. This helps you understand the "examiner's mindset." 🔍</li>
+                            <li><strong>Sacrifice for Success:</strong> To put the "CMA" tag in front of your name, you must temporarily sacrifice social media and leisure. The glory of the degree is worth the effort! 🎓✨</li>
+                            <li><strong>Charts & Notes:</strong> Don't just read; draw. Creating your own flowcharts for GST processes or DT provisions will significantly boost your retention. 🎨🖋️</li>
+                        </ul>
+                    </div>
+                    <p class="text-xl font-bold text-center text-slate-800 mt-12 italic">Success is a combination of determination, discipline, and the right strategy. Follow this 30-day blueprint, and you'll be well on your way to conquering the Taxation paper! 💪🌟</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Article: Law -->
+        <section id="view-article-law" class="view-section">
+            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <article class="bg-white rounded-[40px] shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <header class="bg-gradient-to-br from-emerald-500 to-teal-600 p-12 md:p-20 text-center text-white">
+                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Mastering CMA Inter Law: A 30-Day Blueprint for Success ⚖️📚</h1>
+                </header>
+                <div class="p-8 md:p-16 article-body">
+                    <p class="text-lg font-medium text-slate-700 italic">Law and Ethics (Paper 7) is often perceived as a "theory heavy" subject, but for a CMA aspirant, it is one of the most scoring papers if approached strategically. Instead of getting lost in the vastness of the legal jargon, you need a structured plan that prioritizes high-weightage areas. 🎯</p>
+                    <p>This 30-Day Blueprint is designed to help you cover the entire syllabus, from the Companies Act to Industrial Laws and Ethics, ensuring you are exam-ready with confidence! 🚀</p>
+
+                    <h2>🏛️ The Structure of the Paper</h2>
+                    <p>To master the law, you must first understand how the 100 marks are distributed. Generally, the paper is divided into:</p>
+                    <ul>
+                        <li><i class="fas fa-scroll"></i> <strong>Section A: Commercial Laws</strong> (30-40 Marks) 📜</li>
+                        <li><i class="fas fa-industry"></i> <strong>Section B: Industrial Laws</strong> (15-20 Marks) 🏭</li>
+                        <li><i class="fas fa-building"></i> <strong>Section C: Corporate Law (Companies Act)</strong> (35-40 Marks) 🏢</li>
+                        <li><i class="fas fa-handshake"></i> <strong>Section D: Ethics</strong> (10 Marks) 🤝</li>
+                    </ul>
+
+                    <h2>📅 Phase 1: The Corporate Law Powerhouse (Days 1–10)</h2>
+                    <p>Corporate Law is the heart of your syllabus. Mastery here guarantees a solid foundation for your score. 🏢</p>
+                    <ul>
+                        <li><i class="fas fa-file-contract"></i> <strong>Days 1-4: Basics & Incorporation:</strong> Focus on the types of companies, Memorandum of Association (MOA), and Articles of Association (AOA). Understand the concept of "Lifting the Corporate Veil." 📄</li>
+                        <li><i class="fas fa-coins"></i> <strong>Days 5-7: Share Capital & Debentures:</strong> Master the rules regarding the issue of shares, bonus shares, and rights issues. These are frequent areas for practical-based questions. 💰</li>
+                        <li><i class="fas fa-user-tie"></i> <strong>Days 8-10: Directors:</strong> This is the most crucial part! Focus on the appointment, qualifications, disqualifications, and powers of directors. Ensure you understand the limits for independent directors. 👨‍💼👩‍💼</li>
+                    </ul>
+
+                    <h2>🏗️ Phase 2: Industrial Laws & Scoring Areas (Days 11–18)</h2>
+                    <p>Industrial laws consist of several small acts. The key is to remember the applicability and basic provisions of each. 🏭</p>
+                    <ul>
+                        <li><i class="fas fa-wallet"></i> <strong>Days 11-13: Employee Benefits:</strong> Focus on the Factories Act, Payment of Bonus Act, and Employees' Provident Fund (EPF). These are straightforward and scoring. 💸</li>
+                        <li><i class="fas fa-shield-alt"></i> <strong>Days 14-16: Social Security:</strong> Cover the ESI Act and the Payment of Gratuity Act. Pay special attention to the "threshold limits" (e.g., number of employees) for each act. 🛡️</li>
+                        <li><i class="fas fa-balance-scale"></i> <strong>Days 17-18: Code on Wages:</strong> Since the transition to new codes is ongoing, focus on the fundamental definitions and minimum wage provisions. ⚖️</li>
+                    </ul>
+
+                    <h2>📜 Phase 3: Commercial Laws & Ethics (Days 19–25)</h2>
+                    <p>Commercial laws form the legal basis of business transactions, while Ethics provides the easiest 10 marks in the paper. 🤝</p>
+                    <ul>
+                        <li><i class="fas fa-pen-nib"></i> <strong>Days 19-21: Indian Contract Act:</strong> This is a vast area. Focus on Essential Elements of a Valid Contract, Quasi-Contracts, and Breach of Contract. 📝</li>
+                        <li><i class="fas fa-tag"></i> <strong>Days 22-23: Sale of Goods & Negotiable Instruments:</strong> Focus on "Condition vs. Warranty" and the types of endorsements in Negotiable Instruments. 📑</li>
+                        <li><i class="fas fa-star"></i> <strong>Days 24-25: Ethics & Business:</strong> Ethics is high-reward for low-effort. Study the "Seven Principles of Public Life" and the relationship between Ethics and Business Profitability. 🌟</li>
+                    </ul>
+
+                    <h2>🔄 Phase 4: The Final Lap – Revision & Practice (Days 26–30)</h2>
+                    <p>The last few days are all about retention and writing speed. ⏱️</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>MCQ Power Hour:</strong> Spend at least 1 hour daily solving Bit Questions and past MCQ banks. Objective questions are the key to crossing the 60+ mark barrier! ✅</li>
+                        <li><i class="fas fa-edit"></i> <strong>Writing Practice:</strong> Law is not just about reading; it's about presentation. Practice writing answers in a structured format: Provision > Analysis > Conclusion. ✍️</li>
+                        <li><i class="fas fa-list-ol"></i> <strong>Section Numbers:</strong> You don't need to memorize every section, but knowing the key ones for the Companies Act and Contract Act adds a professional edge to your paper. 🔢</li>
+                    </ul>
+
+                    <div class="highlight-box !bg-emerald-50 !border-emerald-400">
+                        <h3 class="!text-emerald-800 !mt-0">💡 Pro-Tips for the Exam Hall</h3>
+                        <ul class="mb-0 text-emerald-900">
+                            <li><strong>Read the Question Twice:</strong> In Law, a single word like "may" or "shall" can change the entire answer. Read carefully! 🧐</li>
+                            <li><strong>Point-Wise Answers:</strong> Avoid long paragraphs. Use bullet points and headings to make your answer sheet evaluator-friendly. 📌</li>
+                            <li><strong>Case Study Strategy:</strong> If a question asks for a legal opinion, always state the relevant provision first before applying it to the facts of the case. 🕵️‍♂️</li>
+                        </ul>
+                    </div>
+                    <p class="text-xl font-bold text-center text-slate-800 mt-12 italic">By sticking to this 30-day blueprint, you transform Law from a daunting theory paper into a strategic tool to boost your aggregate. Stay disciplined, keep revising, and the "Pass" result is yours! 💪✨</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Article: Costing -->
+        <section id="view-article-costing" class="view-section">
+            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </button>
+            <article class="bg-white rounded-[40px] shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <header class="bg-gradient-to-br from-indigo-500 to-primary p-12 md:p-20 text-center text-white">
+                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Mastering CMA Inter Costing: A 30-Day Blueprint for Success 🚀</h1>
+                </header>
+                <div class="p-8 md:p-16 article-body">
+                    <p class="text-lg font-medium text-slate-700 italic">Cost Accounting (Paper 8) is the backbone of the CMA Inter curriculum. It is often the subject that determines whether a student just passes or secures a rank. 🏆 While the syllabus is extensive, success isn't about studying everything with the same intensity—it’s about strategic prioritization and "Smart Work." 💡</p>
+                    <p>If you have 30 days to prepare, this blueprint will help you navigate the complexities of Costing and turn it into your highest-scoring subject! 📈</p>
+
+                    <h2>🎯 The Secret Weapon: The 30-Mark MCQ Strategy</h2>
+                    <p>Before you touch a single long-form problem, focus on the 30 marks dedicated to Objective Questions. These are the "low-hanging fruits" that can guarantee a passing score before you even start the descriptive section. ✅</p>
+                    <ul>
+                        <li><i class="fas fa-hashtag"></i> <strong>Cost Accounting Standards (CAS):</strong> Memorize the names and numbers of CAS 1 to 24. Expect at least 2–4 marks just from identifying the correct standard number. 🔢</li>
+                        <li><i class="fas fa-book"></i> <strong>The "Bit" Bank:</strong> Solve every objective question provided by the Institute. Focus on basic definitions, EOQ/EBQ formulas, and cost classifications. 📚</li>
+                        <li><i class="fas fa-pen-ruler"></i> <strong>Formula Mastery:</strong> Create a "cheat sheet" for marginal costing ratios and variance analysis formulas. 📝</li>
+                    </ul>
+
+                    <h2>🏗️ Phase 1: Building the Foundation (Days 1–7)</h2>
+                    <p>The first week should be dedicated to the chapters that are virtually guaranteed to appear in every exam. 🧱</p>
+                    <ul>
+                        <li><i class="fas fa-file-invoice"></i> <strong>The Cost Sheet:</strong> This is your starting point. Master the treatment of stocks (Raw Materials, WIP, Finished Goods) and the classification of expenses. It’s a high-probability scoring base! 📄</li>
+                        <li><i class="fas fa-box"></i> <strong>Material Costing:</strong> Focus on Economic Order Quantity (EOQ), stock levels (Minimum, Maximum, Re-order), and inventory valuation. Pay special attention to "Supplier Discounts." 📦</li>
+                        <li><i class="fas fa-users-cog"></i> <strong>Labor & Overheads:</strong> Master incentive schemes and labor turnover ratios. For Overheads, focus on the Simultaneous Equation Method and Supplementary Rates. ⚙️</li>
+                    </ul>
+
+                    <h2>🏭 Phase 2: Methods of Costing (Days 8–15)</h2>
+                    <p>This phase covers the practical application of costing across different industries. 🛠️</p>
+                    <ul>
+                        <li><i class="fas fa-bus"></i> <strong>Operating Costing:</strong> Focus on service sectors like Hotels, Hospitals, and Transport. Specifically, practice "Passenger-Kilometer" and "Room-Day" calculations. 🚌🏥</li>
+                        <li><i class="fas fa-hard-hat"></i> <strong>Contract Costing:</strong> Ensure you understand the Escalation Clause and the calculation of Notional Profit. 🏗️</li>
+                        <li><i class="fas fa-flask"></i> <strong>Process Costing:</strong> The key here is mastering Equivalent Production units. If you can handle the "Statement of Evaluation," you can solve any process problem! ⚗️</li>
+                        <li><i class="fas fa-sync"></i> <strong>Cost Accounting Systems:</strong> Practice the journal entries for Integrated and Non-Integrated systems. Focus on Reconciliation statements, as they are exam favorites. 📑</li>
+                    </ul>
+
+                    <h2>⚖️ Phase 3: Decision Making & Control (Days 16–23)</h2>
+                    <p>These chapters represent the "Management" side of costing and carry significant weightage. 📊</p>
+                    <ul>
+                        <li><i class="fas fa-lightbulb"></i> <strong>Marginal Costing:</strong> This is a heavy-hitter (often 14 marks!). Focus on Key Factor (Limiting Factor) analysis, "Make or Buy" decisions, and Export Offer evaluations. 💡</li>
+                        <li><i class="fas fa-chart-bar"></i> <strong>Standard Costing:</strong> Don't get overwhelmed. Prioritize Material and Labor Variances. Understanding the logic (Price vs. Usage) is more important than rote memorization. 📉</li>
+                        <li><i class="fas fa-wallet"></i> <strong>Budgets:</strong> Master the "Big Three": Flexible Budgets, Cash Budgets, and Production Budgets. These are straightforward and highly rewarding! 💰</li>
+                    </ul>
+
+                    <h2>✍️ Phase 4: Theory & Final Polish (Days 24–30)</h2>
+                    <p>Never ignore theory! It can be a lifesaver if a practical question is exceptionally tricky. 📖</p>
+                    <h3>Essential Theory Topics:</h3>
+                    <ul>
+                        <li><i class="fas fa-landmark"></i> Objectives and Functions of the CASB. 🏛️</li>
+                        <li><i class="fas fa-list-check"></i> Advantages of Activity-Based Costing (ABC). 🗄️</li>
+                        <li><i class="fas fa-bullseye"></i> Responsibility Accounting and Cost Centers. 🎯</li>
+                    </ul>
+                    <p><strong>Mock Exams:</strong> Dedicate the last 3 days to solving at least two full-length past papers under exam conditions. This builds the "writing stamina" needed for the 3-hour marathon. ⏱️</p>
+
+                    <div class="highlight-box">
+                        <h3 class="mt-0">💡 Pro-Tips for the Exam Hall</h3>
+                        <ul class="mb-0">
+                            <li><i class="fas fa-hourglass-half"></i> <strong>Time Management:</strong> Costing papers can be lengthy. If a Marginal Costing problem looks too complex, move to Budgets or Contract Costing first to secure marks quickly. ⏳</li>
+                            <li><i class="fas fa-check-double"></i> <strong>Step Marking:</strong> Never leave a question entirely blank. Writing the format and basic entries will still earn you partial marks! 📝</li>
+                            <li><i class="fas fa-clipboard-list"></i> <strong>Working Notes:</strong> Clear, numbered working notes are as important as the final answer. Show your logic clearly! 📋</li>
+                        </ul>
+                    </div>
+                    <p class="text-xl font-bold text-center text-slate-800 mt-12 italic">By following this 30-day blueprint, you shift from "studying hard" to "studying smart." Focus on the high-weightage areas, master your MCQs, and stay consistent. You’ve got this! 💪🌟</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- About Section -->
+        <section id="view-about" class="view-section">
+            <button onclick="showView('view-blog')" class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:bg-slate-700 hover:text-white transition-all border border-slate-100">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-xl leading-relaxed max-w-4xl mx-auto">
+                <h2 class="text-3xl font-extrabold mb-8 text-primary flex items-center gap-3">📚 About Prepogy CMA Strategy</h2>
+                <div class="text-slate-700 article-body">
+                    <p>Prepogy is a dedicated educational platform for CMA Intermediate students. Our goal is to provide official ICMAI Syllabus 2022 aligned study blueprints and MCQ practice tools to help you succeed in your professional journey. All strategies are compiled to help students navigate the high-weightage areas and manage time effectively during the intensive preparation period.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Accounts, Taxation, Law, and About views follow the same structure as established... -->
-        <!-- (Truncated for brevity, but all content is preserved in the active file) -->
-
     </main>
 
+    <!-- Footer -->
     <footer class="py-10 text-center shrink-0 border-t border-slate-100 mt-20">
         <div class="flex justify-center gap-6 mb-8">
-            <a href="https://whatsapp.com/channel/0029Vb77tFDKQuJFr4fbCE3c" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:bg-[#25D366] hover:text-white group">
+            <a href="https://whatsapp.com/channel/0029Vb77tFDKQuJFr4fbCE3c" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:bg-[#25D366] hover:text-white group" aria-label="Join WhatsApp">
                 <i class="fab fa-whatsapp text-xl text-slate-400 group-hover:text-white"></i>
             </a>
-            <a href="https://www.instagram.com/prepogy.in/" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:bg-[#E1306C] hover:text-white group">
+            <a href="https://www.instagram.com/prepogy.in/" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:bg-[#E1306C] hover:text-white group" aria-label="Follow Instagram">
                 <i class="fab fa-instagram text-xl text-slate-400 group-hover:text-white"></i>
             </a>
         </div>
-        <div class="flex flex-wrap justify-center gap-6 mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+        <nav class="flex flex-wrap justify-center gap-6 mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
             <a href="index.html" class="hover:text-primary">Home</a>
-            <a href="javascript:void(0)" onclick="showView('view-blog')" class="text-indigo-600">Blog</a>
+            <a href="javascript:void(0)" onclick="showView('view-blog')" class="text-indigo-600 underline">CMA Strategy Blog</a>
             <a href="javascript:void(0)" onclick="showView('view-about')" class="hover:text-primary">About</a>
-        </div>
-        <p class="text-slate-400 text-xs font-bold mb-2">Prepogy © 2025</p>
+        </nav>
+        <p class="text-slate-400 text-xs font-bold mb-2">Prepogy © 2025 - Your CMA Study Companion</p>
+        <p class="text-sm font-bold text-emerald-500 mt-4 flex items-center justify-center gap-2">
+            जय हिन्द <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India" width="20" height="13" class="w-5 rounded-[2px] shadow-sm" loading="lazy">
+        </p>
     </footer>
 
     <script>
-        function showView(id) {
-            document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
-            const target = document.getElementById(id);
+        /**
+         * Navigation logic with Browser History support (Hash-based)
+         */
+        
+        // Map of friendly names to section IDs
+        const viewMap = {
+            '': 'view-blog',
+            'accounts': 'view-article-accounts',
+            'taxation': 'view-article-taxation',
+            'law': 'view-article-law',
+            'costing': 'view-article-costing',
+            'about': 'view-about'
+        };
+
+        // Function to resolve hash to viewId
+        function getViewIdFromHash() {
+            const hash = window.location.hash.replace('#', '');
+            return viewMap[hash] || 'view-blog';
+        }
+
+        // Core function to update the DOM based on current hash
+        function updateView() {
+            const viewId = getViewIdFromHash();
+            
+            // Hide all sections
+            document.querySelectorAll('.view-section').forEach(s => {
+                s.classList.remove('active');
+            });
+
+            // Show target section
+            const target = document.getElementById(viewId);
             if(target) {
                 target.classList.add('active');
-                window.scrollTo(0,0);
+                // Smooth scroll to top on view change
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
+
+        /**
+         * Public navigation function
+         * Now it just updates the hash, which triggers the 'hashchange' listener
+         */
+        function showView(viewIdOrHash) {
+            let hash = '';
+            
+            // If passed a view-section ID, convert to short hash
+            if (viewIdOrHash === 'view-blog') hash = '';
+            else if (viewIdOrHash === 'view-article-accounts') hash = 'accounts';
+            else if (viewIdOrHash === 'view-article-taxation') hash = 'taxation';
+            else if (viewIdOrHash === 'view-article-law') hash = 'law';
+            else if (viewIdOrHash === 'view-article-costing') hash = 'costing';
+            else if (viewIdOrHash === 'view-about') hash = 'about';
+            else {
+                // If it's already a clean hash name
+                hash = viewIdOrHash;
+            }
+
+            window.location.hash = hash;
+        }
+
+        // Listen for browser back/forward buttons
+        window.addEventListener('hashchange', updateView);
+
+        // Handle initial page load (deep linking)
+        window.addEventListener('load', updateView);
     </script>
 </body>
 </html>
