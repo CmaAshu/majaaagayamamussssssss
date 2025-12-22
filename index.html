@@ -74,56 +74,32 @@
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#6366f1">
     
-    <!-- SEO & Primary Meta: Optimized for High-Traffic Keywords -->
+    <!-- SEO & Primary Meta -->
     <title>Prepogy - CMA MCQ Bank, ICMAI Previous Year Questions & Mock Tests</title>
     <meta name="description" content="Free CMA MCQ practice platform for Syllabus 2022. Solve authentic ICMAI previous year questions (2013-2025) and chapter-wise mock tests for Foundation, Inter, and Final.">
     <meta name="keywords" content="CMA MCQ, ICMAI Previous Year Questions, CMA Inter MCQ, CMA Foundation Mock Test, CMA Final Questions, ICMAI Syllabus 2022, Cost and Management Accountant">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://prepogy.in/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://prepogy.in/">
-    <meta property="og:title" content="Prepogy - Best CMA MCQ Practice Platform">
-    <meta property="og:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants. Syllabus 2022 compliant.">
-    <meta property="og:image" content="https://prepogy.in/prep.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://prepogy.in/">
-    <meta property="twitter:title" content="Prepogy - CMA MCQ Practice Platform">
-    <meta property="twitter:description" content="Authentic CMA MCQ bank and previous year question sets for ICMAI aspirants.">
-    <meta property="twitter:image" content="https://prepogy.in/prep.png">
-    
     <link rel="icon" href="prep.png" type="image/png">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- 3. PERFORMANCE: Defer Non-Critical CSS (Font Awesome) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" fetchpriority="low">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    </noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
-    <!-- Tailwind CSS & Configuration -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
                     colors: {
-                        primary: {
-                            DEFAULT: '#6366f1',
-                            dark: '#4f46e5',
-                        },
-                        success: '#10b981',
-                        error: '#ef4444',
-                        surface: '#ffffff',
+                        primary: { DEFAULT: '#6366f1', dark: '#4f46e5' },
+                        success: '#10b981', error: '#ef4444', surface: '#ffffff',
+                        sjc: '#036176',
                     },
                     boxShadow: {
                         soft: '0 10px 40px -10px rgba(0,0,0,0.06)',
@@ -139,34 +115,13 @@
                         'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
                     },
                     keyframes: {
-                        rise: {
-                            'from': { transform: 'translateY(0) rotate(0deg)', opacity: '0.4' },
-                            'to': { transform: 'translateY(-120vh) rotate(360deg)', opacity: '0' },
-                        },
-                        floating: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-12px)' },
-                        },
-                        'subtle-bounce': {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-3px)' },
-                        },
-                        fadeInUp: {
-                            'from': { opacity: '0', transform: 'translateY(10px)' },
-                            'to': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        'rotate-border': {
-                            'from': { transform: 'rotate(0deg)' },
-                            'to': { transform: 'rotate(360deg)' },
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-150%)' },
-                            '100%': { transform: 'translateX(150%)' },
-                        },
-                        'pulse-soft': {
-                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-                            '50%': { transform: 'scale(1.015)', opacity: '0.95' },
-                        }
+                        rise: { 'from': { transform: 'translateY(0) rotate(0deg)', opacity: '0.4' }, 'to': { transform: 'translateY(-120vh) rotate(360deg)', opacity: '0' } },
+                        floating: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } },
+                        'subtle-bounce': { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-3px)' } },
+                        fadeInUp: { 'from': { opacity: '0', transform: 'translateY(10px)' }, 'to': { opacity: '1', transform: 'translateY(0)' } },
+                        'rotate-border': { 'from': { transform: 'rotate(0deg)' }, 'to': { transform: 'rotate(360deg)' } },
+                        shimmer: { '0%': { transform: 'translateX(-150%)' }, '100%': { transform: 'translateX(150%)' } },
+                        'pulse-soft': { '0%, 100%': { transform: 'scale(1)', opacity: '1' }, '50%': { transform: 'scale(1.015)', opacity: '0.95' } }
                     }
                 }
             }
@@ -177,51 +132,38 @@
         @layer utilities {
             .scrollbar-hide::-webkit-scrollbar { display: none; }
             .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-            /* Exact gradient from original CSS */
-            .text-gradient-original { 
-                @apply bg-clip-text text-transparent bg-[linear-gradient(135deg,#10b981,#6366f1,#db2777,#f59e0b)];
-            }
-            /* PREVENTS SHAKING: Reserves space for scrollbar */
-            .scrollbar-gutter-stable {
-                scrollbar-gutter: stable;
+            .text-gradient-original { @apply bg-clip-text text-transparent bg-[linear-gradient(135deg,#10b981,#6366f1,#db2777,#f59e0b)]; }
+            .scrollbar-gutter-stable { scrollbar-gutter: stable; }
+            /* Google G Stylized Letter */
+            .google-g-text {
+                background: conic-gradient(
+                    #4285f4 0deg 90deg, 
+                    #34a853 90deg 180deg, 
+                    #fbbc05 180deg 270deg, 
+                    #ea4335 270deg 360deg
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @apply font-black;
             }
         }
 
         @layer components {
-            /* Base View Section - Hidden by default, optimized for transition */
-            .view-section { 
-                @apply hidden opacity-0 translate-y-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] max-w-6xl mx-auto px-5 pb-20 w-full; 
-            }
-            /* Visible State */
-            .view-section.active { 
-                @apply block opacity-100 translate-y-0; 
-            }
-            
-            /* Helper for immediate block display before fade-in */
-            .view-section.preparing {
-                @apply block;
-            }
-
-            /* Reusable Card Base */
+            .view-section { @apply hidden opacity-0 translate-y-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] max-w-6xl mx-auto px-5 pb-20 w-full; }
+            .view-section.active { @apply block opacity-100 translate-y-0; }
+            .view-section.preparing { @apply block; }
             .card-base {
                 @apply border-[3px] border-transparent rounded-[28px] p-10 text-center cursor-pointer 
                        transition-all duration-300 shadow-soft relative overflow-hidden bg-white hover:-translate-y-2;
                 background-origin: padding-box, border-box;
                 background-clip: padding-box, border-box;
             }
-
             .choice-card { @apply card-base; }
             .subject-card { @apply card-base; }
-
             .card-foundation, .subj-foundation { background-image: linear-gradient(white, white), linear-gradient(135deg, #10b981, #0ea5e9); }
-            .card-foundation:hover, .subj-foundation:hover { box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); }
-
             .card-inter, .subj-inter, .mode-bank { background-image: linear-gradient(white, white), linear-gradient(135deg, #6366f1, #a855f7); }
-            .card-inter:hover, .subj-inter:hover, .mode-bank:hover { box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15); }
-
             .card-final, .subj-final, .mode-pyq { background-image: linear-gradient(white, white), linear-gradient(135deg, #f59e0b, #db2777); }
-            .card-final:hover, .subj-final:hover, .mode-pyq:hover { box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15); }
-
+            .mode-sjc { background-image: linear-gradient(white, white), linear-gradient(135deg, #036176, #024a5a); }
             .option {
                 @apply flex items-center p-3 md:p-5 mb-3 bg-white border border-slate-200 rounded-2xl 
                        cursor-pointer transition-all duration-200 hover:scale-[1.015] hover:translate-x-1 hover:bg-violet-50 hover:shadow-hover hover:border-primary;
@@ -229,13 +171,11 @@
             .option.disabled { @apply pointer-events-none; }
             .option.correct { @apply border-success bg-emerald-50; }
             .option.incorrect { @apply border-error bg-red-50; }
-
             .shape { @apply absolute bottom-[-150px] opacity-15 font-bold block will-change-transform animate-rise; line-height: 1; }
         }
     </style>
 </head>
-<!-- min-h-screen and flex-col ensures footer stays at bottom, preventing jumps -->
-<body class="font-sans bg-slate-50 text-gray-800 overflow-x-hidden antialiased selection:bg-indigo-100 selection:text-indigo-700 min-h-screen flex flex-col">
+<body class="font-sans bg-slate-50 text-gray-800 overflow-x-hidden antialiased min-h-screen flex flex-col">
 
     <!-- Background Shapes -->
     <div class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden select-none" aria-hidden="true">
@@ -255,15 +195,48 @@
     </div>
 
     <!-- Shortcuts Modal -->
-    <div id="shortcutsModal" class="hidden fixed inset-0 z-[2000] bg-black/60 backdrop-blur-sm items-center justify-center p-5 [&.show]:flex" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="shortcutsModal" class="hidden fixed inset-0 z-[2000] bg-black/60 backdrop-blur-sm items-center justify-center p-5 [&.show]:flex">
         <div class="bg-white p-8 rounded-3xl w-full max-w-[500px] animate-fade-in-up relative shadow-2xl">
-            <button class="absolute top-4 right-4 text-2xl font-bold text-gray-300 hover:text-gray-500 transition-colors" onclick="App.toggleShortcuts(false)" aria-label="Close Shortcuts Modal">&times;</button>
-            <h2 id="modalTitle" class="text-xl font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-keyboard"></i> Shortcuts</h2>
+            <button class="absolute top-4 right-4 text-2xl font-bold text-gray-300 hover:text-gray-500 transition-colors" onclick="App.toggleShortcuts(false)">&times;</button>
+            <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-keyboard"></i> Shortcuts</h2>
             <ul class="space-y-3 text-sm md:text-base">
                 <li class="flex justify-between border-b border-slate-100 pb-2"><span>Select Option</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">A/B/C/D</span></li>
                 <li class="flex justify-between border-b border-slate-100 pb-2"><span>Next Question</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">Enter / →</span></li>
                 <li class="flex justify-between"><span>Back / Previous</span> <span class="font-bold font-mono bg-slate-100 px-2 py-0.5 rounded text-xs">Esc / ←</span></li>
             </ul>
+        </div>
+    </div>
+
+    <!-- SJC Introduction Modal -->
+    <div id="sjcIntroModal" class="hidden fixed inset-0 z-[2000] bg-black/60 backdrop-blur-md items-center justify-center p-5 [&.show]:flex">
+        <div class="bg-white p-8 md:p-10 rounded-[40px] w-full max-w-[600px] animate-fade-in-up relative shadow-2xl overflow-hidden">
+            <!-- Cross button top right -->
+            <button class="absolute top-6 right-6 text-2xl font-bold text-gray-300 hover:text-gray-500 transition-colors z-20" onclick="App.toggleSjcModal(false)" aria-label="Close">&times;</button>
+            
+            <div class="absolute -top-10 -left-10 w-32 h-32 bg-[#036176]/5 rounded-full"></div>
+            
+            <div class="relative z-10 text-center">
+                <div class="w-16 h-16 bg-[#036176] text-white font-bold rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg shadow-cyan-900/20">SJC</div>
+                <h3 class="text-xl font-extrabold text-gray-800 mb-4 leading-tight">About SJC Institute</h3>
+                <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                    This MCQ quiz is based on materials from the SJC Institute, one of the oldest institutions supporting CMA students. Their workshops and webinars are very helpful, and they continue to guide students even if they face setbacks.
+                </p>
+                
+                <div class="bg-indigo-50/50 p-6 rounded-[28px] border border-indigo-100 mb-8">
+                    <p class="text-xs md:text-sm font-semibold text-indigo-600 mb-4">📺 It's recommended to try this quiz while watching the accompanying video for the best results.</p>
+                    <a href="https://www.youtube.com/watch?v=QkVVoCPjLFU&list=PLM5Q5CSb57Q3NQaygJcRa7DoK3CnwUBFF" target="_blank" class="flex items-center justify-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-indigo-50 hover:border-primary group transition-all">
+                        <i class="fab fa-youtube text-red-600 text-2xl group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left">
+                            <span class="block text-[10px] uppercase font-bold text-slate-400">Watch Workshop</span>
+                            <span class="block text-xs md:text-sm font-bold text-slate-700">Costing MCQ Mastery Class</span>
+                        </div>
+                    </a>
+                </div>
+
+                <button onclick="App.toggleSjcModal(false); App.quiz.startQuizSession('sjc');" class="w-full py-4 bg-[#036176] text-white rounded-2xl font-bold shadow-lg shadow-cyan-900/20 hover:brightness-110 hover:-translate-y-0.5 transition-all">
+                    Start Quiz Now
+                </button>
+            </div>
         </div>
     </div>
 
@@ -273,25 +246,19 @@
         <p class="mt-4 font-bold text-primary tracking-tight animate-pulse">Accessing Prepogy Bank...</p>
     </div>
 
-    <!-- Header (H1) -->
+    <!-- Header -->
     <header class="text-center py-10 md:py-16 px-5 relative shrink-0">
-        <!-- 4. PERFORMANCE: Fetch Priority & Explicit Dimensions for LCP Image -->
-        <!-- 5. SEO: Improved Alt Text -->
-        <div class="w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 cursor-pointer transition-all duration-300 hover:scale-110 drop-shadow-lg hover:drop-shadow-2xl flex items-center justify-center animate-floating" id="logoHome" role="button" aria-label="Go to Home" tabindex="0">
-            <!-- Optimization: fetchpriority="high" for LCP element -->
-            <img src="prep.png" alt="Prepogy - CMA MCQ Practice Platform Logo" width="144" height="144" class="w-full h-auto object-contain" fetchpriority="high" onerror="this.src='https://via.placeholder.com/150?text=P'">
+        <div class="w-24 h-24 md:w-36 md:h-36 mx-auto mb-5 cursor-pointer transition-all duration-300 hover:scale-110 drop-shadow-lg flex items-center justify-center animate-floating" id="logoHome" role="button">
+            <img src="prep.png" alt="Prepogy Logo" width="144" height="144" class="w-full h-auto object-contain" fetchpriority="high" onerror="this.src='https://via.placeholder.com/150?text=P'">
         </div>
-        <!-- Original Gradient and Spacing Restored -->
         <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-extrabold uppercase tracking-[2px] text-gradient-original mb-1">Prepogy</h1>
         <p class="text-[0.9em] text-slate-500 font-medium tracking-wide mt-1">Tailored MCQ Practice Exclusively for CMA Students</p>
     </header>
 
-    <!-- flex-grow ensures main takes up remaining space -->
     <main id="app" class="flex-grow flex flex-col relative w-full">
         <!-- 1. HOME -->
         <section id="view-home" class="view-section active">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Using H2 for key navigation points to improve structure -->
                 <div class="choice-card card-foundation group" onclick="App.view.navigateTo('view-foundation')">
                     <i class="fas fa-seedling text-4xl text-emerald-500 mb-4 block group-hover:scale-110 transition-transform"></i>
                     <h2 class="text-2xl font-bold text-gray-800">Foundation</h2>
@@ -312,7 +279,7 @@
 
         <!-- 2. INTER SUB-GROUP -->
         <section id="view-inter" class="view-section">
-            <button class="mb-8 font-bold flex items-center gap-2 text-primary bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-primary hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+            <button class="mb-8 font-bold flex items-center gap-2 text-primary bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md border border-slate-100" onclick="App.view.goBack()">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
@@ -329,7 +296,7 @@
 
         <!-- 3. FINAL SUB-GROUP -->
         <section id="view-final" class="view-section">
-            <button class="mb-8 font-bold flex items-center gap-2 text-amber-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-amber-500 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+            <button class="mb-8 font-bold flex items-center gap-2 text-amber-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md border border-slate-100" onclick="App.view.goBack()">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
@@ -346,30 +313,28 @@
 
         <!-- 4. FOUNDATION LIST -->
         <section id="view-foundation" class="view-section">
-            <button class="mb-8 font-bold flex items-center gap-2 text-emerald-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-emerald-500 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+            <button class="mb-8 font-bold flex items-center gap-2 text-emerald-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md border border-slate-100" onclick="App.view.goBack()">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
             <div id="foundationList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </section>
 
-        <!-- 5. GENERIC SUBJECTS LIST -->
+        <!-- 5. SUBJECTS LIST -->
         <section id="view-subjects" class="view-section">
-            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md border border-slate-100" onclick="App.view.goBack()">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
-            <!-- H2 for Section Title -->
             <h2 id="subjectsTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Subjects</h2>
             <div id="subjectsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </section>
 
         <!-- 6. PRACTICE DASHBOARD -->
         <section id="view-dashboard" class="view-section">
-            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all hover:animate-bounce-subtle border border-slate-100" onclick="App.view.goBack()" aria-label="Go Back">
+            <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md border border-slate-100" onclick="App.view.goBack()">
                 <i class="fas fa-arrow-left"></i> Back
             </button>
             <h2 id="dashTitle" class="text-2xl font-bold text-center mb-8 text-slate-700">Practice Mode</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Using H3 for card details -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="dashboardGrid">
                 <div class="subject-card mode-bank flex items-center gap-5 text-left p-6" onclick="App.quiz.startQuizSession('bm')">
                     <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-primary"><i class="fas fa-university"></i></div>
                     <div><h3 class="font-bold text-lg">Official MCQ Bank</h3><p class="text-xs text-slate-400">Syllabus 2022</p></div>
@@ -378,7 +343,15 @@
                     <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 text-2xl text-amber-500"><i class="fas fa-file-invoice"></i></div>
                     <div><h3 class="font-bold text-lg">Exam Papers</h3><p class="text-xs text-slate-400">Previous Year Questions</p></div>
                 </div>
-                <div class="subject-card flex items-center gap-5 text-left p-6 opacity-60 grayscale cursor-not-allowed bg-slate-50 border-slate-200 pointer-events-none">
+                <!-- SJC Custom Quiz Card -->
+                <div id="cardSjc" class="subject-card mode-sjc flex items-center gap-5 text-left p-6 hidden" onclick="App.toggleSjcModal(true)">
+                    <div class="w-14 h-14 rounded-2xl bg-[#036176] flex items-center justify-center shrink-0 text-lg font-bold text-white shadow-inner">SJC</div>
+                    <div>
+                        <h3 class="font-bold text-lg">Chapter wise Quiz</h3>
+                        <p class="text-[10px] text-slate-400 font-bold">by Satish Jalan Sir</p>
+                    </div>
+                </div>
+                <div id="cardLibrary" class="subject-card flex items-center gap-5 text-left p-6 opacity-60 grayscale cursor-not-allowed bg-slate-50 border-slate-200 pointer-events-none">
                     <div class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 text-2xl text-slate-400"><i class="fas fa-book-open"></i></div>
                     <div><h3 class="font-bold text-lg text-slate-500">Library Section</h3><p class="text-[10px] text-slate-400 font-bold italic">Coming soon</p></div>
                 </div>
@@ -388,43 +361,37 @@
         <!-- 7. QUIZ INTERFACE -->
         <section id="view-quiz" class="view-section">
             <div class="max-w-2xl mx-auto">
-                <!-- Quiz Header -->
                 <div class="flex justify-between items-center mb-6">
-                    <button class="bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-500 font-bold text-xs hover:bg-slate-50 transition-colors flex items-center gap-2" onclick="App.view.goBack()" aria-label="Go Back">
+                    <button class="bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-500 font-bold text-xs" onclick="App.view.goBack()">
                         <i class="fas fa-arrow-left"></i> Back
                     </button>
                     <div class="flex items-center gap-3">
-                        <button onclick="App.quiz.resetLocalProgress()" class="text-[10px] text-red-400 font-bold uppercase hover:text-red-600 tracking-wide" aria-label="Reset Quiz Progress">Reset</button>
-                        <select id="setSelector" class="bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer" aria-label="Select Quiz Set"></select>
+                        <button onclick="App.quiz.resetLocalProgress()" class="text-[10px] text-red-400 font-bold uppercase tracking-wide">Reset</button>
+                        <select id="setSelector" class="bg-white rounded-xl px-4 py-2 text-xs font-bold border border-slate-200 shadow-sm outline-none focus:border-primary text-slate-600 cursor-pointer"></select>
                     </div>
                 </div>
                 
-                <!-- Scorecard -->
                 <div class="bg-white rounded-3xl p-4 flex shadow-sm mb-8 border border-slate-100 divide-x divide-slate-100">
                     <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-emerald-500 mb-1" id="scoreCorrect">0</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Correct</span></div>
                     <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-red-500 mb-1" id="scoreWrong">0</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Wrong</span></div>
                     <div class="flex-1 text-center"><span class="block text-xl md:text-2xl font-extrabold text-primary mb-1" id="scoreAcc">0%</span><span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Accuracy</span></div>
                 </div>
 
-                <!-- Question Card -->
                 <div id="questionArea" class="bg-white/95 backdrop-blur-md shadow-soft rounded-[28px] p-6 md:p-10 relative overflow-hidden transition-all duration-300">
-                    <i class="fas fa-pen-nib absolute -bottom-6 -right-6 text-[14rem] text-primary opacity-[0.03] -rotate-12 pointer-events-none" aria-hidden="true"></i>
-                    
+                    <i class="fas fa-pen-nib absolute -bottom-6 -right-6 text-[14rem] text-primary opacity-[0.03] -rotate-12 pointer-events-none"></i>
                     <p id="qIndexDisplay" class="text-[10px] font-bold text-primary uppercase mb-4 relative z-10 tracking-widest"></p>
                     <h2 id="qTextDisplay" class="text-lg md:text-xl font-bold text-gray-800 mb-8 leading-relaxed relative z-10"></h2>
-                    
                     <div id="optionsContainer" class="space-y-3 relative z-10"></div>
                     
-                    <!-- Explanation Section -->
                     <div id="explanationContainer" class="relative z-10 mt-6 p-5 bg-slate-50 rounded-2xl border-l-4 border-primary hidden animate-fade-in-up">
                         <div class="flex justify-between items-center mb-3">
                             <h4 class="text-xs font-bold uppercase text-primary tracking-wide">Explanation</h4>
-                            <!-- AI Button -->
-                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative p-[1.5px] rounded-full overflow-hidden inline-flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-sm group border-none bg-transparent" aria-label="Get AI Explanation">
+                            <!-- ASK GURU G Button -->
+                            <button id="btnAiExplain" onclick="App.quiz.openGoogleSearchExplanation()" class="relative p-[1.5px] rounded-full overflow-hidden inline-flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-sm group border-none bg-transparent" aria-label="Ask Guru G">
                                 <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#4285f4,#34a853,#fbbc05,#ea4335,#4285f4)] animate-rotate-border"></div>
                                 <div class="relative bg-white px-3 py-1.5 rounded-full flex items-center gap-1.5 z-10">
                                     <i class="fas fa-magnifying-glass-chart text-primary text-xs"></i>
-                                    <span class="font-bold text-[10px] text-slate-600">Get AI Explanation</span>
+                                    <span class="font-bold text-[10px] text-slate-600">ASK GURU <span class="google-g-text">G</span></span>
                                 </div>
                             </button>
                         </div>
@@ -432,57 +399,38 @@
                     </div>
 
                     <div class="flex justify-between mt-10 pt-6 border-t border-slate-100 relative z-10">
-                        <button id="btnPrevQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-white border border-slate-200 text-slate-500 hover:bg-slate-50 invisible" aria-label="Previous Question">
+                        <button id="btnPrevQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-white border border-slate-200 text-slate-500 hover:bg-slate-50 invisible">
                             <i class="fas fa-arrow-left"></i> Previous
                         </button>
-                        <button id="btnNextQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-primary text-white shadow-lg shadow-indigo-200 hover:bg-primary-dark hover:translate-y-[-2px]" aria-label="Next Question">
+                        <button id="btnNextQ" class="px-6 py-3 rounded-2xl font-bold transition-all flex items-center gap-2 bg-primary text-white shadow-lg shadow-indigo-200">
                             Next <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Results Card -->
                 <div id="resultsArea" class="hidden bg-white rounded-[28px] p-6 md:p-10 text-center shadow-xl animate-fade-in-up">
                     <h2 class="text-2xl md:text-3xl font-black text-primary mb-2">Quiz Finished!</h2>
                     <div id="finalScoreDisplay" class="text-lg md:text-xl font-bold mb-6 text-slate-500"></div>
-
-                    <!-- Enhanced Share Encouragement Section -->
                     <div class="relative overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-emerald-500 p-[2px] rounded-[32px] mb-8 animate-pulse-soft">
                         <div class="bg-white rounded-[30px] p-6 md:p-8 relative overflow-hidden">
-                            <!-- Shimmer Effect Layer -->
-                            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 translate-x-[-150%] animate-shimmer"></div>
-                            </div>
-
-                            <h3 class="text-lg md:text-xl font-extrabold text-gray-800 mb-4 relative z-10">Help Others Learn 📚 — Share This Quiz!</h3>
-                            
-                            <div id="quoteDisplay" class="text-slate-600 font-medium mb-8 text-sm md:text-base italic leading-relaxed relative z-10 px-4 min-h-[3rem] flex items-center justify-center">
-                                <!-- Quote injected here -->
-                            </div>
-
+                            <h3 class="text-lg font-extrabold text-gray-800 mb-4 relative z-10">Share & Help Others Learn 📚</h3>
+                            <div id="quoteDisplay" class="text-slate-600 font-medium mb-8 text-sm italic min-h-[3rem] flex items-center justify-center"></div>
                             <div class="grid grid-cols-3 gap-3 md:gap-6 relative z-10">
-                                <button id="btnShareWA" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Share on WhatsApp">
-                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#25D366] group-hover:shadow-green-200 transition-all">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </div>
-                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">WhatsApp</span>
+                                <button id="btnShareWA" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#25D366] transition-all hover:scale-110 group-hover:shadow-green-200"><i class="fab fa-whatsapp"></i></div>
+                                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">WhatsApp</span>
                                 </button>
-                                <button id="btnShareTG" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Share on Telegram">
-                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#0088cc] group-hover:shadow-blue-200 transition-all">
-                                        <i class="fab fa-telegram-plane"></i>
-                                    </div>
-                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">Telegram</span>
+                                <button id="btnShareTG" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-[#0088cc] transition-all hover:scale-110 group-hover:shadow-blue-200"><i class="fab fa-telegram-plane"></i></div>
+                                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Telegram</span>
                                 </button>
-                                <button id="btnShareCopy" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]" aria-label="Copy Link">
-                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-slate-700 group-hover:shadow-slate-300 transition-all">
-                                        <i class="fas fa-link"></i>
-                                    </div>
-                                    <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-tight">Copy Link</span>
+                                <button id="btnShareCopy" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-[1.03]">
+                                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg bg-slate-700 transition-all hover:scale-110 group-hover:shadow-slate-300"><i class="fas fa-link"></i></div>
+                                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Copy Link</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="App.quiz.loadSet(App.quiz.state.currentSetIdx)" class="bg-primary text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-primary-dark transition-colors">Try Again</button>
                         <button onclick="App.view.resetToHome()" class="bg-slate-100 text-slate-500 py-4 rounded-2xl font-bold hover:bg-slate-200 transition-colors">Main Menu</button>
@@ -491,15 +439,15 @@
             </div>
         </section>
 
-        <!-- 8. ABOUT PREPOGY -->
+        <!-- STATIC PAGES: Full Original Content -->
         <section id="view-about" class="view-section">
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
             <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-xl leading-relaxed max-w-4xl mx-auto">
                 <h2 class="text-3xl font-extrabold mb-8 text-primary flex items-center gap-3">📚 About Prepogy</h2>
                 <div class="space-y-6 text-slate-700">
-                    <p class="text-lg">My motivation for creating this website is to provide CMA students with an easy and effective way to prepare for their exams. 🎯</p>
+                    <p class="text-lg font-medium">My motivation for creating this website is to provide CMA students with an easy and effective way to prepare for their exams. 🎯</p>
                     <div class="bg-indigo-50 p-6 rounded-2xl border-l-4 border-primary">
-                        <p class="italic text-slate-600">"The idea sparked back in 2019 while I was preparing for my driving license test—a computer-based MCQ exam at the RTO. 🚗💻 I downloaded an app, attempted all 200 questions in one go, and despite making mistakes, the instant learning process was incredibly effective. That experience inspired me to build this platform for you! 💡✨"</p>
+                        <p class="italic text-slate-600 text-sm md:text-base">"The idea sparked back in 2019 while I was preparing for my driving license test—a computer-based MCQ exam at the RTO. 🚗💻 I downloaded an app, attempted all 200 questions in one go, and despite making mistakes, the instant learning process was incredibly effective. That experience inspired me to build this platform for you! 💡✨"</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
                         <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
@@ -514,40 +462,45 @@
                 </div>
             </div>
         </section>
-
-        <!-- 9. PRIVACY -->
+        
         <section id="view-privacy" class="view-section">
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
-            <div class="bg-white p-10 rounded-[32px] shadow-lg max-w-4xl mx-auto">
+            <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-lg max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 text-emerald-600">🛡️ Privacy Policy</h2>
-                <p class="text-slate-600 mb-4">At Prepogy.in, one of our main priorities is the privacy of our visitors. We do not require registration or personal accounts.</p>
-                
-                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">1. Information We Collect</h3>
-                <p class="text-slate-600 mb-4 text-sm">Prepogy is designed to be a "privacy-first" platform. We do not store personal student identifiers.</p>
-                
-                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">2. Cookies</h3>
-                <p class="text-slate-600 mb-4 text-sm">We use standard analytics and ad-serving cookies to maintain site performance and support our educational mission.</p>
+                <div class="space-y-6 text-slate-600 text-sm leading-relaxed">
+                    <p>At Prepogy.in, one of our main priorities is the privacy of our visitors. We do not require registration or personal accounts to use our services.</p>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 border-l-4 border-primary pl-3">1. Information We Collect</h3>
+                        <p>Prepogy is designed to be a "privacy-first" platform. We do not store personal student identifiers like phone numbers or emails. Your progress is saved locally on your device.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 border-l-4 border-primary pl-3">2. Cookies</h3>
+                        <p>We use standard analytics and ad-serving cookies to maintain site performance and support our educational mission. These help us understand which topics students find most helpful.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 10. TERMS -->
         <section id="view-terms" class="view-section">
             <button class="mb-8 font-bold flex items-center gap-2 text-slate-600 bg-white px-6 py-2.5 rounded-full shadow-sm hover:shadow-md hover:bg-slate-700 hover:text-white transition-all border border-slate-100" onclick="App.view.resetToHome()" aria-label="Go Back"><i class="fas fa-arrow-left"></i> Back</button>
-            <div class="bg-white p-10 rounded-[32px] shadow-lg max-w-4xl mx-auto">
+            <div class="bg-white p-8 md:p-12 rounded-[32px] shadow-lg max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-6 text-amber-600">📜 Terms and Conditions</h2>
-                <p class="text-slate-600 mb-4">Welcome to Prepogy. These terms outline the rules for using our practice platform.</p>
-                
-                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">1. Property Rights</h3>
-                <p class="text-slate-600 mb-4 text-sm">All educational MCQs and syllabus data are sourced from official ICMAI public materials for fair educational use.</p>
-                
-                <h3 class="font-bold text-lg text-slate-800 mt-6 mb-2 border-l-4 border-primary pl-3">2. Disclaimer</h3>
-                <p class="text-slate-600 mb-4 text-sm">The content provided is for practice purposes. Students should always consult official study modules for final preparation.</p>
+                <div class="space-y-6 text-slate-600 text-sm leading-relaxed">
+                    <p>Welcome to Prepogy. These terms outline the rules for using our practice platform.</p>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 border-l-4 border-primary pl-3">1. Property Rights</h3>
+                        <p>All educational MCQs and syllabus data are sourced from official ICMAI public materials for fair educational use. Prepogy claims no ownership over the question bank itself.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2 border-l-4 border-primary pl-3">2. Disclaimer</h3>
+                        <p>The content provided is for practice and self-assessment purposes. While we strive for accuracy, students should always consult official study modules for final exam preparation.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="py-10 text-center shrink-0">
-        <!-- New: Social Links for WhatsApp Channel and Instagram -->
         <div class="flex justify-center gap-6 mb-8">
             <a href="https://whatsapp.com/channel/0029Vb77tFDKQuJFr4fbCE3c" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all hover:-translate-y-1 hover:bg-[#25D366] group" aria-label="Join WhatsApp Channel">
                 <i class="fab fa-whatsapp text-xl text-slate-400 group-hover:text-white"></i>
@@ -556,17 +509,13 @@
                 <i class="fab fa-instagram text-xl text-slate-400 group-hover:text-white"></i>
             </a>
         </div>
-
-        <!-- 6. SEO: Improved Internal Linking (Semantic Anchors) -->
         <div class="flex justify-center gap-6 mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
-            <!-- Updated to semantic hrefs for SEO, while keeping JS behavior -->
             <a href="#about" class="cursor-pointer hover:text-primary transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-about')" tabindex="0">About</a>
             <a href="#privacy" class="cursor-pointer hover:text-emerald-500 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-privacy')" tabindex="0">Privacy</a>
             <a href="#terms" class="cursor-pointer hover:text-amber-600 transition-colors no-underline text-slate-400" onclick="event.preventDefault(); App.view.navigateTo('view-terms')" tabindex="0">Terms</a>
         </div>
         <p class="text-slate-400 text-xs font-bold mb-2">Prepogy © 2025</p>
         <p class="text-sm font-bold text-emerald-500 mt-4 flex items-center justify-center gap-2">
-            <!-- 5. SEO: Improved Alt Text & Lazy Loading -->
             जय हिन्द <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India" width="20" height="13" class="w-5 rounded-[2px] shadow-sm" loading="lazy">
         </p>
     </footer>
@@ -626,78 +575,37 @@
         class ViewManager {
             constructor() {
                 this.currentViewId = 'view-home';
-                window.addEventListener('popstate', (e) => this.handlePopState(e));
+                window.addEventListener('popstate', (e) => this.showView(e.state ? e.state.viewId : 'view-home'));
             }
-            handlePopState(e) {
-                const targetId = e.state ? e.state.viewId : 'view-home';
-                this.showView(targetId, false);
-            }
-            navigateTo(viewId, push = true) {
-                if (this.currentViewId === viewId) return;
-                if (push) history.pushState({ viewId: viewId }, '', '');
-                this.showView(viewId);
-            }
+            navigateTo(viewId) { history.pushState({ viewId: viewId }, '', ''); this.showView(viewId); }
             goBack() { history.back(); }
             resetToHome() { this.navigateTo('view-home'); }
-            
-            showView(viewId, updateState = true) {
+            showView(viewId) {
                 const current = document.getElementById(this.currentViewId);
                 const next = document.getElementById(viewId);
-                
-                if (!next) return;
                 if (current) current.classList.remove('active');
-                
-                next.classList.add('preparing');
-                void next.offsetWidth; 
-                
-                requestAnimationFrame(() => {
+                if (next) {
+                    next.classList.add('preparing');
+                    void next.offsetWidth;
                     next.classList.remove('preparing');
                     next.classList.add('active');
-                });
-
-                this.currentViewId = viewId;
-                this.updateMeta(viewId);
-                window.scrollTo(0,0);
+                    this.currentViewId = viewId;
+                    this.updateMeta(viewId);
+                    window.scrollTo(0,0);
+                }
             }
-
             updateMeta(viewId) {
-                const setMeta = (title, description) => {
+                const setMeta = (title, desc) => {
                     document.title = `${title} | ${Config.baseTitle}`;
-                    document.querySelector('meta[name="description"]').setAttribute("content", description);
+                    document.querySelector('meta[name="description"]').setAttribute("content", desc);
                 };
-
                 switch(viewId) {
-                    case 'view-foundation': 
-                        setMeta("CMA Foundation MCQs | Papers 1-4", "Practice free CMA Foundation MCQs. Authentic ICMAI Syllabus 2022 questions for Business Laws, Accounting, Maths & Economics.");
-                        break;
-                    case 'view-inter': 
-                        setMeta("CMA Inter MCQ Bank & Previous Papers", "CMA Intermediate Group 1 & 2 MCQ practice. Syllabus 2022 mocks for Financial Accounting, Law, Taxation, and Costing.");
-                        break;
-                    case 'view-final': 
-                        setMeta("CMA Final Mock Test & MCQs", "CMA Final Group 3 & 4 practice. Advanced Law, SFM, SCM, and Direct Tax. ICMAI previous year question bank included.");
-                        break;
-                    case 'view-subjects':
-                        const sTitle = document.getElementById('subjectsTitle').textContent;
-                        setMeta(`${sTitle} - Free CMA MCQ Practice`, `Select a subject from ${sTitle} to begin free CMA MCQ practice online.`);
-                        break;
-                    case 'view-dashboard':
-                        const dTitle = document.getElementById('dashTitle').textContent;
-                        setMeta(dTitle, `Start practicing ${dTitle}. Choose between Official ICMAI MCQ Bank or Previous Year Questions.`);
-                        break;
-                    case 'view-quiz': 
-                        setMeta("CMA MCQ Quiz Session", "Interactive CMA MCQ Quiz Session. Test your knowledge with instant results and explanations.");
-                        break;
-                    case 'view-about': 
-                        setMeta("About Prepogy", "Learn about Prepogy's mission to help CMA aspirants succeed with free educational resources.");
-                        break;
-                    case 'view-privacy': 
-                        setMeta("Privacy Policy", "Prepogy Privacy Policy. We value your privacy and data security.");
-                        break;
-                    case 'view-terms': 
-                        setMeta("Terms & Conditions", "Terms of use for the Prepogy practice platform.");
-                        break;
-                    default:
-                        setMeta("Home", Config.baseDesc);
+                    case 'view-foundation': setMeta("Foundation", Config.baseDesc); break;
+                    case 'view-inter': setMeta("Intermediate", Config.baseDesc); break;
+                    case 'view-final': setMeta("Final", Config.baseDesc); break;
+                    case 'view-quiz': setMeta("Interactive Quiz", "Practice CMA MCQs with instant feedback."); break;
+                    case 'view-about': setMeta("About Prepogy", "Learn about the mission behind Prepogy."); break;
+                    default: setMeta("Home", Config.baseDesc);
                 }
             }
             renderFoundation() {
@@ -705,34 +613,28 @@
                 if(container) container.innerHTML = Config.syllabus.foundation.map(p => this.createCard(p, 'card-foundation')).join('');
             }
             renderSubjects(key, title, theme) {
-                const titleEl = document.getElementById('subjectsTitle');
-                const listEl = document.getElementById('subjectsList');
-                if(titleEl) titleEl.textContent = title;
-                if(listEl) listEl.innerHTML = Config.syllabus[key].map(p => this.createCard(p, theme)).join('');
+                document.getElementById('subjectsTitle').textContent = title;
+                document.getElementById('subjectsList').innerHTML = Config.syllabus[key].map(p => this.createCard(p, theme)).join('');
                 this.navigateTo('view-subjects');
             }
             createCard(p, theme) {
-                return `<div class="subject-card ${theme} flex items-center gap-5 text-left p-6" onclick="App.selectPaper('${p.id}', '${p.t}')" role="button" tabindex="0" onkeypress="if(event.key==='Enter') App.selectPaper('${p.id}', '${p.t}')">
+                return `<div class="subject-card ${theme} flex items-center gap-5 text-left p-6" onclick="App.selectPaper('${p.id}', '${p.t}')">
                     <div class="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shrink-0 text-2xl shadow-sm"><i class="fas ${p.i} ${p.c}"></i></div>
-                    <div><h3 class="font-bold text-gray-800">${p.t}</h3><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Practice Now</p></div>
+                    <div><h3 class="font-bold text-gray-800 text-sm md:text-base">${p.t}</h3><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Practice Now</p></div>
                 </div>`;
             }
         }
 
         class QuizManager {
             constructor() {
-                this.state = { 
-                    paperId: null, 
-                    mode: null, 
-                    currentSetIdx: 0, 
-                    currentQIdx: 0, 
-                    score: { c: 0, w: 0 }, 
-                    dataSets: null, 
-                    answers: [] 
-                };
+                this.state = { paperId: null, mode: null, currentSetIdx: 0, currentQIdx: 0, score: { c: 0, w: 0 }, dataSets: null, answers: [] };
                 this.loader = document.getElementById('globalLoader');
                 document.getElementById('btnNextQ').onclick = () => this.changeQuestion(1);
                 document.getElementById('btnPrevQ').onclick = () => this.changeQuestion(-1);
+                
+                this.touchStartX = 0;
+                this.touchStartY = 0;
+                this.touchStartTime = 0;
                 this.initGestures();
             }
 
@@ -757,55 +659,18 @@
                 }, { passive: true });
             }
 
-            saveLocalProgress() {
-                const saveObj = {
-                    paperId: this.state.paperId,
-                    mode: this.state.mode,
-                    currentSetIdx: this.state.currentSetIdx,
-                    currentQIdx: this.state.currentQIdx,
-                    score: this.state.score,
-                    answers: this.state.answers
-                };
-                localStorage.setItem('prepogy_progress', JSON.stringify(saveObj));
-            }
-
-            resetLocalProgress() {
-                localStorage.removeItem('prepogy_progress');
-                this.loadSet(this.state.currentSetIdx);
-            }
-
             async startQuizSession(mode) {
                 this.state.mode = mode;
-                let loaderTimeout = setTimeout(() => {
-                    this.loader.classList.remove('hidden');
-                    this.loader.style.display = 'flex';
-                }, 300);
-
-                const fileName = `${mode}${this.state.paperId}.js`;
+                this.loader.classList.remove('hidden');
+                this.loader.style.display = 'flex';
+                const fileName = (mode === 'sjc') ? 'SJC COST CHAPTER WISE.js' : `${mode}${this.state.paperId}.js`;
                 try {
-                    const data = await this.loadFile(encodeURI(fileName));
+                    const data = await this.loadFile(fileName);
                     this.state.dataSets = data;
                     this.setupSelector();
                     App.view.navigateTo('view-quiz');
-                    const saved = localStorage.getItem('prepogy_progress');
-                    if (saved) {
-                        const parsed = JSON.parse(saved);
-                        if (parsed.paperId === this.state.paperId && parsed.mode === this.state.mode) {
-                            this.state.currentSetIdx = parsed.currentSetIdx;
-                            this.state.currentQIdx = parsed.currentQIdx;
-                            this.state.score = parsed.score;
-                            this.state.answers = parsed.answers;
-                            document.getElementById('setSelector').value = this.state.currentSetIdx;
-                            this.renderQuestion();
-                            this.updateUI();
-                            return;
-                        }
-                    }
                     this.loadSet(0);
-                } catch (e) {
-                    console.error("Quiz load error", e);
-                } finally {
-                    clearTimeout(loaderTimeout);
+                } catch (e) { console.error("Quiz load error", e); } finally {
                     this.loader.classList.add('hidden');
                     this.loader.style.display = 'none';
                 }
@@ -833,13 +698,11 @@
                     doc.open();
                     doc.write(`<html><body><script>function triggerSuccess(){if(typeof quizSets!=='undefined'){window.parent.postMessage({type:'SUCCESS',payload:JSON.parse(JSON.stringify(quizSets))},'*');}else{triggerError();}}function triggerError(){window.parent.postMessage({type:'ERROR'},'*');}<\/script><script src="${fileName}" onload="triggerSuccess()" onerror="triggerError()"><\/script></body></html>`);
                     doc.close();
-                    setTimeout(() => { window.removeEventListener('message', handler); if(iframe.parentNode) iframe.remove(); reject(new Error("Timeout")); }, 10000);
                 });
             }
 
             setupSelector() {
                 const s = document.getElementById('setSelector');
-                if(!s) return;
                 s.innerHTML = this.state.dataSets.map((set, i) => `<option value="${i}">${set.setName}</option>`).join('');
                 s.onchange = (e) => this.loadSet(parseInt(e.target.value));
             }
@@ -851,10 +714,8 @@
                 this.state.answers = new Array(this.state.dataSets[idx].questions.length).fill(null);
                 document.getElementById('resultsArea').classList.add('hidden');
                 document.getElementById('questionArea').classList.remove('hidden');
-                document.getElementById('explanationContainer').style.display = 'none';
                 this.updateUI();
                 this.renderQuestion();
-                this.saveLocalProgress();
             }
 
             renderQuestion() {
@@ -862,18 +723,19 @@
                 document.getElementById('qIndexDisplay').textContent = `Question ${this.state.currentQIdx + 1} / ${this.state.dataSets[this.state.currentSetIdx].questions.length}`;
                 document.getElementById('qTextDisplay').textContent = q.q;
                 const expBox = document.getElementById('explanationContainer');
-                const expText = document.getElementById('explanationText');
                 const container = document.getElementById('optionsContainer');
                 container.innerHTML = q.o.map((opt, i) => {
-                    const letter = String.fromCharCode(65 + i);
                     const answered = this.state.answers[this.state.currentQIdx] !== null;
                     const selected = this.state.answers[this.state.currentQIdx] === opt;
                     const correct = opt === q.c;
                     let cls = "option";
                     if(answered) { cls += " disabled"; if(correct) cls += " correct"; else if(selected) cls += " incorrect"; }
-                    return `<div class="${cls}" onclick="App.quiz.pick('${opt.replace(/'/g, "\\'")}')" role="button" tabindex="0"><span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center font-bold mr-4 shrink-0 text-slate-600">${letter}</span><span class="text-sm font-medium text-slate-700">${opt}</span></div>`;
+                    return `<div class="${cls}" onclick="App.quiz.pick('${opt.replace(/'/g, "\\'")}')" role="button"><span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center font-bold mr-4 shrink-0 text-slate-600">${String.fromCharCode(65+i)}</span><span class="text-sm font-medium text-slate-700">${opt}</span></div>`;
                 }).join('');
-                if(this.state.answers[this.state.currentQIdx] !== null) { expBox.style.display = 'block'; expText.textContent = q.explanation || "This question is based on concepts from the official CMA Syllabus 2022 modules."; } else { expBox.style.display = 'none'; }
+                if(this.state.answers[this.state.currentQIdx] !== null) {
+                    expBox.classList.remove('hidden');
+                    document.getElementById('explanationText').textContent = q.explanation || "This question is based on concepts from the official CMA Syllabus 2022 modules.";
+                } else { expBox.classList.add('hidden'); }
                 document.getElementById('btnPrevQ').style.visibility = this.state.currentQIdx === 0 ? 'hidden' : 'visible';
                 document.getElementById('btnNextQ').innerHTML = (this.state.currentQIdx === this.state.dataSets[this.state.currentSetIdx].questions.length - 1) ? 'Finish' : 'Next <i class="fas fa-arrow-right"></i>';
             }
@@ -885,7 +747,6 @@
                 if(val === correct) this.state.score.c++; else this.state.score.w++;
                 this.updateUI();
                 this.renderQuestion();
-                this.saveLocalProgress();
             }
 
             updateUI() {
@@ -905,7 +766,6 @@
                 setTimeout(() => {
                     this.state.currentQIdx = next;
                     this.renderQuestion();
-                    this.saveLocalProgress();
                     area.classList.remove('opacity-0', 'scale-95');
                 }, 150);
             }
@@ -913,56 +773,27 @@
             finish() {
                 document.getElementById('questionArea').classList.add('hidden');
                 document.getElementById('resultsArea').classList.remove('hidden');
-                const qLen = this.state.dataSets[this.state.currentSetIdx].questions.length;
-                document.getElementById('finalScoreDisplay').textContent = `Correct Answers: ${this.state.score.c} / ${qLen}`;
-                
-                // Select Random Encouragement Quote
-                const randQuote = Config.quotes[Math.floor(Math.random() * Config.quotes.length)];
-                document.getElementById('quoteDisplay').textContent = randQuote;
-                
+                document.getElementById('finalScoreDisplay').textContent = `Correct Answers: ${this.state.score.c} / ${this.state.dataSets[this.state.currentSetIdx].questions.length}`;
+                document.getElementById('quoteDisplay').textContent = Config.quotes[Math.floor(Math.random() * Config.quotes.length)];
                 this.bindShare();
-                localStorage.removeItem('prepogy_progress');
             }
 
             bindShare() {
                 const url = "https://prepogy.in";
-                const msg = "I just scored " + this.state.score.c + " on Prepogy! 🚀 Practice CMA MCQs Syllabus 2022 here: ";
-                document.getElementById('btnShareWA').onclick = () => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg + ' ' + url)}`);
+                const msg = "I just scored " + this.state.score.c + " on Prepogy! 🚀 Practice CMA MCQs here: ";
+                document.getElementById('btnShareWA').onclick = () => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg + url)}`);
                 document.getElementById('btnShareTG').onclick = () => window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`);
-                document.getElementById('btnShareCopy').onclick = () => { 
-                    const temp = document.createElement('input');
-                    document.body.appendChild(temp);
-                    temp.value = url;
-                    temp.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(temp);
-                    
-                    // Small visual feedback for copy
-                    const btnLabel = document.querySelector('#btnShareCopy span');
-                    const original = btnLabel.textContent;
-                    btnLabel.textContent = "COPIED!";
-                    btnLabel.classList.add('text-emerald-500');
-                    setTimeout(() => {
-                        btnLabel.textContent = original;
-                        btnLabel.classList.remove('text-emerald-500');
-                    }, 2000);
+                document.getElementById('btnShareCopy').onclick = () => {
+                    const temp = document.createElement('input'); temp.value = url; document.body.appendChild(temp); temp.select(); document.execCommand('copy'); document.body.removeChild(temp);
                 };
             }
 
             openGoogleSearchExplanation() {
                 const q = this.state.dataSets[this.state.currentSetIdx].questions[this.state.currentQIdx];
                 const query = `Explain why "${q.c}" is the correct answer for this CMA MCQ: \nQuestion: ${q.q}\nOptions: ${q.o.join(', ')}`;
-                const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-                try {
-                    const temp = document.createElement('textarea');
-                    temp.value = query;
-                    document.body.appendChild(temp);
-                    temp.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(temp);
-                } catch (e) {}
-                window.open(googleUrl, '_blank');
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
             }
+            resetLocalProgress() { this.loadSet(this.state.currentSetIdx); }
         }
 
         class PrepogyApp {
@@ -974,13 +805,14 @@
                 document.getElementById('btnShortcuts').onclick = () => this.toggleShortcuts(true);
                 document.addEventListener('keydown', (e) => this.handleKeys(e));
             }
-            toggleShortcuts(show) { 
-                const el = document.getElementById('shortcutsModal');
-                if(show) el.classList.add('show'); else el.classList.remove('show');
-            }
+            toggleShortcuts(show) { const el = document.getElementById('shortcutsModal'); if(show) el.classList.add('show'); else el.classList.remove('show'); }
+            toggleSjcModal(show) { const el = document.getElementById('sjcIntroModal'); if(show) el.classList.add('show'); else el.classList.remove('show'); }
             selectPaper(id, title) {
                 this.quiz.state.paperId = id;
                 document.getElementById('dashTitle').textContent = title;
+                const sjcCard = document.getElementById('cardSjc');
+                const libCard = document.getElementById('cardLibrary');
+                if (id == '8') { sjcCard.classList.remove('hidden'); libCard.classList.add('hidden'); } else { sjcCard.classList.add('hidden'); libCard.classList.remove('hidden'); }
                 const pyqCard = document.querySelector('.mode-pyq');
                 if (pyqCard) {
                     const numId = parseInt(id); 
